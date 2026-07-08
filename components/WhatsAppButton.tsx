@@ -5,7 +5,7 @@ export default function WhatsAppButton({ phone, message }: { phone: string; mess
   return (
     <button 
       onClick={() => window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")}
-      className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg"
+      className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform"
     >
       <MessageCircle size={28} />
     </button>
