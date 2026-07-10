@@ -1,138 +1,93 @@
-import { ArrowRight, BadgeCheck, Box, Factory, Palette, Ruler, Send, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck, Box, Factory, Globe2, Lightbulb, PackageCheck, Palette, Send, Sparkles, SwatchBook, Truck, UsersRound } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import QuoteForm from "@/components/QuoteForm";
+import { articles, categories, trendingProducts } from "@/lib/site-data";
 import { mediaUrl } from "@/lib/media";
 
-const categories = [
-  { name: "3D Floral Patches", note: "Dimensional petals & couture details", image: mediaUrl("pastel-assortment.jpg") },
-  { name: "Elegant Lace Trim", note: "Mesh, cotton & guipure borders", image: mediaUrl("yellow-floral.jpg") },
-  { name: "Bead & Rhinestone", note: "Hand-finished statement pieces", image: mediaUrl("grey-rhinestone.jpg") },
-  { name: "Embroidery Appliqués", note: "Bridal, eveningwear & accessories", image: mediaUrl("beaded-neckline.jpg") },
-  { name: "Crochet & Guipure", note: "Textural trims with clean edges", image: mediaUrl("gold-applique.png") },
-  { name: "Custom Development", note: "From sketch or sample to production", image: mediaUrl("luxury-beaded.jpg") },
+const trust = ["Guangzhou China Supply Chain", "OEM & Custom Design", "Worldwide Shipping", "Low MOQ Available"];
+const applications = [
+  { title: "Wedding Dress", text: "Bridal lace supplier for wedding gowns and couture fashion.", image: mediaUrl("luxury-beaded.jpg"), alt: "bridal lace supplier for wedding dress designers" },
+  { title: "Children's Clothing", text: "Soft decorative lace trims for baby and kids apparel.", image: mediaUrl("yellow-floral.jpg"), alt: "soft kids lace trim for children's clothing" },
+  { title: "Fashion Apparel", text: "Fashion trims for dresses, lingerie and designer clothing.", image: mediaUrl("grey-rhinestone.jpg"), alt: "fashion lace trims for designer apparel" },
+  { title: "DIY Crafts", text: "Wholesale lace materials for handmade projects.", image: mediaUrl("gold-applique.png"), alt: "wholesale lace materials for DIY crafts" },
 ];
-
-const products = [
-  { id: "LP-2401", name: "Pastel Beaded 3D Floral Appliqué", category: "Embroidery Appliqués", image: mediaUrl("pastel-collection.jpg"), moq: "30 pairs", tag: "New" },
-  { id: "LP-2402", name: "Luxury Beaded Flower Appliqué Set", category: "Bead & Rhinestone", image: mediaUrl("luxury-beaded.jpg"), moq: "30 pairs", tag: "Bestseller" },
-  { id: "LP-2403", name: "Grey Layered Rhinestone Lace Appliqué", category: "Embroidery Appliqués", image: mediaUrl("grey-rhinestone.jpg"), moq: "50 pcs" },
-  { id: "LP-2404", name: "Water-Soluble Floral Lace Pair", category: "Guipure", image: mediaUrl("yellow-floral.jpg"), moq: "30 pairs" },
-  { id: "LP-2405", name: "Gold Sequin Floral Vine Appliqué", category: "Handcrafted Patch", image: mediaUrl("gold-applique.png"), moq: "50 pcs", tag: "Couture" },
-  { id: "LP-2406", name: "White Beaded Leaf Neckline Appliqué", category: "Bridal Collection", image: mediaUrl("beaded-neckline.jpg"), moq: "30 pairs" },
+const advantages = [
+  { icon: Factory, title: "Guangzhou China Supply Chain", text: "Located near Guangzhou textile markets with access to thousands of lace designs." },
+  { icon: Lightbulb, title: "Custom Development", text: "From customer ideas and references to approved samples and finished products." },
+  { icon: SwatchBook, title: "Wide Product Selection", text: "Lace trims, embroidery lace, appliques and fashion accessories in one source." },
+  { icon: Globe2, title: "Global Wholesale Service", text: "Clear export communication, reliable packing and worldwide shipping support." },
 ];
-
-const steps = [
-  { n: "01", title: "Share your brief", text: "Send a photo, sketch, tech pack or physical sample with target quantity." },
-  { n: "02", title: "Sample development", text: "We confirm material, color, dimensions and workmanship before sampling." },
-  { n: "03", title: "Approve & produce", text: "Your approved sample becomes the production standard for every batch." },
-  { n: "04", title: "QC & worldwide delivery", text: "Final inspection, secure packing and export support to your destination." },
-];
+const process = [
+  ["01", "Send Your Design Idea", Send], ["02", "Sample Development", Palette], ["03", "Customer Approval", BadgeCheck],
+  ["04", "Mass Production", Factory], ["05", "Quality Inspection", PackageCheck], ["06", "Worldwide Shipping", Truck],
+] as const;
 
 export default function Home() {
   return (
     <main>
       <section className="hero" id="home">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Lace, Trim & Appliqué Manufacturer · Guangzhou</p>
-          <h1>Details that make<br />fashion <em>unforgettable.</em></h1>
-          <p className="hero-lead">Factory-direct garment embellishments for fashion brands, bridal studios, importers and manufacturers worldwide. OEM / ODM, flexible MOQ and reliable production at scale.</p>
-          <div className="hero-actions">
-            <a className="button button-dark" href="#quote">Request wholesale pricing <ArrowRight size={17} /></a>
-            <a className="text-link" href="#products">Explore the collection <ArrowRight size={15} /></a>
-          </div>
-          <div className="hero-trust">
-            <div className="avatars" aria-hidden="true"><span>NY</span><span>LD</span><span>PA</span></div>
-            <p><strong>Trusted by fashion professionals</strong><br />in 30+ countries</p>
-          </div>
+          <p className="eyebrow"><span /> China lace trim manufacturer</p>
+          <h1>Wholesale Lace Trim Manufacturer & Garment Accessories Supplier <em>in China.</em></h1>
+          <p className="hero-lead">Velorace Lace specializes in embroidery lace, lace trims, bridal lace, 3D appliques and fashion accessories. We support global brands, designers and garment manufacturers with custom development and wholesale supply.</p>
+          <div className="hero-actions"><a className="button button-dark" href="#contact">Get free samples <ArrowRight size={17} /></a><a className="text-link" href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">Request wholesale catalog <ArrowRight size={15} /></a></div>
+          <div className="trust-badges">{trust.map((item) => <span key={item}><BadgeCheck size={15} />{item}</span>)}</div>
         </div>
-        <div className="hero-visual" aria-label="Luxury floral lace appliqués">
-          <div className="hero-main-image"><img src={mediaUrl("pastel-assortment.jpg")} alt="Pastel floral appliqués for bridal and couture fashion" /></div>
-          <div className="hero-small-image"><img src={mediaUrl("gold-applique.png")} alt="Gold handcrafted floral appliqué" /></div>
-          <div className="hero-stamp"><Sparkles size={18} /><span>Made for<br />your design</span></div>
+        <div className="hero-visual" aria-label="Premium embroidery lace and 3D floral appliques">
+          <div className="hero-main-image"><img src={mediaUrl("pastel-assortment.jpg")} alt="pastel 3D flower lace applique manufacturer" /></div>
+          <div className="hero-small-image"><img src={mediaUrl("beaded-neckline.jpg")} alt="white bridal lace applique manufacturer" /></div>
+          <div className="hero-stamp"><Sparkles size={18} /><span>Custom lace<br />for global brands</span></div>
         </div>
       </section>
 
-      <section className="stats" aria-label="Factory statistics">
-        <div><strong>500+</strong><span>Brands & buyers served</span></div>
-        <div><strong>200K+</strong><span>Pieces monthly capacity</span></div>
-        <div><strong>98%</strong><span>On-time delivery</span></div>
-        <div><strong>100%</strong><span>Pre-shipment QC</span></div>
+      <section className="stats" aria-label="Wholesale service statistics">
+        <div><strong>500+</strong><span>Brands and buyers served</span></div><div><strong>6</strong><span>Core lace categories</span></div><div><strong>24h</strong><span>Wholesale reply target</span></div><div><strong>100%</strong><span>Pre-shipment inspection</span></div>
       </section>
 
-      <section className="section" id="catalog">
-        <div className="section-heading split-heading">
-          <div><p className="eyebrow"><span /> Production capabilities</p><h2>Browse our product ranges.</h2></div>
-          <p>Every range is in active production and fully customizable. Choose a starting point, then tell us the color, size, finish and quantity you need.</p>
-        </div>
-        <div className="category-grid">
-          {categories.map((item, i) => (
-            <a className={`category-card category-${i + 1}`} href="#quote" key={item.name}>
-              <img src={item.image} alt={item.name} />
-              <span className="category-shade" />
-              <span className="category-index">0{i + 1}</span>
-              <span className="category-copy"><strong>{item.name}</strong><small>{item.note}</small></span>
-              <span className="round-arrow"><ArrowRight size={18} /></span>
-            </a>
-          ))}
-        </div>
+      <section className="section" id="collections">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product categories</p><h2>Lace collections for modern fashion.</h2></div><p>Explore wholesale-ready collections, then customize the color, width, motif and finish for your brand or garment program.</p></div>
+        <div className="category-grid">{categories.map((item, i) => <a className="category-card" href={`/${item.slug}`} key={item.slug}><img src={item.image} alt={item.alt} /><span className="category-shade" /><span className="category-index">0{i + 1}</span><span className="category-copy"><strong>{item.name}</strong><small>{item.description}</small></span><span className="round-arrow"><ArrowRight size={18} /></span></a>)}</div>
       </section>
 
-      <section className="partnership" id="about">
-        <div className="partnership-image"><img src={mediaUrl("beaded-neckline.jpg")} alt="White beaded lace embroidery for a bridal neckline" /></div>
-        <div className="partnership-copy">
-          <p className="eyebrow eyebrow-light"><span /> Why importers choose Velorace Lace</p>
-          <h2>Built for wholesale and<br /><em>brand partnerships.</em></h2>
-          <p>We bring material sourcing, embroidery, hand embellishment and quality control together under one production team. That means clearer communication, steadier quality and fewer surprises between sample and bulk order.</p>
-          <div className="benefit-grid">
-            <div><Factory /><strong>Factory direct</strong><span>Clear pricing and production visibility.</span></div>
-            <div><Palette /><strong>True customization</strong><span>Color, size, motif, beading and backing.</span></div>
-            <div><BadgeCheck /><strong>Approval-led QC</strong><span>Bulk production follows your signed sample.</span></div>
-            <div><Box /><strong>Export ready</strong><span>Secure packing and worldwide shipping support.</span></div>
-          </div>
-          <a className="button button-light" href="#quote">Start a custom inquiry <ArrowRight size={17} /></a>
-        </div>
+      <section className="section trending-section" id="products">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Trending lace collections</p><h2>Styles buyers are sourcing now.</h2></div><a className="text-link" href="/#contact">Request the full catalog <ArrowRight size={15} /></a></div>
+        <div className="product-grid product-grid-three">{trendingProducts.map((product) => <ProductCard key={product.id} {...product} />)}</div>
+      </section>
+
+      <section className="section application-section">
+        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Lace trim applications</p><h2>Designed around the final garment.</h2><p>Tell us where the lace will be used and we will recommend the right construction, weight and finish.</p></div>
+        <div className="application-grid">{applications.map((item) => <article key={item.title}><img src={item.image} alt={item.alt} /><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+      </section>
+
+      <section className="why-section" id="about">
+        <div className="why-intro"><p className="eyebrow eyebrow-light"><span /> Why choose us</p><h2>Why Choose<br /><em>Velorace Lace?</em></h2><p>A sourcing partner that understands fashion detail, wholesale timelines and the importance of consistent repeat orders.</p><a className="button button-light" href="/about-us">About our company <ArrowRight size={17} /></a></div>
+        <div className="why-grid">{advantages.map(({ icon: Icon, title, text }) => <article key={title}><Icon /><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 
       <section className="section process-section">
-        <div className="section-heading centered-heading">
-          <p className="eyebrow"><span /> Custom development</p>
-          <h2>From your idea to production.</h2>
-          <p>One accountable workflow for bridal, couture and ready-to-wear embellishments.</p>
-        </div>
-        <div className="process-grid">
-          {steps.map((step, i) => <div className="process-card" key={step.n}><span>{step.n}</span>{i === 0 ? <Send /> : i === 1 ? <Ruler /> : i === 2 ? <Factory /> : <Box />}<h3>{step.title}</h3><p>{step.text}</p></div>)}
+        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Custom lace development process</p><h2>From your idea to worldwide delivery.</h2></div>
+        <div className="process-grid process-grid-six">{process.map(([number, title, Icon]) => <article className="process-card" key={number}><span>{number}</span><Icon /><h3>{title}</h3></article>)}</div>
+      </section>
+
+      <section className="factory-section">
+        <div className="factory-copy"><p className="eyebrow"><span /> Factory advantage</p><h2>Your Reliable Lace Partner in China</h2><p>Based in Guangzhou, China, Velorace Lace connects global buyers with professional lace manufacturing resources. We help fashion brands and garment factories develop unique trims and accessories.</p><ul><li><UsersRound size={17} /> Dedicated wholesale communication</li><li><Box size={17} /> Sample-to-bulk quality control</li><li><Factory size={17} /> Flexible production coordination</li></ul><a className="button button-dark" href="/custom-design">View custom service <ArrowRight size={17} /></a></div>
+        <div className="factory-gallery">
+          <figure><img src={mediaUrl("pastel-assortment.jpg")} alt="lace samples for wholesale buyers" /><figcaption>Lace samples</figcaption></figure>
+          <figure><img src={mediaUrl("grey-rhinestone.jpg")} alt="embellished lace production quality inspection" /><figcaption>Production details</figcaption></figure>
+          <figure><img src={mediaUrl("pastel-collection.jpg")} alt="lace product selection and color development" /><figcaption>Color development</figcaption></figure>
+          <figure><img src={mediaUrl("beaded-neckline.jpg")} alt="bridal lace applique prepared for export packaging" /><figcaption>Quality and packing</figcaption></figure>
         </div>
       </section>
 
-      <section className="section products-section" id="products">
-        <div className="section-heading split-heading">
-          <div><p className="eyebrow"><span /> From the collection</p><h2>Featured products.</h2></div>
-          <a className="text-link" href="#quote">Request the full catalog <ArrowRight size={15} /></a>
-        </div>
-        <div className="product-grid">{products.map((product) => <ProductCard key={product.id} {...product} />)}</div>
+      <section className="section blog-preview">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Buyer resources</p><h2>Lace sourcing insights.</h2></div><a className="text-link" href="/blog">Visit the blog <ArrowRight size={15} /></a></div>
+        <div className="blog-grid">{articles.slice(0, 3).map((article) => <article className="blog-card" key={article.slug}><a href={`/blog/${article.slug}`}><img src={article.image} alt={article.alt} /></a><span>{article.keyword}</span><h3><a href={`/blog/${article.slug}`}>{article.title}</a></h3><p>{article.description}</p><a className="text-link" href={`/blog/${article.slug}`}>Read article <ArrowRight size={14} /></a></article>)}</div>
       </section>
 
-      <section className="quote-section" id="quote">
-        <div className="quote-intro">
-          <p className="eyebrow eyebrow-light"><span /> Request a quote</p>
-          <h2>Tell us what<br />you’re <em>creating.</em></h2>
-          <p>Share your specification and target quantity. Our trade team will reply with pricing, MOQ and lead time within 24 hours.</p>
-          <ul><li><BadgeCheck size={17} /> No obligation</li><li><BadgeCheck size={17} /> Samples available</li><li><BadgeCheck size={17} /> Your design stays confidential</li></ul>
-        </div>
+      <section className="quote-section" id="contact">
+        <div className="quote-intro"><p className="eyebrow eyebrow-light"><span /> Wholesale inquiry</p><h2>Request samples,<br />catalog or <em>pricing.</em></h2><p>Share your application, target quantity and destination. Our trade team will reply with suitable options, MOQ and lead time.</p><ul><li><BadgeCheck size={17} /> Free sample discussion</li><li><BadgeCheck size={17} /> Custom design support</li><li><BadgeCheck size={17} /> Confidential sourcing</li></ul></div>
         <QuoteForm />
       </section>
-
-      <section className="section faq-section" id="faq">
-        <div className="section-heading centered-heading"><p className="eyebrow"><span /> FAQ</p><h2>What buyers usually ask.</h2></div>
-        <div className="faq-list">
-          <details open><summary>What is your minimum order quantity?<span>+</span></summary><p>MOQ depends on the construction and level of handwork. Stock designs typically start from 30–100 pieces or 50–100 yards. Custom designs are quoted individually.</p></details>
-          <details><summary>Can you match our Pantone color or supplied fabric?<span>+</span></summary><p>Yes. We can match Pantone references, fabric swatches or existing samples. A lab dip or pre-production sample is confirmed before bulk production.</p></details>
-          <details><summary>How long does sampling and production take?<span>+</span></summary><p>Most samples take 7–14 days. Standard bulk orders usually require 20–35 days after sample approval, depending on quantity and workmanship.</p></details>
-          <details><summary>Do you ship internationally?<span>+</span></summary><p>Yes. We support express, air and sea freight and can work with your nominated forwarder or recommend a suitable shipping option.</p></details>
-        </div>
-      </section>
-
-      <section className="final-cta"><p>Ready to develop your next collection?</p><h2>Let’s make the details<br />worth remembering.</h2><a className="button button-light" href="#quote">Request a quote <ArrowRight size={17} /></a></section>
     </main>
   );
 }

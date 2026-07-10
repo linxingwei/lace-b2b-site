@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import QuoteForm from "@/components/QuoteForm";
+export const metadata: Metadata = { title: "Contact Velorace Lace for Wholesale Inquiries", description: "Contact Velorace Lace for lace trim samples, wholesale catalogs, custom development and garment accessory quotations.", alternates: { canonical: "/contact" } };
+export default function ContactPage() { return <main><section className="quote-section standalone-contact"><div className="quote-intro"><p className="eyebrow eyebrow-light"><span /> Contact Velorace Lace</p><h1>Tell us what<br />you are <em>developing.</em></h1><p>Send your product type, estimated quantity, destination and reference images. Our Guangzhou trade team will reply with suitable options and next steps.</p><address><strong>WhatsApp</strong><a href="https://wa.me/message/IXEEGXESENF6F1">+86 157 6795 6637</a><strong>Location</strong><span>Guangzhou, China</span></address></div><QuoteForm /></section></main>; }
