@@ -2,12 +2,5 @@
 import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton({ phone, message }: { phone: string; message: string }) {
-  return (
-    <button 
-      onClick={() => window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank")}
-      className="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform"
-    >
-      <MessageCircle size={28} />
-    </button>
-  );
+  return <a href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer" className="whatsapp-float" aria-label="Chat with Velorace Lace on WhatsApp"><MessageCircle size={23} /><span>Chat with us</span></a>;
 }

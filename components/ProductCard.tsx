@@ -1,18 +1,19 @@
-"use client";
-export default function ProductCard({ id, name, category, image }: { id: string; name: string; category: string; image: string }) {
+import { ArrowUpRight } from "lucide-react";
+
+type ProductCardProps = { id: string; name: string; category: string; image: string; moq: string; tag?: string };
+
+export default function ProductCard({ id, name, category, image, moq, tag }: ProductCardProps) {
+  const message = encodeURIComponent(`Hi, I would like a quote for ${name} (${id}). Please send pricing and available colors.`);
   return (
-    <div className="border p-4 bg-white group">
-      <div className="relative aspect-[4/5] overflow-hidden bg-gray-100 mb-4">
-        <img src={image} alt={name} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-      </div>
-      <h3 className="font-bold text-lg">{name}</h3>
-      <p className="text-xs text-gray-500 uppercase tracking-widest">SKU: {id}</p>
-      <button 
-        onClick={() => window.open(`https://wa.me/8615767956637?text=Inquiry for SKU: ${id}`, "_blank")}
-        className="mt-4 border-b-2 border-black font-bold text-xs tracking-widest uppercase hover:text-[#25D366] hover:border-[#25D366] transition-colors"
-      >
-        Inquire via WhatsApp
-      </button>
-    </div>
+    <article className="product-card">
+      <a className="product-image" href={`https://wa.me/8615767956637?text=${message}`} target="_blank" rel="noreferrer" aria-label={`Inquire about ${name}`}>
+        <img src={image} alt={name} />
+        {tag && <span className="product-tag">{tag}</span>}
+        <span className="product-action"><ArrowUpRight size={19} /></span>
+      </a>
+      <div className="product-meta"><span>{category}</span><span>SKU {id}</span></div>
+      <h3>{name}</h3>
+      <p>MOQ: {moq}</p>
+    </article>
   );
 }
