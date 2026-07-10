@@ -25,10 +25,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <div className="footer-brand"><a className="logo logo-light" href="#home"><strong>VELORACE</strong><span>LACE</span></a><p>Professional manufacturer of lace trims, embroidery appliqués, 3D flowers and garment embellishments for fashion brands worldwide.</p></div>
           <div><h3>Explore</h3><a href="#about">About us</a><a href="#catalog">Product ranges</a><a href="#products">Featured products</a><a href="#faq">FAQ</a></div>
           <div><h3>Production</h3><a href="#quote">OEM / ODM</a><a href="#quote">Sample development</a><a href="#quote">Private label</a><a href="#quote">Request a catalog</a></div>
-          <div><h3>Get in touch</h3><a href="https://wa.me/8615767956637" target="_blank" rel="noreferrer">WhatsApp +86 157 6795 6637</a><span>Guangzhou, China</span><small>Monday–Saturday · 9:00–18:00 CST</small></div>
+          <div><h3>Get in touch</h3><a href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">WhatsApp Business</a><span>+86 157 6795 6637</span><span>Guangzhou, China</span><small>Monday–Saturday · 9:00–18:00 CST</small></div>
           <div className="footer-bottom"><span>© 2026 Velorace Lace. All rights reserved.</span><span>veloracelace.com · Factory direct · Worldwide delivery</span></div>
         </footer>
-        <WhatsAppButton phone="8615767956637" message="Hi, I am interested in your lace and garment accessories. Please send me your catalog." />
+        <WhatsAppButton businessUrl="https://wa.me/message/IXEEGXESENF6F1" />
       </body>
     </html>
   );
