@@ -58,7 +58,16 @@ export default function Home() {
 
       <section className="section" id="collections">
         <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product categories</p><h2>Lace collections for modern fashion.</h2></div><p>Explore wholesale-ready collections, then customize the color, width, motif and finish for your brand or garment program.</p></div>
-        <div className="category-grid">{categories.map((item, i) => <a className="category-card" href={`/${item.slug}`} key={item.slug}><img src={item.image} alt={item.alt} width="900" height="700" loading="lazy" decoding="async" /><span className="category-shade" /><span className="category-index">0{i + 1}</span><span className="category-copy"><strong>{item.name}</strong><small>{item.description}</small></span><span className="round-arrow"><ArrowRight size={18} /></span></a>)}</div>
+        <div className="category-spec-grid">{categories.map((item, i) => <article className="category-spec-card" key={item.slug}>
+          <a className="category-spec-image" href={`/${item.slug}`}><img src={item.image} alt={item.alt} width="900" height="700" loading="lazy" decoding="async" /><span>0{i + 1}</span></a>
+          <div className="category-spec-body">
+            <span className="category-spec-tag">Custom & wholesale</span>
+            <h3><a href={`/${item.slug}`}>{item.name}</a></h3>
+            <p>{item.description}</p>
+            <dl><div><dt>MOQ</dt><dd>Flexible</dd></div><div><dt>Sample</dt><dd>7–14 days</dd></div><div><dt>Service</dt><dd>OEM / Custom</dd></div></dl>
+            <a className="category-spec-cta" href={`/${item.slug}`}>View & request quote <ArrowRight size={15} /></a>
+          </div>
+        </article>)}</div>
       </section>
 
       <section className="section trending-section" id="products">
