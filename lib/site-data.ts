@@ -41,8 +41,8 @@ export const categories: CategoryData[] = [
     title: "Eyelash Lace Trim Wholesale Supplier",
     description: "Wholesale eyelash lace trim for lingerie, dresses, bridal fashion and designer apparel with custom colors and widths.",
     intro: "Fine scalloped edges and soft eyelash fringes give garments a delicate finish. Choose classic floral looks or develop exclusive patterns for your collection.",
-    image: mediaUrl("beaded-neckline.jpg"),
-    alt: "white eyelash lace trim wholesale supplier",
+    image: mediaUrl("yellow-floral.jpg"),
+    alt: "decorative floral lace trim sample for wholesale development",
     applications: ["Lingerie finishing", "Bridal veils and gowns", "Evening dresses", "Fashion accessories"],
     highlights: ["Soft hand feel", "Multiple widths", "Custom dyeing", "Roll or cut-piece packing"],
   },
@@ -74,8 +74,8 @@ export const categories: CategoryData[] = [
     title: "Cute Kids Lace Trim Supplier China",
     description: "Cute embroidered lace trims for babywear, children's clothing, accessories and DIY craft collections.",
     intro: "Playful motifs, soft colors and lightweight constructions designed for childrenswear and baby product collections. Ask about animal, bow, floral and seasonal designs.",
-    image: mediaUrl("gold-applique.png"),
-    alt: "cute kids lace trim supplier China",
+    image: mediaUrl("pastel-assortment.jpg"),
+    alt: "pastel floral applique sample for kids fashion development",
     applications: ["Baby clothing", "Children's dresses", "Hair accessories", "DIY craft products"],
     highlights: ["Cute motif library", "Soft color palettes", "Low MOQ options", "Custom seasonal designs"],
   },
@@ -84,9 +84,9 @@ export const categories: CategoryData[] = [
 export const categoryBySlug = Object.fromEntries(categories.map((category) => [category.slug, category]));
 
 export const trendingProducts = [
-  { id: "VL-2601", name: "Cute Animal Embroidery Lace Trim", category: "Kids Lace Trim", description: "Popular embroidered lace trim with playful motifs for children's clothing, baby products and DIY crafts.", image: mediaUrl("yellow-floral.jpg"), alt: "cute animal embroidery lace trim for children's clothing", moq: "50 yards", tag: "Trending" },
-  { id: "VL-2602", name: "Pink Bow Lace Trim", category: "Embroidery Lace", description: "Elegant bow embroidery lace trim for dresses, accessories and fashion applications.", image: mediaUrl("pastel-collection.jpg"), alt: "pink bow embroidery lace trim wholesale", moq: "50 yards", tag: "New" },
-  { id: "VL-2603", name: "Floral 3D Lace Applique", category: "3D Flower Applique", description: "Luxury floral lace applique for bridal gowns, eveningwear and fashion designers.", image: mediaUrl("pastel-assortment.jpg"), alt: "floral 3D lace applique manufacturer", moq: "30 pairs", tag: "Bridal" },
+  { id: "VL-2601", name: "Yellow Floral Guipure Lace Applique Pair", category: "Floral Lace Applique", description: "A bright floral applique pair for dresses, accessories, childrenswear and decorative fashion applications.", image: mediaUrl("yellow-floral.jpg"), alt: "yellow floral guipure lace applique pair", moq: "30 pairs", tag: "Trending" },
+  { id: "VL-2602", name: "Pastel Embroidered 3D Flower Applique", category: "3D Flower Applique", description: "Layered pastel flower appliques with embroidered leaves for dresses, accessories and occasionwear.", image: mediaUrl("pastel-collection.jpg"), alt: "pastel embroidered 3D flower applique collection", moq: "30 pairs", tag: "New" },
+  { id: "VL-2603", name: "Floral 3D Lace Applique Collection", category: "3D Flower Applique", description: "Luxury dimensional floral appliques for bridal gowns, eveningwear and fashion designers.", image: mediaUrl("pastel-assortment.jpg"), alt: "floral 3D lace applique collection", moq: "30 pairs", tag: "Bridal" },
 ];
 
 export type ArticleData = {

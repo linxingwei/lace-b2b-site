@@ -1,7 +1,7 @@
 import { ArrowRight, Menu, MessageCircle } from "lucide-react";
 
 const links = [
-  ["Home", "/"], ["Products", "/#collections"], ["Lace Trim", "/lace-trim"],
+  ["Home", "/"], ["Products", "/products"], ["Lace Trim", "/lace-trim"],
   ["Applique", "/3d-flower-applique"], ["Custom Design", "/custom-design"],
   ["About Us", "/about-us"], ["Blog", "/blog"], ["Contact", "/#contact"],
 ];
@@ -13,8 +13,8 @@ export default function SiteHeader() {
       <header className="site-header">
         <a className="logo" href="/" aria-label="Velorace Lace home"><strong>VELORACE</strong><span>LACE</span></a>
         <nav aria-label="Main navigation">{links.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>
-        <a className="header-quote" href="/#contact">Get free samples <ArrowRight size={15} /></a>
-        <details className="mobile-menu"><summary aria-label="Open navigation"><Menu /></summary><div>{links.map(([label, href]) => <a href={href} key={href}>{label}</a>)}<a href="/#contact"><MessageCircle size={17} /> Get free samples</a></div></details>
+        <a className="header-quote" href="/#contact">Request samples <ArrowRight size={15} /></a>
+        <details className="mobile-menu"><summary aria-label="Open navigation"><Menu /></summary><div>{links.map(([label, href]) => <a href={href} key={href}>{label}</a>)}<a href="/#contact"><MessageCircle size={17} /> Request samples</a></div></details>
       </header>
     </>
   );

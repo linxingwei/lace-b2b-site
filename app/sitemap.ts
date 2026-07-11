@@ -1,6 +1,14 @@
 import type { MetadataRoute } from "next";
+import { articles, categories } from "@/lib/site-data";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.veloracelace.com";
-  const routes = ["", "/lace-trim", "/embroidery-lace", "/eyelash-lace", "/bridal-lace", "/3d-flower-applique", "/kids-lace-trim", "/custom-design", "/about-us", "/blog", "/contact", "/blog/lace-trim-trends-2026", "/blog/how-to-choose-bridal-lace", "/blog/china-lace-manufacturer-guide", "/blog/embroidery-lace-vs-guipure-lace"];
-  return routes.map((route, index) => ({ url: `${base}${route}`, lastModified: new Date(), changeFrequency: index === 0 ? "weekly" : "monthly", priority: index === 0 ? 1 : route.startsWith("/blog/") ? 0.7 : 0.8 }));
+  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, changeFrequency: "monthly" as const, priority: 0.8 }));
+  const articleRoutes = articles.map((article) => ({ url: `${base}/blog/${article.slug}`, lastModified: new Date(article.date), changeFrequency: "monthly" as const, priority: 0.7 }));
+  const coreRoutes = [
+    { path: "", priority: 1, frequency: "weekly" as const }, { path: "/products", priority: 0.9, frequency: "weekly" as const },
+    { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about-us", priority: 0.7, frequency: "monthly" as const },
+    { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
+  ].map((route) => ({ url: `${base}${route.path}`, changeFrequency: route.frequency, priority: route.priority }));
+  return [...coreRoutes, ...categoryRoutes, ...articleRoutes];
 }

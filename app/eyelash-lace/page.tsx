@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import CategoryPage from "@/components/CategoryPage";
 import { categoryBySlug } from "@/lib/site-data";
+import { categoryMetadata } from "@/lib/seo";
 const category = categoryBySlug["eyelash-lace"];
-export const metadata: Metadata = { title: "Eyelash Lace Trim Wholesale Supplier", description: category.description, alternates: { canonical: "/eyelash-lace" } };
+export const metadata = categoryMetadata(category);
 export default function Page() { return <CategoryPage category={category} />; }

@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import ArticlePage from "@/components/ArticlePage";
 import { articleBySlug } from "@/lib/site-data";
+import { articleMetadata } from "@/lib/seo";
 const article = articleBySlug["china-lace-manufacturer-guide"];
-export const metadata: Metadata = { title: article.title, description: article.description, alternates: { canonical: `/blog/${article.slug}` } };
+export const metadata = articleMetadata(article);
 export default function Page() { return <ArticlePage article={article} />; }

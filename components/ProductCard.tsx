@@ -7,7 +7,7 @@ export default function ProductCard({ id, name, category, image, alt, descriptio
   return (
     <article className="product-card">
       <a className="product-image" href={`https://wa.me/8615767956637?text=${message}`} target="_blank" rel="noreferrer" aria-label={`Inquire about ${name}`}>
-        <img src={image} alt={alt || name} />
+        <img src={image} alt={alt || name} width="900" height="980" loading="lazy" decoding="async" />
         {tag && <span className="product-tag">{tag}</span>}
         <span className="product-action"><ArrowUpRight size={19} /></span>
       </a>
