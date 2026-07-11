@@ -5,7 +5,7 @@ import { articles, categories, trendingProducts } from "@/lib/site-data";
 import { mediaUrl } from "@/lib/media";
 import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = createPageMetadata("China Lace & Garment Accessories Supplier for Fashion Brands | Velorace Lace", "Velorace Lace supplies custom lace trims, bridal lace, embroidery and 3D appliques for global fashion brands and garment manufacturers.", "/");
+export const metadata = createPageMetadata("China Lace & Garment Accessories Supplier for Fashion Brands", "Velorace Lace supplies custom lace trims, bridal lace, embroidery and 3D appliques for global fashion brands and garment manufacturers.", "/");
 
 const trust = ["Guangzhou China Supply Chain", "OEM & Custom Design", "Worldwide Shipping", "Low MOQ Available"];
 const applications = [

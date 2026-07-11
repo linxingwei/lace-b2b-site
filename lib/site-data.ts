@@ -10,6 +10,8 @@ export type CategoryData = {
   alt: string;
   applications: string[];
   highlights: string[];
+  gallery?: { image: string; alt: string }[];
+  catalogUrl?: string;
 };
 
 export const categories: CategoryData[] = [
@@ -30,10 +32,19 @@ export const categories: CategoryData[] = [
     title: "Embroidery Lace Supplier & Manufacturer China",
     description: "Custom embroidery lace manufacturer for garment factories, fashion brands and textile wholesalers worldwide.",
     intro: "Develop precise embroidered motifs on mesh, organza and specialty bases. Our team helps translate references and sketches into production-ready lace for repeat wholesale supply.",
-    image: mediaUrl("pastel-collection.jpg"),
-    alt: "pastel embroidery lace supplier in China",
+    image: mediaUrl("embroidered-lace/embroidered-lace-butterfly.webp"),
+    alt: "pastel butterfly embroidered mesh lace trim",
     applications: ["Designer dresses", "Blouses and occasionwear", "Bridal accessories", "Decorative garment panels"],
     highlights: ["Custom motif development", "Pantone color matching", "Bead and sequin options", "Sample approval before bulk"],
+    gallery: [
+      { image: mediaUrl("embroidered-lace/embroidered-lace-butterfly.webp"), alt: "white mesh lace trim with pastel embroidered butterfly motifs" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-gold-floral.webp"), alt: "gold floral embroidery lace trim on mesh" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-aqua-floral.webp"), alt: "aqua floral embroidered mesh lace trim" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-forest-floral.webp"), alt: "dark green floral embroidery lace trim" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-blush-floral.webp"), alt: "blush pink floral embroidered lace trim" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-scallop.webp"), alt: "pink scalloped floral embroidery lace with measured width" },
+    ],
+    catalogUrl: "https://ruiyuelai.x.yupoo.com/albums/244212977?uid=1",
   },
   {
     slug: "eyelash-lace",
