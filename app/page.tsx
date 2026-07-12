@@ -8,6 +8,14 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata("China Lace & Garment Accessories Supplier for Fashion Brands", "Velorace Lace supplies custom lace trims, bridal lace, embroidery and 3D appliques for global fashion brands and garment manufacturers.", "/");
 
 const trust = ["Guangzhou China Supply Chain", "OEM & Custom Design", "Worldwide Shipping", "Low MOQ Available"];
+const featuredEmbroidery = [
+  ["Butterfly Lace", "embroidered-lace/embroidered-lace-butterfly.webp", "pastel butterfly embroidered lace trim"],
+  ["Gold Floral", "embroidered-lace/embroidered-lace-gold-floral.webp", "gold floral embroidered mesh lace"],
+  ["Aqua Floral", "embroidered-lace/embroidered-lace-aqua-floral.webp", "aqua floral embroidered mesh lace"],
+  ["Forest Floral", "embroidered-lace/embroidered-lace-forest-floral.webp", "forest green floral embroidered lace"],
+  ["Blush Floral", "embroidered-lace/embroidered-lace-blush-floral.webp", "blush pink floral embroidered lace"],
+  ["Scalloped Lace", "embroidered-lace/embroidered-lace-scallop.webp", "pink scalloped floral embroidery lace"],
+] as const;
 const applications = [
   { title: "Wedding Dress", text: "Bridal lace supplier for wedding gowns and couture fashion.", image: mediaUrl("luxury-beaded.jpg"), alt: "bridal lace supplier for wedding dress designers" },
   { title: "Children's Clothing", text: "Soft decorative lace trims for baby and kids apparel.", image: mediaUrl("yellow-floral.jpg"), alt: "soft kids lace trim for children's clothing" },
@@ -39,21 +47,27 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="hero" id="home">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> China lace trim manufacturer</p>
-          <h1>Custom Lace Trims for Fashion Brands & <em>Garment Factories.</em></h1>
-          <p className="hero-lead">Velorace Lace is a Guangzhou-based lace and garment accessories supplier specializing in embroidery lace, lace trims, bridal lace and 3D appliques. We support global buyers with sample development, production coordination and wholesale supply.</p>
+          <p className="eyebrow"><span /> Premium lace trim supplier</p>
+          <h1>Elegant Lace Details for <em>Fashion Collections.</em></h1>
+          <p className="hero-lead">Discover embroidery lace, bridal trims and dimensional appliques selected for fashion brands, designers and garment manufacturers. Custom colors, motifs and sample development are available.</p>
           <div className="hero-actions"><a className="button button-dark" href="#contact">Request samples & quote <ArrowRight size={17} /></a><a className="text-link" href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">Request wholesale catalog <ArrowRight size={15} /></a></div>
           <div className="trust-badges">{trust.map((item) => <span key={item}><BadgeCheck size={15} />{item}</span>)}</div>
         </div>
         <div className="hero-visual" aria-label="Premium embroidery lace and 3D floral appliques">
-          <div className="hero-main-image"><img src={mediaUrl("pastel-assortment.jpg")} alt="pastel 3D flower lace applique supplier" width="1200" height="1200" fetchPriority="high" decoding="async" /></div>
-          <div className="hero-small-image"><img src={mediaUrl("beaded-neckline.jpg")} alt="white beaded bridal applique supplier" width="600" height="600" decoding="async" /></div>
-          <div className="hero-stamp"><Sparkles size={18} /><span>Custom lace<br />for global brands</span></div>
+          <div className="hero-main-image"><img src={mediaUrl("embroidered-lace/embroidered-lace-butterfly.webp")} alt="pastel butterfly embroidered mesh lace trim" width="1100" height="1100" fetchPriority="high" decoding="async" /></div>
+          <div className="hero-small-image"><img src={mediaUrl("embroidered-lace/embroidered-lace-gold-floral.webp")} alt="gold floral embroidered mesh lace trim" width="1100" height="1100" decoding="async" /></div>
+          <div className="hero-stamp"><Sparkles size={18} /><span>Custom colors<br />& motifs</span></div>
         </div>
       </section>
 
       <section className="stats service-proof" aria-label="Wholesale service capabilities">
         <div><strong>Guangzhou</strong><span>Textile supply chain access</span></div><div><strong>Custom</strong><span>Sampling from your reference</span></div><div><strong>Flexible</strong><span>MOQ by design and process</span></div><div><strong>Global</strong><span>Export and shipping support</span></div>
+      </section>
+
+      <section className="section featured-lace-section">
+        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Featured embroidered lace</p><h2>Butterfly & floral collection.</h2><p>Soft mesh lace trims in delicate colors for dresses, childrenswear, occasionwear and decorative fashion details.</p></div>
+        <div className="featured-swatch-grid">{featuredEmbroidery.map(([name, image, alt]) => <a href="/embroidery-lace" key={name}><img src={mediaUrl(image)} alt={alt} width="1100" height="1100" loading="lazy" decoding="async" /><span>{name}</span></a>)}</div>
+        <div className="featured-lace-actions"><a className="button button-gold" href="/embroidery-lace">Explore embroidered lace <ArrowRight size={16} /></a><a className="text-link" href="https://ruiyuelai.x.yupoo.com/albums/244212977?uid=1" target="_blank" rel="noreferrer">View full photo album <ArrowRight size={15} /></a></div>
       </section>
 
       <section className="section" id="collections">
