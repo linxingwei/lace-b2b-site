@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, Box, Factory, Globe2, Lightbulb, PackageCheck, Palette, Send, Sparkles, SwatchBook, Truck, UsersRound } from "lucide-react";
+import { ArrowRight, BadgeCheck, Box, Factory, Globe2, Lightbulb, PackageCheck, Palette, Send, SwatchBook, Truck, UsersRound } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import QuoteForm from "@/components/QuoteForm";
 import { articles, categories, trendingProducts } from "@/lib/site-data";
@@ -8,14 +8,6 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata("China Lace & Garment Accessories Supplier for Fashion Brands", "Velorace Lace supplies custom lace trims, bridal lace, embroidery and 3D appliques for global fashion brands and garment manufacturers.", "/");
 
 const trust = ["Guangzhou China Supply Chain", "OEM & Custom Design", "Worldwide Shipping", "Low MOQ Available"];
-const featuredEmbroidery = [
-  ["Butterfly Lace", "embroidered-lace/embroidered-lace-butterfly.webp", "pastel butterfly embroidered lace trim"],
-  ["Gold Floral", "embroidered-lace/embroidered-lace-gold-floral.webp", "gold floral embroidered mesh lace"],
-  ["Aqua Floral", "embroidered-lace/embroidered-lace-aqua-floral.webp", "aqua floral embroidered mesh lace"],
-  ["Forest Floral", "embroidered-lace/embroidered-lace-forest-floral.webp", "forest green floral embroidered lace"],
-  ["Blush Floral", "embroidered-lace/embroidered-lace-blush-floral.webp", "blush pink floral embroidered lace"],
-  ["Scalloped Lace", "embroidered-lace/embroidered-lace-scallop.webp", "pink scalloped floral embroidery lace"],
-] as const;
 const applications = [
   { title: "Wedding Dress", text: "Bridal lace supplier for wedding gowns and couture fashion.", image: mediaUrl("luxury-beaded.jpg"), alt: "bridal lace supplier for wedding dress designers" },
   { title: "Children's Clothing", text: "Soft decorative lace trims for baby and kids apparel.", image: mediaUrl("yellow-floral.jpg"), alt: "soft kids lace trim for children's clothing" },
@@ -45,18 +37,15 @@ export default function Home() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <section className="hero" id="home">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> Premium lace trim supplier</p>
-          <h1>Elegant Lace Details for <em>Fashion Collections.</em></h1>
-          <p className="hero-lead">Discover embroidery lace, bridal trims and dimensional appliques selected for fashion brands, designers and garment manufacturers. Custom colors, motifs and sample development are available.</p>
-          <div className="hero-actions"><a className="button button-dark" href="#contact">Request samples & quote <ArrowRight size={17} /></a><a className="text-link" href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">Request wholesale catalog <ArrowRight size={15} /></a></div>
+      <section className="loti-hero" id="home">
+        <img className="loti-hero-background" src={mediaUrl("embroidered-lace/embroidered-lace-butterfly.webp")} alt="pastel butterfly embroidered mesh lace trim" width="1100" height="1100" fetchPriority="high" decoding="async" />
+        <span className="loti-hero-overlay" />
+        <div className="loti-hero-content">
+          <p className="loti-kicker">Lace, Trim & Applique Supplier<br /><span>Guangzhou, China</span></p>
+          <h1>Your professional garment accessory <em>supplier in China.</em></h1>
+          <p>OEM and custom development for fashion brands, designers, importers and garment manufacturers. Send your reference to receive suitable options, MOQ and lead time.</p>
+          <div className="hero-actions"><a className="button button-dark" href="#contact">Request samples & quote <ArrowRight size={17} /></a><a className="button button-outline" href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">Chat on WhatsApp <ArrowRight size={15} /></a></div>
           <div className="trust-badges">{trust.map((item) => <span key={item}><BadgeCheck size={15} />{item}</span>)}</div>
-        </div>
-        <div className="hero-visual" aria-label="Premium embroidery lace and 3D floral appliques">
-          <div className="hero-main-image"><img src={mediaUrl("embroidered-lace/embroidered-lace-butterfly.webp")} alt="pastel butterfly embroidered mesh lace trim" width="1100" height="1100" fetchPriority="high" decoding="async" /></div>
-          <div className="hero-small-image"><img src={mediaUrl("embroidered-lace/embroidered-lace-gold-floral.webp")} alt="gold floral embroidered mesh lace trim" width="1100" height="1100" decoding="async" /></div>
-          <div className="hero-stamp"><Sparkles size={18} /><span>Custom colors<br />& motifs</span></div>
         </div>
       </section>
 
@@ -64,24 +53,9 @@ export default function Home() {
         <div><strong>Guangzhou</strong><span>Textile supply chain access</span></div><div><strong>Custom</strong><span>Sampling from your reference</span></div><div><strong>Flexible</strong><span>MOQ by design and process</span></div><div><strong>Global</strong><span>Export and shipping support</span></div>
       </section>
 
-      <section className="section featured-lace-section">
-        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Featured embroidered lace</p><h2>Butterfly & floral collection.</h2><p>Soft mesh lace trims in delicate colors for dresses, childrenswear, occasionwear and decorative fashion details.</p></div>
-        <div className="featured-swatch-grid">{featuredEmbroidery.map(([name, image, alt]) => <a href="/embroidery-lace" key={name}><img src={mediaUrl(image)} alt={alt} width="1100" height="1100" loading="lazy" decoding="async" /><span>{name}</span></a>)}</div>
-        <div className="featured-lace-actions"><a className="button button-gold" href="/embroidery-lace">Explore embroidered lace <ArrowRight size={16} /></a><a className="text-link" href="https://ruiyuelai.x.yupoo.com/albums/244212977?uid=1" target="_blank" rel="noreferrer">View full photo album <ArrowRight size={15} /></a></div>
-      </section>
-
       <section className="section" id="collections">
-        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product categories</p><h2>Lace collections for modern fashion.</h2></div><p>Explore wholesale-ready collections, then customize the color, width, motif and finish for your brand or garment program.</p></div>
-        <div className="category-spec-grid">{categories.map((item, i) => <article className="category-spec-card" key={item.slug}>
-          <a className="category-spec-image" href={`/${item.slug}`}><img src={item.image} alt={item.alt} width="900" height="700" loading="lazy" decoding="async" /><span>0{i + 1}</span></a>
-          <div className="category-spec-body">
-            <span className="category-spec-tag">Custom & wholesale</span>
-            <h3><a href={`/${item.slug}`}>{item.name}</a></h3>
-            <p>{item.description}</p>
-            <dl><div><dt>MOQ</dt><dd>Flexible</dd></div><div><dt>Sample</dt><dd>7–14 days</dd></div><div><dt>Service</dt><dd>OEM / Custom</dd></div></dl>
-            <a className="category-spec-cta" href={`/${item.slug}`}>View & request quote <ArrowRight size={15} /></a>
-          </div>
-        </article>)}</div>
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product collections</p><h2>Browse our lace & accessory ranges.</h2></div><p>Each range supports wholesale supply and custom development. Open a collection to view representative styles and request samples.</p></div>
+        <div className="loti-range-grid">{categories.map((item) => <article className="loti-range-card" key={item.slug}><img src={item.image} alt={item.alt} width="900" height="900" loading="lazy" decoding="async" /><span className="loti-range-overlay" /><div><h3>{item.name}</h3><a href={`/${item.slug}`}>View more <ArrowRight size={14} /></a></div></article>)}</div>
       </section>
 
       <section className="section trending-section" id="products">
