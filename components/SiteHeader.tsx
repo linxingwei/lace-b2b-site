@@ -3,7 +3,7 @@ import { ArrowRight, Menu, MessageCircle } from "lucide-react";
 const links = [
   ["Home", "/"], ["Products", "/products"], ["Lace Trim", "/lace-trim"],
   ["Applique", "/3d-flower-applique"], ["Custom Design", "/custom-design"],
-  ["About Us", "/about-us"], ["Blog", "/blog"], ["Contact", "/#contact"],
+  ["About Us", "/about"], ["Blog", "/blog"], ["Contact", "/#contact"],
 ];
 
 export default function SiteHeader() {

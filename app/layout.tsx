@@ -33,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <div className="footer-brand"><a className="logo logo-light" href="/"><strong>VELORACE</strong><span>LACE</span></a><p>Guangzhou lace and fashion accessories supplier coordinating custom development and wholesale production for global buyers.</p></div>
           <div><h3>Collections</h3><a href="/products">All Products</a><a href="/lace-trim">Lace Trim</a><a href="/embroidery-lace">Embroidery Lace</a><a href="/eyelash-lace">Eyelash Lace</a><a href="/bridal-lace">Bridal Lace</a><a href="/3d-flower-applique">3D Applique</a><a href="/kids-lace-trim">Kids Lace Trim</a></div>
-          <div><h3>Company</h3><a href="/custom-design">Custom Design</a><a href="/about-us">About Us</a><a href="/blog">Blog</a><a href="/contact">Contact</a></div>
+          <div><h3>Company</h3><a href="/custom-design">Custom Design</a><a href="/about">About Us</a><a href="/blog">Blog</a><a href="/contact">Contact</a></div>
           <div><h3>Get in touch</h3><a href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">WhatsApp Business</a><span>+86 157 6795 6637</span><span>Guangzhou, China</span><small>Monday-Saturday - 9:00-18:00 CST</small></div>
           <div className="footer-bottom"><span>Copyright 2026 Velorace Lace. All rights reserved.</span><span>Wholesale supply - Custom development - Worldwide shipping</span></div>
         </footer>

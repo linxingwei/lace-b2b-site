@@ -1,4 +1,5 @@
 import { ArrowRight, BadgeCheck, Box, Factory, Globe2, Lightbulb, PackageCheck, Palette, Send, SwatchBook, Truck, UsersRound } from "lucide-react";
+import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import QuoteForm from "@/components/QuoteForm";
 import { articles, trendingProducts } from "@/lib/site-data";
@@ -71,6 +72,20 @@ export default function Home() {
         <div className="product-grid product-grid-three">{trendingProducts.map((product) => <ProductCard key={product.id} {...product} />)}</div>
       </section>
 
+      <section className="section home-editorial-section">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product insight & sourcing</p><h2>Inspiration backed by a clear process.</h2></div><p>Explore current lace directions and understand the typical production stages behind sampling, inspection and finishing.</p></div>
+        <div className="home-editorial-grid">
+          <article>
+            <a className="home-editorial-image" href="/blog/lace-trim-trends-2026"><Image src="/images/home/2026-lace-trim-trends.webp" alt="Twenty lace trim style ideas for bridal, fashion and decorative applications" width={1310} height={740} sizes="(max-width: 900px) 100vw, 50vw" /></a>
+            <div><p>Buyer inspiration</p><h3>2026 Lace Trim Trends</h3><span>Review dimensional florals, beaded trims, embroidered mesh, guipure, eyelash lace and other design directions.</span><a className="text-link" href="/blog/lace-trim-trends-2026">Read the trend guide <ArrowRight size={14} /></a></div>
+          </article>
+          <article>
+            <div className="home-editorial-image"><Image src="/images/home/production-workflow-reference.webp" alt="Illustrative overview of embroidery, inspection, finishing and material storage stages" width={856} height={572} sizes="(max-width: 900px) 100vw, 50vw" /></div>
+            <div><p>Production & sourcing</p><h3>How Lace Orders Move Forward</h3><span>An illustrative overview of embroidery, inspection and finishing stages. Specific production arrangements vary by design and order requirements.</span><a className="text-link" href="/about">About our sourcing process <ArrowRight size={14} /></a></div>
+          </article>
+        </div>
+      </section>
+
       <aside className="mid-cta"><div><p>Have a reference image, sample or tech pack?</p><h2>Get a sourcing recommendation before you order.</h2></div><a className="button button-light" href="#contact">Request samples & quote <ArrowRight size={17} /></a></aside>
 
       <section className="section application-section">
@@ -79,7 +94,7 @@ export default function Home() {
       </section>
 
       <section className="why-section" id="about">
-        <div className="why-intro"><p className="eyebrow eyebrow-light"><span /> Why choose us</p><h2>Why Choose<br /><em>Velorace Lace?</em></h2><p>A sourcing partner that understands fashion detail, wholesale timelines and the importance of consistent repeat orders.</p><a className="button button-light" href="/about-us">About our company <ArrowRight size={17} /></a></div>
+        <div className="why-intro"><p className="eyebrow eyebrow-light"><span /> Why choose us</p><h2>Why Choose<br /><em>Velorace Lace?</em></h2><p>A sourcing partner that understands fashion detail, wholesale timelines and the importance of consistent repeat orders.</p><a className="button button-light" href="/about">About our company <ArrowRight size={17} /></a></div>
         <div className="why-grid">{advantages.map(({ icon: Icon, title, text }) => <article key={title}><Icon /><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 
@@ -89,7 +104,7 @@ export default function Home() {
       </section>
 
       <section className="factory-section">
-        <div className="factory-copy"><p className="eyebrow"><span /> Supply chain & quality workflow</p><h2>Your Lace Sourcing & Production Partner in Guangzhou</h2><p>Velorace Lace coordinates design selection, sample development, production follow-up and finished-product review through professional lace manufacturing resources in Guangzhou. We give overseas buyers one clear point of contact from reference to delivery.</p><ul><li><UsersRound size={17} /> Dedicated wholesale communication</li><li><Box size={17} /> Approved sample as the bulk reference</li><li><Factory size={17} /> Production partner coordination</li></ul><a className="button button-dark" href="/about-us">See how we work <ArrowRight size={17} /></a></div>
+        <div className="factory-copy"><p className="eyebrow"><span /> Supply chain & quality workflow</p><h2>Your Lace Sourcing & Production Partner in Guangzhou</h2><p>Velorace Lace coordinates design selection, sample development, production follow-up and finished-product review through professional lace manufacturing resources in Guangzhou. We give overseas buyers one clear point of contact from reference to delivery.</p><ul><li><UsersRound size={17} /> Dedicated wholesale communication</li><li><Box size={17} /> Approved sample as the bulk reference</li><li><Factory size={17} /> Production partner coordination</li></ul><a className="button button-dark" href="/about">See how we work <ArrowRight size={17} /></a></div>
         <div className="factory-gallery">
           <figure><img src={mediaUrl("pastel-assortment.jpg")} alt="3D floral lace applique design selection" width="700" height="700" loading="lazy" decoding="async" /><figcaption>Design selection</figcaption></figure>
           <figure><img src={mediaUrl("grey-rhinestone.jpg")} alt="grey layered rhinestone lace applique detail" width="700" height="700" loading="lazy" decoding="async" /><figcaption>Material and finish review</figcaption></figure>
