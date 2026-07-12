@@ -1,13 +1,21 @@
 import { ArrowRight, BadgeCheck, Box, Factory, Globe2, Lightbulb, PackageCheck, Palette, Send, SwatchBook, Truck, UsersRound } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import QuoteForm from "@/components/QuoteForm";
-import { articles, categories, trendingProducts } from "@/lib/site-data";
+import { articles, trendingProducts } from "@/lib/site-data";
 import { mediaUrl } from "@/lib/media";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata("China Lace & Garment Accessories Supplier for Fashion Brands", "Velorace Lace supplies custom lace trims, bridal lace, embroidery and 3D appliques for global fashion brands and garment manufacturers.", "/");
 
 const trust = ["Guangzhou China Supply Chain", "OEM & Custom Design", "Worldwide Shipping", "Low MOQ Available"];
+const homeRanges = [
+  { name: "3D Floral Patches", href: "/3d-flower-applique", image: mediaUrl("home-ranges/3d-floral.webp"), alt: "3D fabric flower patches in multiple colors" },
+  { name: "Elegant Lace Trim", href: "/lace-trim", image: mediaUrl("home-ranges/elegant-lace.webp"), alt: "colorful decorative lace trims on display" },
+  { name: "Bead & Rhinestone", href: "/bridal-lace", image: mediaUrl("home-ranges/bead-rhinestone.webp"), alt: "beaded and rhinestone embroidery appliques" },
+  { name: "Embroidery Appliques", href: "/embroidery-lace", image: mediaUrl("home-ranges/embroidery-appliques.webp"), alt: "blue and ivory floral embroidery appliques" },
+  { name: "Crochet & Guipure", href: "/lace-trim", image: mediaUrl("home-ranges/crochet-guipure.webp"), alt: "white crochet and guipure lace motifs" },
+  { name: "Handcrafted Patch", href: "/custom-design", image: mediaUrl("home-ranges/handcrafted-patch.webp"), alt: "green handcrafted beaded palm tree patches" },
+] as const;
 const applications = [
   { title: "Wedding Dress", text: "Bridal lace supplier for wedding gowns and couture fashion.", image: mediaUrl("luxury-beaded.jpg"), alt: "bridal lace supplier for wedding dress designers" },
   { title: "Children's Clothing", text: "Soft decorative lace trims for baby and kids apparel.", image: mediaUrl("yellow-floral.jpg"), alt: "soft kids lace trim for children's clothing" },
@@ -55,7 +63,7 @@ export default function Home() {
 
       <section className="section" id="collections">
         <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product collections</p><h2>Browse our lace & accessory ranges.</h2></div><p>Each range supports wholesale supply and custom development. Open a collection to view representative styles and request samples.</p></div>
-        <div className="loti-range-grid">{categories.map((item) => <article className="loti-range-card" key={item.slug}><img src={item.image} alt={item.alt} width="900" height="900" loading="lazy" decoding="async" /><span className="loti-range-overlay" /><div><h3>{item.name}</h3><a href={`/${item.slug}`}>View more <ArrowRight size={14} /></a></div></article>)}</div>
+        <div className="loti-range-grid">{homeRanges.map((item) => <article className="loti-range-card" key={item.name}><img src={item.image} alt={item.alt} width="1100" height="1100" loading="lazy" decoding="async" /><span className="loti-range-overlay" /><div><h3>{item.name}</h3><a href={item.href}>View more <ArrowRight size={14} /></a></div></article>)}</div>
       </section>
 
       <section className="section trending-section" id="products">
