@@ -7,7 +7,7 @@ export default function CategoryPage({ category }: { category: CategoryData }) {
   const url = absoluteUrl(`/${category.slug}`);
   const breadcrumbId = `${url}#breadcrumb`;
   const faqs = [
-    [`Can you customize ${category.name.toLowerCase()}?`, `Yes. Velorace Lace supports color, size, motif, material and finish development for ${category.name.toLowerCase()} projects. Send a reference and target quantity for evaluation.`],
+    [`Can you customize ${category.name.toLowerCase()}?`, `Yes. Velora Lace supports color, size, motif, material and finish development for ${category.name.toLowerCase()} projects. Send a reference and target quantity for evaluation.`],
     [`What is the MOQ for ${category.name.toLowerCase()}?`, "MOQ depends on whether the design is stocked or custom and on the amount of embroidery or handwork. We confirm the practical minimum after reviewing your requirement."],
     ["Can I request a sample before bulk production?", "Yes. A physical sample is recommended so material, color, dimensions and workmanship can be approved before bulk production."],
   ];

@@ -18,7 +18,7 @@ export const categories: CategoryData[] = [
   {
     slug: "lace-trim",
     name: "Lace Trim",
-    title: "Wholesale Lace Trim Manufacturer in China | Velorace Lace",
+    title: "Wholesale Lace Trim Manufacturer in China | Velora Lace",
     description: "Professional lace trim supplier offering embroidery lace, cotton lace, eyelash lace and fashion trims for global buyers.",
     intro: "Source dependable lace trims for fashion, bridal, lingerie, childrenswear and accessories. We support stock selection, color matching and custom motif development for wholesale buyers.",
     image: mediaUrl("yellow-floral.jpg"),

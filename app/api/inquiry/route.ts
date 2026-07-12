@@ -48,7 +48,7 @@ async function deliverEmail(resendKey: string, toEmail: string, fromEmail: strin
       signal: AbortSignal.timeout(deliveryTimeoutMs),
       body: JSON.stringify({
         from: fromEmail, to: [toEmail], reply_to: inquiry.email,
-        subject: `[Velorace Lace] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.product}`,
+        subject: `[Velora Lace] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.product}`,
         text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`].join("\n"),
       }),
     });
