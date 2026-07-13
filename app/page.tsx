@@ -98,7 +98,7 @@ export default function Home() {
         <div className="home-capability-media"><Image src="/images/home/production-workflow-reference.webp" alt="illustrative embroidery, inspection, finishing and material storage stages" width={856} height={572} sizes="(max-width: 900px) 100vw, 55vw" /></div>
       </section>
 
-      <section className="section home-manufacturing-section">
+      <section className="section home-manufacturing-section" id="manufacturing">
         <div className="section-heading centered-heading"><p className="eyebrow"><span /> Manufacturing process</p><h2>From requirement to delivery.</h2><p>A clear approval workflow helps protect quality, timing and repeat-order consistency.</p></div>
         <div className="home-process-grid">{manufacturingProcess.map(([number, title, Icon, text]) => <article key={number}><span>{number}</span><Icon aria-hidden="true" /><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
