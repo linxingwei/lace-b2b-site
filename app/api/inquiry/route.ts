@@ -52,9 +52,14 @@ async function deliverEmail(resendKey: string, toEmail: string, fromEmail: strin
         text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`].join("\n"),
       }),
     });
-    return response.ok;
-  } catch {
-    return false;
+    if (response.ok) return { delivered: true, status: "sent" };
+
+    const error = (await response.text()).slice(0, 500);
+    console.error("Resend inquiry delivery failed", { status: response.status, error });
+    return { delivered: false, status: `resend_http_${response.status}` };
+  } catch (error) {
+    console.error("Resend inquiry request failed", error instanceof Error ? error.message : "Unknown error");
+    return { delivered: false, status: "resend_request_failed" };
   }
 }
 
@@ -78,12 +83,20 @@ export async function POST(request: Request) {
     const resendDomain = clean(process.env.RESEND_EMAIL_DOMAIN, 200).replace(/^https?:\/\//, "").replace(/\/$/, "");
     const fromEmail = process.env.INQUIRY_FROM_EMAIL || (resendDomain ? `Velora Lace <inquiries@${resendDomain}>` : "");
     const submittedAt = new Date().toISOString();
-    const [webhookDelivered, emailDelivered] = await Promise.all([
+    const emailPromise = !resendKey
+      ? Promise.resolve({ delivered: false, status: "missing_resend_api_key" })
+      : !fromEmail
+        ? Promise.resolve({ delivered: false, status: "missing_resend_sender" })
+        : deliverEmail(resendKey, toEmail, fromEmail, inquiry);
+    const [webhookDelivered, emailResult] = await Promise.all([
       webhook ? deliverWebhook(webhook, inquiry, submittedAt) : Promise.resolve(false),
-      resendKey && fromEmail ? deliverEmail(resendKey, toEmail, fromEmail, inquiry) : Promise.resolve(false),
+      emailPromise,
     ]);
-    const delivered = webhookDelivered || emailDelivered;
-    return NextResponse.json({ ok: true, delivered, fallback: delivered ? undefined : "whatsapp" }, { status: delivered ? 200 : 202 });
+    const delivered = webhookDelivered || emailResult.delivered;
+    return NextResponse.json(
+      { ok: true, delivered, emailStatus: emailResult.status, fallback: delivered ? undefined : "whatsapp" },
+      { status: delivered ? 200 : 202 },
+    );
   } catch {
     return NextResponse.json({ ok: false, error: "Unable to process the inquiry." }, { status: 500 });
   }
