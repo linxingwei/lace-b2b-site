@@ -79,7 +79,7 @@ export async function POST(request: Request) {
 
     const webhook = process.env.INQUIRY_WEBHOOK_URL;
     const resendKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.INQUIRY_TO_EMAIL || "1650378792@qq.com";
+    const toEmail = process.env.INQUIRY_TO_EMAIL || "sales@veloracelace.com";
     const resendDomain = clean(process.env.RESEND_EMAIL_DOMAIN, 200).replace(/^https?:\/\//, "").replace(/\/$/, "");
     const fromEmail = process.env.INQUIRY_FROM_EMAIL || (resendDomain ? `Velora Lace <inquiries@${resendDomain}>` : "");
     const submittedAt = new Date().toISOString();

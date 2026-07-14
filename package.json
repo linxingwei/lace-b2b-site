@@ -1,12 +1,13 @@
 {
-  "name": "velorace-lace",
+  "name": "velora-lace",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:audit": "node scripts/audit-indexability.mjs"
   },
   "dependencies": {
     "next": "14.2.35",

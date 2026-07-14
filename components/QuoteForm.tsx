@@ -2,6 +2,7 @@
 
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { FormEvent, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "sending" | "sent" | "fallback" | "error";
 type WhatsAppFallback = { url: string; product: string };
@@ -9,11 +10,6 @@ type WhatsAppFallback = { url: string; product: string };
 export default function QuoteForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [whatsappFallback, setWhatsappFallback] = useState<WhatsAppFallback | null>(null);
-
-  function trackLead(method: string, product: string) {
-    const target = window as Window & { dataLayer?: Record<string, unknown>[] };
-    target.dataLayer?.push({ event: "generate_lead", inquiry_method: method, product_category: product });
-  }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,7 +34,7 @@ export default function QuoteForm() {
       if (response.ok && result.delivered) {
         setStatus("sent");
         form.reset();
-        trackLead("form", product);
+        trackEvent("generate_lead", { inquiry_method: "form", product_category: product });
         return;
       }
       if (response.ok && result.fallback === "whatsapp") {
@@ -60,7 +56,7 @@ export default function QuoteForm() {
       <label>REQUIREMENT<textarea name="requirement" required maxLength={1600} rows={5} placeholder="Please include quantity, color, size, application and destination country." /></label>
       <button className="button button-gold" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending inquiry..." : "Send wholesale inquiry"}<ArrowRight size={17} /></button>
       <p className={`form-note form-${status}`} aria-live="polite">{status === "sent" ? "Thank you. Your inquiry was sent to our trade team and we will reply shortly." : status === "fallback" ? "Automatic delivery was unavailable. Continue in WhatsApp below, then tap Send to complete your inquiry." : status === "error" ? "We could not submit these details. Please review the required fields or use WhatsApp Business." : "Your details remain private. We typically reply within one business day."}</p>
-      {status !== "sent" && <a className={`form-whatsapp${whatsappFallback ? " form-whatsapp-fallback" : ""}`} href={whatsappFallback?.url || "https://wa.me/message/IXEEGXESENF6F1"} target="_blank" rel="noreferrer" onClick={whatsappFallback ? () => trackLead("whatsapp", whatsappFallback.product) : undefined}><MessageCircle size={16} /> {whatsappFallback ? "Continue in WhatsApp" : "Prefer WhatsApp Business?"}</a>}
+      {status !== "sent" && <a className={`form-whatsapp${whatsappFallback ? " form-whatsapp-fallback" : ""}`} href={whatsappFallback?.url || "https://wa.me/message/IXEEGXESENF6F1"} target="_blank" rel="noreferrer"><MessageCircle size={16} /> {whatsappFallback ? "Continue in WhatsApp" : "Prefer WhatsApp Business?"}</a>}
     </form>
   );
 }

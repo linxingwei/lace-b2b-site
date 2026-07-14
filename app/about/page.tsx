@@ -76,7 +76,7 @@ export default function AboutPage() {
         legalName: "Guangzhou Ruiyuelai Trading Co., Ltd.",
         url: siteUrl,
         telephone: "+86 157 6795 6637",
-        email: "1650378792@qq.com",
+        email: "sales@veloracelace.com",
         address: { "@type": "PostalAddress", addressLocality: "Guangzhou", addressRegion: "Guangdong", addressCountry: "CN" },
         sameAs: ["https://wa.me/message/IXEEGXESENF6F1"],
       },
