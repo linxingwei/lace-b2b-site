@@ -16,6 +16,7 @@ import {
 import QuoteForm from "@/components/QuoteForm";
 import { mediaUrl } from "@/lib/media";
 import { createPageMetadata } from "@/lib/seo";
+import { bridalApplique } from "@/lib/products";
 
 export const metadata = createPageMetadata(
   "Premium Lace Manufacturer & Custom Embellishment Supplier",
@@ -92,6 +93,8 @@ export default function Home() {
         <div className="trend-product-grid">{trends.map((item, index) => <a href={item.href} key={item.name} className="trend-product-card"><div><Image src={item.image} alt={item.alt} width={1100} height={1100} sizes="(max-width: 700px) 50vw, 20vw" /><span>{String(index + 1).padStart(2, "0")}</span></div><small>{item.type}</small><h3>{item.name}</h3></a>)}</div>
         <div className="home-section-action"><a className="button button-dark" href="/products">Explore product collections <ArrowRight size={16} /></a></div>
       </section>
+
+      <section className="section home-featured-product"><div className="home-featured-product-copy"><p className="eyebrow"><span /> Featured custom design</p><h2>{bridalApplique.name}</h2><p>An ivory mirrored appliqué pair with dimensional organza flowers, embroidery, pearls and sequins. Sample development and custom colors, sizes and motifs are available.</p><div><span>SKU {bridalApplique.sku}</span><span>MOQ 30 Pairs</span><span>Bridal Lace / 3D Appliqué</span></div><a className="button button-dark" href={`/products/${bridalApplique.slug}`}>View product <ArrowRight size={16} /></a></div><a className="home-featured-product-media" href={`/products/${bridalApplique.slug}`}><Image src={bridalApplique.image} alt={bridalApplique.imageAlt} width={1122} height={1402} sizes="(max-width: 900px) 100vw, 45vw" /></a></section>
 
       <section className="home-capability-section">
         <div className="home-capability-copy"><p className="eyebrow"><span /> Factory capability</p><h2>Manufacturing support for dependable wholesale supply.</h2><p>We coordinate suitable embroidery, lace and embellishment production resources according to each design, technique and order requirement. Buyers receive one clear point of contact from sampling through delivery.</p><ul><li><BadgeCheck /> Specialized embroidery and lace production</li><li><BadgeCheck /> Material and color coordination</li><li><BadgeCheck /> In-process follow-up and finished-product review</li><li><BadgeCheck /> Export packing and logistics support</li></ul><small>Production imagery is illustrative. Specific production arrangements vary by product and order.</small><a className="button button-dark" href="/about">About our capabilities <ArrowRight size={16} /></a></div>

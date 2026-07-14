@@ -5,6 +5,8 @@ type Inquiry = {
   email?: string;
   whatsapp?: string;
   product?: string;
+  productName?: string;
+  sku?: string;
   request?: string;
   requirement?: string;
   page?: string;
@@ -20,6 +22,8 @@ type CleanInquiry = {
   email: string;
   whatsapp: string;
   product: string;
+  productName: string;
+  sku: string;
   request: string;
   requirement: string;
   page: string;
@@ -48,8 +52,8 @@ async function deliverEmail(resendKey: string, toEmail: string, fromEmail: strin
       signal: AbortSignal.timeout(deliveryTimeoutMs),
       body: JSON.stringify({
         from: fromEmail, to: [toEmail], reply_to: inquiry.email,
-        subject: `[VELORACE LACE] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.product}`,
-        text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`].join("\n"),
+        subject: `[VELORACE LACE] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.sku || inquiry.product}`,
+        text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.productName || inquiry.product}`, inquiry.sku ? `SKU: ${inquiry.sku}` : "", `Category: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`].filter(Boolean).join("\n"),
       }),
     });
     if (response.ok) return { delivered: true, status: "sent" };
@@ -70,7 +74,7 @@ export async function POST(request: Request) {
 
     const inquiry = {
       name: clean(body.name, 100), email: clean(body.email, 160), whatsapp: clean(body.whatsapp, 80),
-      product: clean(body.product, 120), request: clean(body.request, 120), requirement: clean(body.requirement, 1600),
+      product: clean(body.product, 120), productName: clean(body.productName, 180), sku: clean(body.sku, 60), request: clean(body.request, 120), requirement: clean(body.requirement, 1600),
       page: clean(body.page, 300), source: clean(body.source, 200),
     };
     if (!inquiry.name || !inquiry.email || !inquiry.product || !inquiry.requirement || !/^\S+@\S+\.\S+$/.test(inquiry.email)) {

@@ -14,7 +14,8 @@ const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[
 const failures = [];
 
 for (const url of urls) {
-  const response = await fetch(url, { redirect: "follow" });
+  const requestUrl = new URL(new URL(url).pathname, baseUrl).toString();
+  const response = await fetch(requestUrl, { redirect: "follow" });
   const html = await response.text();
   const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)?.[1];
   const robots = html.match(/<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["']/i)?.[1] || "";
@@ -25,7 +26,8 @@ for (const url of urls) {
 }
 
 console.log(`Audited ${urls.length} sitemap URLs at ${baseUrl}`);
-if (urls.length !== 17) failures.push(`Expected 17 sitemap URLs, found ${urls.length}`);
+const expectedUrlCount = Number(process.env.SEO_AUDIT_EXPECTED_URLS || 22);
+if (urls.length !== expectedUrlCount) failures.push(`Expected ${expectedUrlCount} sitemap URLs, found ${urls.length}`);
 if (failures.length) {
   console.error(failures.join("\n"));
   process.exit(1);
