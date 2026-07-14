@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ArticleData, CategoryData } from "@/lib/site-data";
 
 export const siteUrl = "https://www.veloracelace.com";
-export const siteName = "Velora Lace";
+export const siteName = "VELORACE LACE";
 export const defaultOgImage = "/og.png";
 
 export function absoluteUrl(pathOrUrl: string) {
@@ -10,7 +10,7 @@ export function absoluteUrl(pathOrUrl: string) {
 }
 
 function pageTitle(title: string) {
-  return title.replace(/\s*\|\s*Velora Lace\s*$/i, "").trim();
+  return title.replace(/\s*\|\s*VELORACE LACE\s*$/i, "").trim();
 }
 
 function socialImages(image: string, alt: string) {

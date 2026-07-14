@@ -53,8 +53,8 @@ export default function SiteHeader() {
         </a>
       </div>
       <header className="site-header">
-        <a className="logo" href="/" aria-label="Velora Lace home">
-          <strong>VELORA</strong><span>LACE</span>
+        <a className="logo" href="/" aria-label="VELORACE LACE home">
+          <strong>VELORACE</strong><span>LACE</span>
         </a>
 
         <nav className="desktop-navigation" aria-label="Main navigation">
@@ -68,7 +68,7 @@ export default function SiteHeader() {
         <details className="mobile-menu">
           <summary aria-label="Open navigation"><Menu aria-hidden="true" /></summary>
           <div className="mobile-menu-panel">
-            <div className="mobile-menu-heading"><span>Navigation</span><small>Velora Lace</small></div>
+            <div className="mobile-menu-heading"><span>Navigation</span><small>VELORACE LACE</small></div>
             <a href="/">Home</a>
             <details className="mobile-products">
               <summary>Products <ChevronDown size={15} aria-hidden="true" /></summary>

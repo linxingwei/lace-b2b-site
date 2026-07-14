@@ -1,6 +1,6 @@
 # About page image needs
 
-The first published version uses verified product-display photographs already supplied by Velora Lace. These images are described as product selection, embellishment and workmanship examples; they are not presented as factory evidence.
+The first published version uses verified product-display photographs already supplied by VELORACE LACE. These images are described as product selection, embellishment and workmanship examples; they are not presented as factory evidence.
 
 Replace or add the following when original company photographs are available:
 

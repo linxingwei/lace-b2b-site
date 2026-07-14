@@ -18,8 +18,8 @@ import {
 } from "lucide-react";
 import { absoluteUrl, siteUrl } from "@/lib/seo";
 
-const pageTitle = "About Velora Lace | Lace Trim & Embroidery Appliqué Supplier";
-const pageDescription = "Learn about Velora Lace, a Guangzhou-based supplier of lace trims, embroidered appliqués, beaded motifs and custom fashion embellishments for bridal and garment businesses worldwide.";
+const pageTitle = "About VELORACE LACE | Lace Trim & Embroidery Appliqué Supplier";
+const pageDescription = "Learn about VELORACE LACE, a Guangzhou-based supplier of lace trims, embroidered appliqués, beaded motifs and custom fashion embellishments for bridal and garment businesses worldwide.";
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     url: `${siteUrl}/about`,
     type: "website",
     locale: "en_US",
-    siteName: "Velora Lace",
-    images: [{ url: absoluteUrl("/images/about/about-hero.webp"), width: 1100, height: 1100, alt: "Premium embroidered appliqués supplied by Velora Lace" }],
+    siteName: "VELORACE LACE",
+    images: [{ url: absoluteUrl("/images/about/about-hero.webp"), width: 1100, height: 1100, alt: "Premium embroidered appliqués supplied by VELORACE LACE" }],
   },
   twitter: { card: "summary_large_image", title: pageTitle, description: pageDescription, images: [absoluteUrl("/images/about/about-hero.webp")] },
   keywords: ["lace trim supplier", "embroidery appliqué manufacturer", "bridal lace supplier", "beaded appliqué wholesale", "custom garment accessories", "Guangzhou lace supplier", "fashion embellishment supplier"],
@@ -72,7 +72,7 @@ export default function AboutPage() {
       {
         "@type": "Organization",
         "@id": `${siteUrl}/#organization`,
-        name: "Velora Lace",
+        name: "VELORACE LACE",
         legalName: "Guangzhou Ruiyuelai Trading Co., Ltd.",
         url: siteUrl,
         telephone: "+86 157 6795 6637",
@@ -112,7 +112,7 @@ export default function AboutPage() {
         <div>
           <nav className="breadcrumb breadcrumb-light" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">About Us</span></nav>
           <p>Guangzhou lace & garment accessories supplier</p>
-          <h1>ABOUT VELORA LACE</h1>
+          <h1>ABOUT VELORACE LACE</h1>
           <h2>Crafted Details · Flexible Customization · Reliable Supply</h2>
           <span>Premium lace trims, embroidered appliqués and fashion embellishments for bridal, eveningwear and contemporary fashion.</span>
         </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
         <div className="about-copy-block">
           <p className="eyebrow"><span /> About our company</p>
           <h2>Your Lace & Embellishment Sourcing Partner</h2>
-          <p>Velora Lace is a Guangzhou-based supplier of premium lace trims, embroidered appliqués, beaded motifs, 3D floral embellishments and custom garment accessories.</p>
+          <p>VELORACE LACE is a Guangzhou-based supplier of premium lace trims, embroidered appliqués, beaded motifs, 3D floral embellishments and custom garment accessories.</p>
           <p>Located close to Guangzhou’s major textile and garment-accessory sourcing network, we help international buyers discover new designs, develop customized products and manage flexible wholesale orders.</p>
           <p>Our products are developed for bridal gowns, evening dresses, couture collections, dancewear, occasionwear and fashion accessories. We work with designers, boutiques, wholesalers, fashion brands and garment manufacturers around the world.</p>
           <p>From product selection and color matching to sampling, production and international delivery, our goal is to make the sourcing process clear, efficient and dependable.</p>
@@ -148,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       <section className="section about-advantages-v2">
-        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer advantages</p><h2>WHY CHOOSE VELORA LACE</h2></div>
+        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer advantages</p><h2>WHY CHOOSE VELORACE LACE</h2></div>
         <div className="about-card-grid about-advantage-grid">{advantages.map(({ icon: Icon, title, text }) => <article key={title}><Icon aria-hidden="true" /><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 

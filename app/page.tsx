@@ -19,7 +19,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata(
   "Premium Lace Manufacturer & Custom Embellishment Supplier",
-  "Velora Lace supplies lace trims, embroidered appliqués, beaded motifs and custom garment embellishments for bridal brands, designers and garment manufacturers worldwide.",
+  "VELORACE LACE supplies lace trims, embroidered appliqués, beaded motifs and custom garment embellishments for bridal brands, designers and garment manufacturers worldwide.",
   "/",
   "/images/about/about-hero.webp",
 );
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="loti-hero-content">
           <p className="loti-kicker">Guangzhou Lace Manufacturing & Sourcing</p>
           <h1>Premium Lace Trims & Embellishments for <em>Global Fashion Brands.</em></h1>
-          <p>Velora Lace supports bridal brands, fashion designers and garment manufacturers with product selection, custom development, coordinated production and reliable wholesale supply.</p>
+          <p>VELORACE LACE supports bridal brands, fashion designers and garment manufacturers with product selection, custom development, coordinated production and reliable wholesale supply.</p>
           <div className="hero-actions"><a className="button button-dark" href="#contact">Request samples & quote <ArrowRight size={17} /></a><a className="button button-outline" href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">Discuss your project <ArrowRight size={15} /></a></div>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       <section className="why-section home-why-section" id="about">
-        <div className="why-intro"><p className="eyebrow eyebrow-light"><span /> Why choose us</p><h2>A focused partner for <em>global fashion buyers.</em></h2><p>Professional sourcing support, practical customization and clear communication for wholesale lace and embellishment projects.</p><a className="button button-light" href="/about">About Velora Lace <ArrowRight size={17} /></a></div>
+        <div className="why-intro"><p className="eyebrow eyebrow-light"><span /> Why choose us</p><h2>A focused partner for <em>global fashion buyers.</em></h2><p>Professional sourcing support, practical customization and clear communication for wholesale lace and embellishment projects.</p><a className="button button-light" href="/about">About VELORACE LACE <ArrowRight size={17} /></a></div>
         <div className="why-grid home-why-grid">{advantages.map(({ icon: Icon, title, text }) => <article key={title}><Icon aria-hidden="true" /><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 

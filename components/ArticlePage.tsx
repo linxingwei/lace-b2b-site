@@ -30,12 +30,12 @@ export default function ArticlePage({ article }: { article: ArticleData }) {
         <a className="article-back" href="/blog"><ArrowLeft size={16} /> Back to insights</a>
         <p className="eyebrow"><span /> Sourcing insight</p>
         <h1>{article.title}</h1>
-        <div className="article-meta"><span>Velora Lace sourcing team</span><span>Updated July 2026</span><span>{article.readTime ?? "5 minute read"}</span></div>
+        <div className="article-meta"><span>VELORACE LACE sourcing team</span><span>Updated July 2026</span><span>{article.readTime ?? "5 minute read"}</span></div>
         <img className="article-cover" src={article.image} alt={article.alt} width="1200" height="800" fetchPriority="high" decoding="async" />
         <div className="article-body"><p className="article-lead">{article.description}</p>{article.sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}</div>
         {article.faqs?.length ? <section className="article-faq" aria-labelledby="article-faq-title"><p className="eyebrow"><span /> Buyer FAQ</p><h2 id="article-faq-title">Frequently asked questions.</h2><div className="faq-list">{article.faqs.map((faq, index) => <details key={faq.question} open={index === 0}><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></section> : null}
         <nav className="article-related" aria-label="Related product collections"><span>Related sourcing pages</span>{related.map((item) => <a href={item.href} key={item.href}>{item.label} <ArrowRight size={15} /></a>)}</nav>
-        <aside className="article-cta"><div><span>Planning a lace collection?</span><h2>Request samples and wholesale options.</h2></div><a className="button button-gold" href="/#contact">Contact Velora Lace <ArrowRight size={17} /></a></aside>
+        <aside className="article-cta"><div><span>Planning a lace collection?</span><h2>Request samples and wholesale options.</h2></div><a className="button button-gold" href="/#contact">Contact VELORACE LACE <ArrowRight size={17} /></a></aside>
       </article>
     </main>
   );

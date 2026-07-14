@@ -32,7 +32,7 @@ export default function ButterflyFloralTrimPage() {
         image: images.map(([image]) => absoluteUrl(image)),
         category: "Embroidered Lace Trim",
         material: "Embroidered mesh lace",
-        brand: { "@type": "Brand", name: "Velora Lace" },
+        brand: { "@type": "Brand", name: "VELORACE LACE" },
         additionalProperty: [
           { "@type": "PropertyValue", name: "Customization", value: "Color, motif, width and base material" },
           { "@type": "PropertyValue", name: "Supply type", value: "Wholesale and custom development" },
@@ -60,7 +60,7 @@ export default function ButterflyFloralTrimPage() {
           <p className="eyebrow"><span /> SKU VET-BF002</p>
           <h1>Butterfly & Floral<br /><em>Embroidered Lace Trim.</em></h1>
           <p>{description} Send your reference, target color, width, quantity and garment application for a practical quotation.</p>
-          <div className="hero-actions"><a className="button button-dark" href="/#contact">Request samples & quote <ArrowRight size={17} /></a><a className="text-link" href="https://wa.me/8615767956637?text=Hello%20Velora%20Lace%2C%20I%20would%20like%20to%20ask%20about%20VET-BF002." target="_blank" rel="noreferrer">Ask on WhatsApp <ArrowRight size={15} /></a></div>
+          <div className="hero-actions"><a className="button button-dark" href="/#contact">Request samples & quote <ArrowRight size={17} /></a><a className="text-link" href="https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20would%20like%20to%20ask%20about%20VET-BF002." target="_blank" rel="noreferrer">Ask on WhatsApp <ArrowRight size={15} /></a></div>
         </div>
         <div className="inner-hero-image"><Image src={images[0][0]} alt={images[0][1]} width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /></div>
       </section>

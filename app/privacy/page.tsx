@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "@/lib/seo";
 
-const baseMetadata = createPageMetadata("Privacy Policy", "How Velora Lace handles wholesale inquiry information and optional website analytics.", "/privacy");
+const baseMetadata = createPageMetadata("Privacy Policy", "How VELORACE LACE handles wholesale inquiry information and optional website analytics.", "/privacy");
 export const metadata: Metadata = { ...baseMetadata, robots: { index: false, follow: true } };
 
 export default function PrivacyPage() {
   return (
     <main className="legal-page">
-      <header><p>Last updated: July 13, 2026</p><h1>Privacy Policy</h1><span>Velora Lace uses personal information only to respond to wholesale inquiries, provide requested product information and improve this website with consent.</span></header>
+      <header><p>Last updated: July 13, 2026</p><h1>Privacy Policy</h1><span>VELORACE LACE uses personal information only to respond to wholesale inquiries, provide requested product information and improve this website with consent.</span></header>
       <section>
         <h2>Information you provide</h2>
         <p>When you submit an inquiry, we may receive your name, work email, WhatsApp number, product interest, quantity, application, destination and other details you choose to include.</p>

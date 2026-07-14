@@ -48,7 +48,7 @@ async function deliverEmail(resendKey: string, toEmail: string, fromEmail: strin
       signal: AbortSignal.timeout(deliveryTimeoutMs),
       body: JSON.stringify({
         from: fromEmail, to: [toEmail], reply_to: inquiry.email,
-        subject: `[Velora Lace] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.product}`,
+        subject: `[VELORACE LACE] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.product}`,
         text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`].join("\n"),
       }),
     });
@@ -81,7 +81,7 @@ export async function POST(request: Request) {
     const resendKey = process.env.RESEND_API_KEY;
     const toEmail = process.env.INQUIRY_TO_EMAIL || "sales@veloracelace.com";
     const resendDomain = clean(process.env.RESEND_EMAIL_DOMAIN, 200).replace(/^https?:\/\//, "").replace(/\/$/, "");
-    const fromEmail = process.env.INQUIRY_FROM_EMAIL || (resendDomain ? `Velora Lace <inquiries@${resendDomain}>` : "");
+    const fromEmail = process.env.INQUIRY_FROM_EMAIL || (resendDomain ? `VELORACE LACE <inquiries@${resendDomain}>` : "");
     const submittedAt = new Date().toISOString();
     const emailPromise = !resendKey
       ? Promise.resolve({ delivered: false, status: "missing_resend_api_key" })

@@ -18,7 +18,7 @@ export default function QuoteForm() {
     const fields = Object.fromEntries(data.entries());
     const params = new URLSearchParams(window.location.search);
     const payload = { ...fields, page: window.location.href, source: params.get("utm_source") || document.referrer || "direct" };
-    const message = ["Hello Velora Lace, I would like to discuss a wholesale inquiry.", `Name: ${fields.name}`, `Email: ${fields.email}`, `WhatsApp: ${fields.whatsapp}`, `Product: ${fields.product}`, `Request: ${fields.request}`, `Quantity / requirement: ${fields.requirement}`, `Page: ${window.location.href}`].join("\n");
+    const message = ["Hello VELORACE LACE, I would like to discuss a wholesale inquiry.", `Name: ${fields.name}`, `Email: ${fields.email}`, `WhatsApp: ${fields.whatsapp}`, `Product: ${fields.product}`, `Request: ${fields.request}`, `Quantity / requirement: ${fields.requirement}`, `Page: ${window.location.href}`].join("\n");
     const whatsappUrl = `https://wa.me/8615767956637?text=${encodeURIComponent(message)}`;
     const product = String(fields.product || "");
     const offerWhatsAppFallback = () => {
