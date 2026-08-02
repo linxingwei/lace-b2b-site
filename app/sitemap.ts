@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articleRoutes = articles.map((article) => ({ url: `${base}/blog/${article.slug}`, lastModified: new Date(article.date), changeFrequency: "monthly" as const, priority: 0.7 }));
   const productRoutes = [
     { url: `${base}/products/butterfly-floral-embroidered-trim`, lastModified: new Date("2026-07-13"), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${base}/custom-embroidered-lace-trim`, lastModified: new Date("2026-08-02"), changeFrequency: "monthly" as const, priority: 0.8 },
   ];
   const coreRoutes = [
     { path: "", priority: 1, frequency: "weekly" as const }, { path: "/products", priority: 0.9, frequency: "weekly" as const },
