@@ -12,6 +12,7 @@ export type CategoryData = {
   highlights: string[];
   gallery?: { image: string; alt: string }[];
   catalogUrl?: string;
+  featuredArticle?: { href: string; label: string; title: string; description: string };
 };
 
 export const categories: CategoryData[] = [
@@ -67,6 +68,12 @@ export const categories: CategoryData[] = [
     alt: "luxury bridal lace applique manufacturer",
     applications: ["Wedding gowns", "Bridal veils", "Couture bodices", "Bridal belts and accessories"],
     highlights: ["Couture handwork", "Matching applique sets", "Custom ivory tones", "Design confidentiality"],
+    featuredArticle: {
+      href: "/blog/embroidered-lace-applique-trends-2026",
+      label: "2026 bridal trend report",
+      title: "Top 10 Embroidered Lace Applique Trends for Wedding Dresses",
+      description: "See how tonal embroidery, narrative motifs and modular lace details translate into sourcing decisions for 2026 bridal collections.",
+    },
   },
   {
     slug: "3d-flower-applique",
@@ -109,6 +116,7 @@ export type ArticleData = {
   image: string;
   alt: string;
   date: string;
+  modifiedDate?: string;
   sections: { heading: string; paragraphs: string[]; image?: string; alt?: string; caption?: string }[];
   faqs?: { question: string; answer: string }[];
   related?: { href: string; label: string }[];
@@ -118,19 +126,37 @@ export type ArticleData = {
   ctaHeading?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  summary?: string;
+  keyTakeaways?: string[];
+  methodology?: string;
+  authorNote?: string;
+  entities?: string[];
+  isListArticle?: boolean;
 };
 
 export const articles: ArticleData[] = [
   {
     slug: "embroidered-lace-applique-trends-2026",
     title: "Top 10 Embroidered Lace Applique Trends for Wedding Dresses in 2026",
-    seoTitle: "10 Embroidered Lace Applique Trends for Wedding Dresses 2026",
+    seoTitle: "Embroidered Lace Applique Trends 2026 for Wedding Dresses",
     keyword: "embroidered lace applique trends 2026",
     description: "Discover 10 embroidered lace applique trends shaping 2026 bridal design, from tonal ivory texture and bows to narrative custom motifs and detachable accents.",
     image: "/images/blog/bridal-lace-trends/swan-blue-bow-embroidered-lace-trim-2026.jpg",
     alt: "Ivory swan and blue bow embroidered lace trim for 2026 bridal design inspiration",
     date: "2026-08-03",
+    modifiedDate: "2026-08-03",
     readTime: "10 minute read",
+    isListArticle: true,
+    entities: ["embroidered lace applique", "bridal lace", "wedding dress", "custom lace trim", "detachable bridal accessories"],
+    summary: "The defining embroidered lace applique direction for 2026 wedding dresses is lightweight personalization: tonal ivory texture, restrained color, narrative motifs and modular trims that can move between the ceremony gown, detachable accessories and a reception look.",
+    keyTakeaways: [
+      "Use tonal ivory embroidery and negative space to add texture without making the gown feel heavy.",
+      "Treat the photographed novelty samples as construction and customization references, not as claims that every motif is a mainstream bridal trend.",
+      "Design repeats as modular systems so a trim can remain a border or be cut into individual appliques after testing.",
+      "Approve color, drape, fraying and placement on the final gown fabric before bulk production.",
+    ],
+    methodology: "This guide separates published 2026 runway signals from VELORACE LACE's product-development interpretation. Vogue, Pronovias and Martha Stewart inform the bridal market context; the photographed pieces are real embroidery lace samples used to explain construction, color and customization possibilities. They are not runway photographs, and not every novelty motif is presented as a mainstream wedding-gown trend.",
+    authorNote: "The VELORACE LACE sourcing team coordinates embroidery lace sampling, color matching, motif development and bulk-order preparation for bridal designers, fashion brands and garment manufacturers from Guangzhou, China.",
     ctaEyebrow: "Developing a 2026 bridal collection?",
     ctaHeading: "Turn your motif direction into a production-ready lace sample.",
     ctaLabel: "Request Custom Lace Samples",

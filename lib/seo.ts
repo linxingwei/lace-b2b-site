@@ -52,16 +52,19 @@ export function categoryMetadata(category: CategoryData): Metadata {
 
 export function articleMetadata(article: ArticleData): Metadata {
   const metadata = createPageMetadata(article.seoTitle ?? article.title, article.description, `/blog/${article.slug}`, article.image);
+  const modifiedTime = article.modifiedDate ?? article.date;
   return {
     ...metadata,
-    keywords: [article.keyword, "embroidered lace applique", "bridal lace", "wedding dress lace"],
+    keywords: [article.keyword, "embroidered lace applique", "bridal lace", "wedding dress lace", ...(article.entities ?? [])],
     authors: [{ name: `${siteName} sourcing team`, url: siteUrl }],
     openGraph: {
       ...metadata.openGraph,
       type: "article",
       publishedTime: article.date,
-      modifiedTime: article.date,
+      modifiedTime,
       authors: [siteUrl],
+      section: "Bridal lace sourcing",
+      tags: [article.keyword, ...(article.entities ?? [])],
     },
   };
 }

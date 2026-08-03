@@ -8,6 +8,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Bingbot", allow: "/", disallow: ["/api/"] },
       { userAgent: "OAI-SearchBot", allow: "/", disallow: ["/api/"] },
       { userAgent: "ChatGPT-User", allow: "/", disallow: ["/api/"] },
+      { userAgent: "PerplexityBot", allow: "/", disallow: ["/api/"] },
+      { userAgent: "Perplexity-User", allow: "/", disallow: ["/api/"] },
     ],
     sitemap: "https://www.veloracelace.com/sitemap.xml",
     host: "https://www.veloracelace.com",
