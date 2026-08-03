@@ -103,18 +103,157 @@ export const trendingProducts = [
 export type ArticleData = {
   slug: string;
   title: string;
+  seoTitle?: string;
   keyword: string;
   description: string;
   image: string;
   alt: string;
   date: string;
-  sections: { heading: string; paragraphs: string[] }[];
+  sections: { heading: string; paragraphs: string[]; image?: string; alt?: string; caption?: string }[];
   faqs?: { question: string; answer: string }[];
   related?: { href: string; label: string }[];
+  sources?: { href: string; label: string }[];
   readTime?: string;
+  ctaEyebrow?: string;
+  ctaHeading?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 export const articles: ArticleData[] = [
+  {
+    slug: "embroidered-lace-applique-trends-2026",
+    title: "Top 10 Embroidered Lace Applique Trends for Wedding Dresses in 2026",
+    seoTitle: "10 Embroidered Lace Applique Trends for Wedding Dresses 2026",
+    keyword: "embroidered lace applique trends 2026",
+    description: "Discover 10 embroidered lace applique trends shaping 2026 bridal design, from tonal ivory texture and bows to narrative custom motifs and detachable accents.",
+    image: "/images/blog/bridal-lace-trends/swan-blue-bow-embroidered-lace-trim-2026.jpg",
+    alt: "Ivory swan and blue bow embroidered lace trim for 2026 bridal design inspiration",
+    date: "2026-08-03",
+    readTime: "10 minute read",
+    ctaEyebrow: "Developing a 2026 bridal collection?",
+    ctaHeading: "Turn your motif direction into a production-ready lace sample.",
+    ctaLabel: "Request Custom Lace Samples",
+    ctaHref: "/#contact",
+    related: [
+      { href: "/bridal-lace", label: "Bridal Lace" },
+      { href: "/embroidery-lace", label: "Embroidery Lace" },
+      { href: "/3d-flower-applique", label: "3D Flower Applique" },
+      { href: "/custom-design", label: "Custom Lace Design" },
+      { href: "/contact", label: "Contact Us" },
+    ],
+    sources: [
+      { href: "https://www.vogue.com/article/lace-wedding-dress-trend-2026", label: "Vogue: lace wedding dresses in 2026" },
+      { href: "https://www.pronovias.com/editorial/wedding-dress-trends", label: "Pronovias: 2026 wedding dress trends" },
+      { href: "https://www.marthastewart.com/wedding-dress-trends-2026-11829544", label: "Martha Stewart: 2026 bridal style" },
+    ],
+    sections: [
+      {
+        heading: "1. Tonal ivory embroidery with soft color cues",
+        paragraphs: [
+          "Lace is returning as a central bridal material in 2026, but the strongest applications feel light rather than heavy. Tonal ivory thread, transparent mesh and carefully spaced motifs let the gown move while still showing couture-level workmanship. A restrained powder-blue bow or another pale accent can become a subtle signature color without overwhelming the bridal palette.",
+          "The swan trim shown above demonstrates this direction through an ivory ground, dimensional satin stitching and a delicate repeating border. For a wedding dress, designers can adapt the same technique into neckline bands, detachable cuffs, veil edging or individual cut appliques. The product images in this guide are technique and customization references; novelty motifs can be redrawn for a bridal collection without copying the original artwork.",
+        ],
+      },
+      {
+        heading: "2. Romantic bows and small color-pop motifs",
+        image: "/images/blog/bridal-lace-trends/cherry-bow-embroidered-lace-trim-2026.jpg",
+        alt: "Cherry and pink bow embroidered mesh lace trim with scalloped ivory edges",
+        caption: "Fine bow embroidery and controlled red accents can add personality to bridal accessories and second looks.",
+        paragraphs: [
+          "Bows remain an effective bridal code because they can read as romantic, youthful or graphic depending on scale. In 2026, smaller repeated bows work especially well on detachable sleeves, short reception dresses, garters and veil borders. A limited red accent can connect the trim to lipstick, florals or a reception color story.",
+          "For production, ask the lace manufacturer to match thread colors under neutral light and approve the bow height, repeat distance and scallop depth. Small changes in spacing can determine whether a trim feels refined or visually crowded.",
+        ],
+      },
+      {
+        heading: "3. Pastoral botanicals and soft storytelling",
+        image: "/images/blog/bridal-lace-trends/chick-daisy-embroidered-lace-trim-2026.jpg",
+        alt: "Yellow chick daisy and blue bow embroidered lace trim on ivory mesh",
+        caption: "Pastoral motifs show how flowers, bows and dimensional thread can build a gentle narrative border.",
+        paragraphs: [
+          "Personal narrative is becoming more important in bridal fashion. Delicate meadow flowers, tiny bows and symbolic motifs can reference a wedding location, family memory or seasonal theme. On a formal gown, the same visual language can be translated into daisies, leaves, birds or monograms arranged with more negative space.",
+          "Use a soft mesh base and keep raised stitches away from high-friction areas. A physical sample should be tested against the final silk, tulle or organza because the base color changes how ivory thread and pale blue details appear.",
+        ],
+      },
+      {
+        heading: "4. Heirloom narrative borders for meaningful accessories",
+        image: "/images/blog/bridal-lace-trends/baby-motif-embroidered-lace-trim-2026.jpg",
+        alt: "Pink rocking horse bow carriage and bonnet embroidered lace trim",
+        caption: "Narrative borders can be customized with symbols that are personal to the couple or family.",
+        paragraphs: [
+          "Heirloom bridal pieces increasingly carry a story. A repeated border can include initials, a date, local flowers or private symbols that make a veil, handkerchief or getting-ready robe worth keeping. The baby-themed sample illustrates the construction principle: multiple detailed motifs are united by one consistent mesh and scalloped edge.",
+          "For custom work, provide vector artwork or clear sketches, the finished trim width, target repeat length and intended garment placement. The manufacturer can then simplify very fine lines so the design remains legible in thread.",
+        ],
+      },
+      {
+        heading: "5. Inclusive personalized character embroidery",
+        image: "/images/blog/bridal-lace-trends/pink-dress-girl-embroidered-lace-trim-2026.jpg",
+        alt: "Inclusive girl character embroidered lace trim with pink dresses and scalloped border",
+        caption: "Custom character embroidery can reflect different skin tones, hair colors and members of a wedding party.",
+        paragraphs: [
+          "Personalized embroidery can represent the people taking part in a wedding rather than relying only on generic florals. For bridal robes, flower-girl dresses, keepsake pouches or shower accessories, inclusive character motifs can mirror bridesmaids, family members and different skin tones.",
+          "This type of trim requires disciplined color management. Approve thread cards, facial-detail limits and the exact motif sequence before sampling. For the main wedding gown, designers may carry the personalization forward more subtly through initials, silhouettes or symbolic flowers.",
+        ],
+      },
+      {
+        heading: "6. Woodland motifs for rustic bridal stories",
+        image: "/images/blog/bridal-lace-trends/woodland-animal-embroidered-lace-trim-2026.jpg",
+        alt: "Fox raccoon and deer woodland animal embroidered lace trim",
+        caption: "Woodland embroidery offers a clear direction for rustic weddings, accessories and flower-girl collections.",
+        paragraphs: [
+          "Forest-inspired weddings create room for leaves, ferns, branches and small woodland symbols. The illustrated animal sample shows how warm brown, rust and gray threads can remain readable on a light mesh ground. A bridal interpretation might replace cartoon forms with fine botanical silhouettes or small crest-like animals.",
+          "Keep the repeat modular so selected motifs can be cut out and applied individually. This gives designers more control over placement on bodices, capes, bags and childrenswear while reducing unused trim.",
+        ],
+      },
+      {
+        heading: "7. Dessert, fruit and rose motifs for reception dressing",
+        image: "/images/blog/bridal-lace-trends/chocolate-rose-embroidered-lace-trim-2026.jpg",
+        alt: "Chocolate strawberry and red rose embroidered lace trim on ivory mesh",
+        caption: "Food and floral motifs can turn reception outfits and bridal-event accessories into collectible details.",
+        paragraphs: [
+          "Second looks and bridal-event outfits allow more playful embroidery than the ceremony gown. Strawberries, chocolate boxes and roses can connect to a proposal story, dessert table or Valentine's theme while still using delicate lace construction.",
+          "For a more formal result, isolate the rose, reduce the number of colors and scale it into scattered appliques. Sampling both the full border and separate cut motifs helps the design team compare labor, placement flexibility and final cost.",
+        ],
+      },
+      {
+        heading: "8. Destination-inspired custom motif collections",
+        image: "/images/blog/bridal-lace-trends/safari-animal-embroidered-lace-trim-2026.jpg",
+        alt: "Elephant lion and zebra safari animal embroidered lace trim",
+        caption: "Destination themes can be translated into a coordinated family of custom embroidery motifs.",
+        paragraphs: [
+          "Destination weddings are encouraging designers to build small motif families around place. Botanical emblems, architecture, animals or landscape symbols can appear on welcome-event clothing, veils, ring pillows and childrenswear. The safari sample demonstrates how distinct motifs stay cohesive when thread weight, outline style and border construction remain consistent.",
+          "Avoid treating a location as a collection of random icons. Select three to five symbols, set one color system and define where each motif will appear across the bridal wardrobe and accessories.",
+        ],
+      },
+      {
+        heading: "9. Storybook blue for modern princess details",
+        image: "/images/blog/bridal-lace-trends/princess-castle-embroidered-lace-trim-2026.jpg",
+        alt: "Pale blue princess dress castle and shoe embroidered lace trim",
+        caption: "Pale blue thread offers a controlled way to introduce a storybook mood and the traditional something blue.",
+        paragraphs: [
+          "The 'something blue' detail is moving from hidden token to visible design accent. Pale blue embroidery can outline a monogram, architectural motif, tiny flower or scalloped veil edge. The color photographs softly and remains compatible with ivory, silver and pearl embellishment.",
+          "Use the storybook reference selectively on a wedding gown. One hero motif on the train or inside a detachable cape will usually feel more premium than a dense all-over repeat. Confirm color under daylight and warm venue lighting before bulk production.",
+        ],
+      },
+      {
+        heading: "10. Modular novelty trims for second looks and bridal events",
+        image: "/images/blog/bridal-lace-trends/island-animal-embroidered-lace-trim-2026.jpg",
+        alt: "Island boat pig and colorful bird embroidered lace trim on scalloped mesh",
+        caption: "A modular repeat lets designers use a border intact or cut selected motifs into individual appliques.",
+        paragraphs: [
+          "A single embroidered border can serve several products when its repeat is designed as a modular system. Use it intact on a robe or party dress, cut selected motifs for a clutch or shoe, and translate the border shape into a coordinating veil edge. This approach supports the growing 2026 interest in adaptable bridal wardrobes and expressive second looks.",
+          "Before ordering, test how cleanly each motif can be cut, whether the mesh frays and whether additional backing is required. Confirm commercial artwork rights for every custom character or symbol; original artwork is the safest route for an exclusive bridal collection.",
+        ],
+      },
+    ],
+    faqs: [
+      { question: "What embroidered lace applique styles are trending for wedding dresses in 2026?", answer: "The strongest 2026 directions combine lightweight lace, tonal ivory embroidery, layered texture, personalized narrative motifs, controlled color accents and modular details that can move between ceremony gowns, detachable pieces and reception looks." },
+      { question: "Is embroidered lace trim the same as lace applique?", answer: "No. Lace trim is supplied as a continuous border or repeat, while an applique is an individual motif placed on a garment. A well-planned embroidered trim can often be used intact or carefully cut into separate appliques after fraying and backing tests." },
+      { question: "Can these motifs be customized for a bridal collection?", answer: "Yes. Motif artwork, thread colors, trim width, repeat length, mesh color and scalloped edges can be developed around an original bridal concept. Physical sampling is required to confirm detail, drape and color." },
+      { question: "Are playful motifs suitable for a wedding dress?", answer: "They are best used selectively. Refined versions can work on a train, veil or detachable cape, while more colorful novelty motifs are usually better for reception outfits, bridal showers, robes, accessories or flower-girl dresses." },
+      { question: "What should I send when requesting custom lace samples?", answer: "Send original artwork or reference images, intended application, finished width, approximate motif size, preferred mesh and thread colors, order quantity, deadline and destination. A fabric swatch helps the supplier match the final gown color." },
+    ],
+  },
   {
     slug: "lace-trim-trends-2026",
     title: "Top 10 Lace Trim Trends for Fashion Designers in 2026",

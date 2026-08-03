@@ -51,9 +51,10 @@ export function categoryMetadata(category: CategoryData): Metadata {
 }
 
 export function articleMetadata(article: ArticleData): Metadata {
-  const metadata = createPageMetadata(article.title, article.description, `/blog/${article.slug}`, article.image);
+  const metadata = createPageMetadata(article.seoTitle ?? article.title, article.description, `/blog/${article.slug}`, article.image);
   return {
     ...metadata,
+    keywords: [article.keyword, "embroidered lace applique", "bridal lace", "wedding dress lace"],
     authors: [{ name: `${siteName} sourcing team`, url: siteUrl }],
     openGraph: {
       ...metadata.openGraph,
