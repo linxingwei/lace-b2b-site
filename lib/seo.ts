@@ -63,7 +63,7 @@ export function articleMetadata(article: ArticleData): Metadata {
       publishedTime: article.date,
       modifiedTime,
       authors: [siteUrl],
-      section: "Bridal lace sourcing",
+      section: article.articleSection ?? "Lace sourcing",
       tags: [article.keyword, ...(article.entities ?? [])],
     },
   };
