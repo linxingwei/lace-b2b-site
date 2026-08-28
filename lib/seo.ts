@@ -53,9 +53,11 @@ export function categoryMetadata(category: CategoryData): Metadata {
 export function articleMetadata(article: ArticleData): Metadata {
   const metadata = createPageMetadata(article.seoTitle ?? article.title, article.description, `/blog/${article.slug}`, article.image);
   const modifiedTime = article.modifiedDate ?? article.date;
+  const defaultKeywords = article.articleSection === "Christmas lace trim trends" ? [] : ["embroidered lace applique", "bridal lace", "wedding dress lace"];
+  const keywords = Array.from(new Set([article.keyword, ...defaultKeywords, ...(article.entities ?? [])]));
   return {
     ...metadata,
-    keywords: [article.keyword, "embroidered lace applique", "bridal lace", "wedding dress lace", ...(article.entities ?? [])],
+    keywords,
     authors: [{ name: `${siteName} sourcing team`, url: siteUrl }],
     openGraph: {
       ...metadata.openGraph,
@@ -64,7 +66,7 @@ export function articleMetadata(article: ArticleData): Metadata {
       modifiedTime,
       authors: [siteUrl],
       section: article.articleSection ?? "Lace sourcing",
-      tags: [article.keyword, ...(article.entities ?? [])],
+      tags: keywords,
     },
   };
 }
