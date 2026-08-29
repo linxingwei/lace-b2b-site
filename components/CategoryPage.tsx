@@ -38,6 +38,7 @@ export default function CategoryPage({ category }: { category: CategoryData }) {
           <div className="detail-cta"><span>Need a custom color, width or motif?</span><h3>Send us your reference.</h3><a className="button button-gold" href="/#contact">Start custom development <ArrowRight size={17} /></a></div>
         </div>
       </section>
+      {category.contextualLinks?.length ? <section className="category-context-section" aria-label={`${category.name} buying guidance`}><div><p className="eyebrow"><span /> Buying guidance</p><h2>Connect the material choice to the garment brief.</h2></div><div>{category.contextualLinks.map((item) => <p key={item.href}>{item.prefix}<a href={item.href}>{item.label}</a>{item.suffix}</p>)}</div></section> : null}
       {category.featuredArticle ? <aside className="category-insight"><div><span>{category.featuredArticle.label}</span><h2>{category.featuredArticle.title}</h2><p>{category.featuredArticle.description}</p></div><a className="button button-dark" href={category.featuredArticle.href}>Read the trend guide <ArrowRight size={17} /></a></aside> : null}
       {category.gallery?.length ? (
         <section className="section collection-gallery-section">
