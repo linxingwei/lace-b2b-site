@@ -3,7 +3,7 @@ import { articles, categories } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.veloracelace.com";
-  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, lastModified: category.slug === "3d-flower-applique" ? new Date("2026-08-29") : undefined, changeFrequency: "monthly" as const, priority: 0.8 }));
+  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, lastModified: category.slug === "3d-flower-applique" ? new Date("2026-08-31") : undefined, changeFrequency: "monthly" as const, priority: 0.8 }));
   const articleRoutes = articles.map((article) => ({ url: `${base}/blog/${article.slug}`, lastModified: new Date(article.modifiedDate ?? article.date), changeFrequency: "monthly" as const, priority: 0.7 }));
   const productRoutes = [
     { url: `${base}/products/butterfly-floral-embroidered-trim`, lastModified: new Date("2026-07-13"), changeFrequency: "monthly" as const, priority: 0.8 },

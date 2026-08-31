@@ -26,12 +26,12 @@ const afterDesignReview = "Confirmed after design review";
 
 export const threeDFlowerAppliqueBuyerData: BuyerDataSheet = {
   product: "3D Flower Lace Applique",
-  updated: "2026-08-29",
+  updated: "2026-08-31",
   fields: [
     {
       key: "moq",
       label: "MOQ",
-      value: "30 pairs for published styles VL-2602 and VL-2603; other styles and custom developments are confirmed after design review.",
+      value: "10 pieces",
       status: "published",
     },
     { key: "sampleTime", label: "Sample Time", value: afterDesignReview, status: "design-review" },

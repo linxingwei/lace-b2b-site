@@ -112,8 +112,8 @@ export const categoryBySlug = Object.fromEntries(categories.map((category) => [c
 
 export const trendingProducts = [
   { id: "VL-2601", name: "Yellow Floral Guipure Lace Applique Pair", category: "Floral Lace Applique", description: "A bright floral applique pair for dresses, accessories, childrenswear and decorative fashion applications.", image: mediaUrl("yellow-floral.jpg"), alt: "yellow floral guipure lace applique pair", moq: "30 pairs", tag: "Trending" },
-  { id: "VL-2602", name: "Pastel Embroidered 3D Flower Applique", category: "3D Flower Applique", description: "Layered pastel flower appliques with embroidered leaves for dresses, accessories and occasionwear.", image: mediaUrl("pastel-collection.jpg"), alt: "pastel embroidered 3D flower applique collection", moq: "30 pairs", tag: "New" },
-  { id: "VL-2603", name: "Floral 3D Lace Applique Collection", category: "3D Flower Applique", description: "Luxury dimensional floral appliques for bridal gowns, eveningwear and fashion designers.", image: mediaUrl("pastel-assortment.jpg"), alt: "floral 3D lace applique collection", moq: "30 pairs", tag: "Bridal" },
+  { id: "VL-2602", name: "Pastel Embroidered 3D Flower Applique", category: "3D Flower Applique", description: "Layered pastel flower appliques with embroidered leaves for dresses, accessories and occasionwear.", image: mediaUrl("pastel-collection.jpg"), alt: "pastel embroidered 3D flower applique collection", moq: "10 pieces", tag: "New" },
+  { id: "VL-2603", name: "Floral 3D Lace Applique Collection", category: "3D Flower Applique", description: "Luxury dimensional floral appliques for bridal gowns, eveningwear and fashion designers.", image: mediaUrl("pastel-assortment.jpg"), alt: "floral 3D lace applique collection", moq: "10 pieces", tag: "Bridal" },
 ];
 
 export type ArticleData = {
@@ -152,14 +152,14 @@ export type ArticleData = {
 export const articles: ArticleData[] = [
   {
     slug: "3d-lace-applique-vs-flat-embroidered-applique",
-    title: "3D Lace Applique vs Flat Embroidered Applique: A Buyer's Comparison",
-    seoTitle: "3D vs Flat Embroidered Lace Applique",
+    title: "3D Lace Applique vs Flat Embroidered Applique: Which Is Better for Bridal Dresses?",
+    seoTitle: "3D Lace Applique vs Flat Embroidered Applique for Bridal Dresses",
     keyword: "3D lace applique vs flat embroidered applique",
     description: "Compare 3D lace applique and flat embroidered applique by appearance, weight, durability, sewing, care, cost drivers and best garment applications.",
     image: "/products/3d-flower-lace-applique-wholesale.jpg",
     alt: "Layered 3D flower lace appliques used for a buyer comparison with flat embroidery",
     date: "2026-08-29",
-    modifiedDate: "2026-08-29",
+    modifiedDate: "2026-08-31",
     readTime: "7 minute read",
     articleSection: "Bridal lace sourcing",
     audienceType: "Bridal designers, fashion brands, garment manufacturers and lace buyers",
@@ -174,8 +174,8 @@ export const articles: ArticleData[] = [
     ],
     ctaEyebrow: "Choosing an applique construction?",
     ctaHeading: "Compare a physical 3D and flat sample on your garment fabric.",
-    ctaLabel: "Request applique samples",
-    ctaHref: "/#contact",
+    ctaLabel: "Send a reference photo on WhatsApp",
+    ctaHref: "https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20would%20like%20to%20compare%203D%20and%20flat%20embroidered%20applique%20for%20a%20bridal%20dress.%20I%20will%20send%20a%20reference%20photo.",
     related: [
       { href: "/3d-flower-applique", label: "Source 3D flower appliques" },
       { href: "/embroidery-lace", label: "Explore flat embroidery lace" },
@@ -189,13 +189,13 @@ export const articles: ArticleData[] = [
         ["Dimension", "Layered or attached elements create visible lift", "Stitching stays comparatively close to the base"],
         ["Weight", "Often higher at focal points; sample on the garment base", "Usually lighter, although dense stitching can add stiffness"],
         ["Flexibility", "Best on protected areas with room for raised petals", "More adaptable around curves, seams and layered areas"],
-        ["Sewing", "Foundation and selected internal points are secured while petals remain free", "Edges are generally easier to baste or stitch"],
-        ["Alteration", "Requires planning so raised elements can be lifted or repositioned", "Usually easier to remove and reapply across alteration lines"],
-        ["Embellishment", "Supports pearls, beads, sequins and dimensional flower centers", "Supports stitched and low-profile decoration with less projection"],
-        ["Best placement", "Bodice focal points, trains, statement sleeves and accessories", "Veils, fitted sleeves, seam crossings and repeated motifs"],
-        ["Packing & care", "Needs abrasion and snag protection", "Generally simpler to layer and pack"],
-        ["Sampling complexity", "Higher when petal direction, matching or hand assembly is involved", "Usually more repeatable, but base and stitch density still require approval"],
-        ["Commercial data", "MOQ and timing depend on layers, handwork and matching", "MOQ and timing depend on base, stitch count and finishing"],
+        ["Sewing Difficulty", "Usually more labor-intensive because raised petals must remain free and protected", "Generally easier to baste or stitch around edges and seams"],
+        ["Alteration Friendliness", "Requires planning so raised elements can be lifted or repositioned", "Usually easier to remove and reapply across alteration lines"],
+        ["Beading Options", "Supports pearls, beads, sequins and dimensional flower centers", "Supports stitched and low-profile decoration with less projection"],
+        ["Best Garment Area", "Bodice focal points, trains, statement sleeves and accessories", "Veils, fitted sleeves, seam crossings and repeated motifs"],
+        ["Cost Tendency", "Usually more expensive because of layers, hand assembly and handling; actual cost depends on design", "Usually lower, although dense stitching and embellishment can raise cost"],
+        ["Sampling Complexity", "Higher when petal direction, matching or hand assembly is involved", "Usually more repeatable, but base and stitch density still require approval"],
+        ["Best Use Case", "Couture focal points where dimensional texture is central", "Lighter, smoother and repeatable bridal placements"],
       ],
     },
     contextualLinks: [
@@ -210,7 +210,7 @@ export const articles: ArticleData[] = [
       { heading: "Weight, drape and comfort", paragraphs: ["Layered petals, beads and hand-applied components add local weight. Place them where the garment base can support that load and test whether the reverse side needs lining, especially on illusion tulle or close-to-skin areas.", "Flat appliques normally distribute weight more evenly and create less bulk. They are often easier on soft sleeves, lightweight veils and garments that must fold closely, although dense stitching can still feel stiff if not sampled on the final base."] },
       { heading: "Sewing, placement and production repeatability", paragraphs: ["A 3D motif needs careful handling so petals are not trapped under stitches. Sewing teams may secure the foundation and selected internal points while protecting raised elements. Matched left-right sets should be labeled and packed by orientation.", "Flat applique edges are generally easier to baste, machine-stitch or hand-sew around curves and seams. Whichever construction is selected, provide a placement map with motif code, direction, quantity per garment and fixed measurement points."] },
       { heading: "Durability, care and packing", paragraphs: ["Raised petals and embellishments face more abrasion during sewing, wear, cleaning and transport. Test attachment strength, snag risk and recovery after packing, then use protective separation where motifs could catch on one another.", "Flat embroidery has fewer protruding elements, which can simplify packing and routine handling. Durability still depends on the base, cut edge, thread density and attachment method, so the approved physical sample remains the inspection standard."] },
-      { heading: "MOQ, cost and lead-time drivers", paragraphs: ["Cost is driven by motif size, stitch count, number of layers, hand assembly, embellishment, backing, matching and order quantity. A 3D applique often includes more processes, but a dense flat motif can also be costly; compare the actual construction rather than assuming one label determines price.", "Selected existing VELORACE LACE 3D flower styles start from 30 pairs. Custom MOQ and schedule are confirmed after artwork, materials, handwork, quantity and destination are reviewed. Avoid approving a lead time before these variables are known."] },
+      { heading: "MOQ, cost and lead-time drivers", paragraphs: ["Cost is driven by motif size, stitch count, number of layers, hand assembly, embellishment, backing, matching and order quantity. A 3D applique is usually more expensive, more complex to sample and more labor-intensive to sew, but the actual result depends on the design; compare the real construction rather than assuming one label determines price.", "The MOQ for VELORACE LACE 3D flower appliques is 10 pieces. Sample Time: Confirmed after design review. Bulk Lead Time: Confirmed after design review. Artwork, materials, handwork, quantity and destination must be reviewed before a schedule is approved."] },
       { heading: "Which applique should you choose?", paragraphs: ["Choose 3D lace applique for protected focal areas, dimensional bridal florals, couture gowns and accessories where texture is central to the design. Choose flat embroidered applique for lighter garments, veil borders, seam-spanning motifs, close-fitting areas and programs that prioritize smooth packing and repeatability.", "If the garment uses both, build a system: place hero 3D flowers at focal points and use related flat leaves or connectors to graduate the design. Request both samples in the same color family and assess them together on the final fabric before bulk approval."] },
     ],
     faqs: [

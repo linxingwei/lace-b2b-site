@@ -1,127 +1,108 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, ClipboardCheck, Palette, Ruler, Sparkles } from "lucide-react";
-import { threeDFlowerAppliqueBuyerData } from "@/lib/buyer-data";
+import { ArrowRight } from "lucide-react";
+import WhatsAppLink from "@/components/WhatsAppLink";
 import { absoluteUrl, createPageMetadata, siteUrl } from "@/lib/seo";
 
 const pagePath = "/3d-flower-applique";
-const pageTitle = "3D Flower Lace Applique Wholesale";
-const pageDescription = "Source wholesale 3D flower lace appliques for bridal gowns and fashion. Review MOQ, construction, size, backing, customization, sampling and quality-control details.";
-const heroImage = "/products/3d-flower-lace-applique-wholesale.jpg";
+const pageTitle = "3D Flower Lace Applique Supplier for Bridal & Couture";
+const pageDescription = "Custom 3D flower lace appliques for bridal gowns and couture. Review buyer specifications, MOQ 10 pieces, sampling, mirrored pairs and beading options.";
+const heroImage = "/products/3d-applique-design-showcase/ivory-bridal-3d-flower-lace-applique-design-showcase.jpg";
 
 export const metadata: Metadata = createPageMetadata(pageTitle, pageDescription, pagePath, heroImage);
 
-const productDetails = [
-  ["Construction", "Layered embroidered petals; mesh, organza and edge finish vary by design"],
-  ["Order unit", "Pair, matched set or individual piece, depending on the motif"],
-  ["Backing", "Sew-on is the standard recommendation; iron-on is evaluated by application"],
-  ["Embellishment", "Pearls, beads, sequins or crystals can be evaluated for selected designs"],
+const whatsappMessage = "Hello VELORACE LACE, I would like to develop a 3D flower lace applique. I will send a reference photo. Please advise the MOQ and sampling options.";
+
+const specifications = [
+  ["Product type", "3D flower lace applique"],
+  ["Structure", "Flat, layered or dimensional floral construction"],
+  ["Base material", "Mesh, tulle, lace base or custom base"],
+  ["Decoration", "Embroidery-only, pearl, bead, sequin or crystal options"],
+  ["Backing", "Sew-on by default; other options confirmed after design review"],
+  ["Pairing", "Single motif, coordinated set or mirrored pair"],
+  ["Color", "Ivory, white or custom color matching"],
+  ["Custom size & motif", "Available after design feasibility review"],
+  ["MOQ", "10 pieces"],
+  ["Sample Time", "Confirmed after design review"],
+  ["Bulk Lead Time", "Confirmed after design review"],
+  ["Packing", "Piece, pair or custom packing confirmed with the order"],
+  ["QC", "Pre-shipment inspection against the approved sample"],
+];
+
+const showcase = [
+  { title: "Ivory Bridal 3D Flower Applique", image: heroImage, alt: "Ivory 3D flower lace applique design for a bridal gown neckline", text: "An ivory floral direction for wedding-gown necklines and bodices. The motif can be reviewed for color tone, scale and placement against the final dress fabric." },
+  { title: "Pearl & Beaded 3D Flower Applique", image: "/products/3d-applique-design-showcase/pearl-beaded-3d-flower-applique-design-showcase.jpg", alt: "Pearl and beaded 3D flower lace applique design for couture eveningwear", text: "Pearls, beads or sequins can highlight flower centers and leaf details. Material, placement and attachment method are confirmed during design review." },
+  { title: "Layered Petal 3D Lace Applique", image: "/products/3d-applique-design-showcase/layered-petal-3d-flower-lace-applique-design-showcase.jpg", alt: "Layered petal 3D flower lace applique concept for a bridal bodice", text: "Layered embroidered petals create more depth than flat stitching. Petal structure and edge finishing are assessed during sampling so the motif remains balanced on the garment." },
+  { title: "Mirrored Pair Lace Appliques", image: "/products/3d-applique-design-showcase/mirrored-pair-3d-flower-lace-applique-design-showcase.jpg", alt: "Mirrored pair 3D floral lace applique design for symmetrical bridal placement", text: "Matched left-and-right directions can frame a neckline, corset, waist or back panel. Send the intended placement so orientation and pair matching can be reviewed before sampling." },
+  { title: "Couture Bodice Lace Applique", image: "/products/3d-applique-design-showcase/couture-bodice-3d-flower-lace-applique-design-showcase.jpg", alt: "Couture bodice 3D flower lace applique design with dimensional floral placement", text: "Elongated or contoured applique layouts can follow a couture bodice or corset. Final shape depends on the silhouette, seams and desired focal area." },
+];
+
+const process = [
+  ["01", "Send Reference", "Share a photo, artwork or sample plus the intended garment area and quantity."],
+  ["02", "Design Review", "We assess structure, dimensions, color, decoration, placement and production feasibility."],
+  ["03", "Sample", "A physical sample is developed when required. Sample time is confirmed after design review."],
+  ["04", "Approval", "Confirm shape, color, arrangement, embellishment, pairing and reverse-side finish."],
+  ["05", "Bulk Production", "Production follows the approved sample. Bulk lead time is confirmed after design review."],
+  ["06", "QC", "Finished pieces are checked for consistency, visible defects, decoration and pair matching."],
+  ["07", "Shipment", "Packing and shipping are arranged for the confirmed quantity and destination."],
 ];
 
 const faqs = [
-  ["What is the MOQ for 3D flower lace appliques?", "Selected existing styles start from 30 pairs. The practical MOQ for a custom motif depends on its size, materials, embroidery and hand-applied details, so it is confirmed after the design brief is reviewed."],
-  ["Can you make matched left and right applique pairs?", "Yes. Mirrored pairs and coordinated motif sets can be developed for necklines, bodices, sleeves and other planned garment placements."],
-  ["Can the flower size and color be customized?", "Yes. Send the required finished dimensions, garment fabric or color reference, intended placement and estimated quantity. Size, thread, base and embellishment options are then confirmed during sampling."],
-  ["Is sew-on or iron-on backing better for bridal appliques?", "Sew-on application gives bridal and couture teams the most control on tulle, curved seams and delicate fabrics. Iron-on backing is considered only after heat and fabric compatibility are tested."],
-  ["What should buyers approve before bulk production?", "Approve the physical sample for dimensions, color, motif direction, petal attachment, reverse-side finish, embellishment security and appearance on the final garment fabric."],
+  ["What is the MOQ for 3D flower lace appliques?", "The MOQ is 10 pieces. Final order details depend on the selected design, decoration and customization level."],
+  ["What are the sample and bulk lead times?", "Sample Time: Confirmed after design review. Bulk Lead Time: Confirmed after design review. We do not publish a fixed number before the construction, handwork and quantity are assessed."],
+  ["Can you customize from a reference photo?", "Yes. Send a product photo, dress photo, sketch, artwork or physical sample. We review whether the design can be adapted for production and advise the sampling route."],
+  ["Can you make mirrored applique pairs?", "Yes. Matched left-and-right pairs can be developed for bodices, necklines, shoulders, waistlines and other symmetrical garment areas."],
+  ["Can pearls, beads or sequins be added?", "Yes, depending on the motif. Decoration materials, placement and attachment are confirmed during design review."],
+  ["Are 3D appliques more expensive and harder to sew than flat embroidery?", "Usually, yes. Layered petals and embellishment often require more materials, more complex sampling and more careful sewing, but the actual cost and workload depend on the design."],
 ];
 
 export default function ThreeDFlowerAppliquePage() {
   const url = absoluteUrl(pagePath);
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProductGroup",
-        "@id": `${url}#product-group`,
-        name: "Wholesale 3D Flower Lace Applique",
-        description: pageDescription,
-        url,
-        image: absoluteUrl(heroImage),
-        brand: { "@type": "Brand", name: "VELORACE LACE" },
-        manufacturer: { "@id": `${siteUrl}/#organization` },
-        audience: { "@type": "BusinessAudience", audienceType: "Bridal designers, fashion brands, garment manufacturers and trim wholesalers" },
-        additionalProperty: [
-          ...productDetails.map(([name, value]) => ({ "@type": "PropertyValue", name, value })),
-          ...threeDFlowerAppliqueBuyerData.fields.map(({ label: name, value }) => ({ "@type": "PropertyValue", name, value })),
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${url}#breadcrumb`,
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-          { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` },
-          { "@type": "ListItem", position: 3, name: "3D Flower Applique", item: url },
-        ],
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${url}#faq`,
-        mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })),
-      },
-    ],
-  };
+  const schema = { "@context": "https://schema.org", "@graph": [
+    { "@type": "ProductGroup", "@id": `${url}#product-group`, name: "3D Flower Lace Applique", description: pageDescription, url, image: showcase.map((item) => absoluteUrl(item.image)), brand: { "@type": "Brand", name: "VELORACE LACE" }, manufacturer: { "@id": `${siteUrl}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Bridal designers, couture studios, fashion brands and garment manufacturers" }, additionalProperty: specifications.map(([name, value]) => ({ "@type": "PropertyValue", name, value })) },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` }, { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` }, { "@type": "ListItem", position: 3, name: "3D Flower Applique", item: url }] },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+  ] };
 
   return (
-    <main className="applique-page">
+    <main className="applique-money-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section className="inner-hero applique-hero">
+      <section className="inner-hero applique-money-hero">
         <div className="inner-hero-copy">
           <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products">Products</a><span aria-hidden="true">/</span><span aria-current="page">3D Flower Applique</span></nav>
-          <p className="eyebrow"><span /> Wholesale &amp; custom development</p>
-          <h1>3D Flower Lace Applique<br /><em>for bridal and fashion.</em></h1>
-          <p>Source dimensional floral motifs with layered petals, embroidery and optional hand-applied details. Published styles VL-2602 and VL-2603 list a 30-pair MOQ; custom size, color, motif and matched-set options are reviewed against your brief.</p>
-          <div className="hero-actions"><a className="button button-dark" href="/#contact">Send a reference photo → Get MOQ &amp; sampling options</a><a className="text-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Compare 3D vs flat applique <ArrowRight size={15} /></a></div>
+          <p className="eyebrow"><span /> Bridal &amp; couture development</p>
+          <h1>3D Flower Lace Applique<br /><em>Supplier for Bridal &amp; Couture</em></h1>
+          <p>Custom dimensional floral appliques for wedding gowns, couture dresses, eveningwear and fashion collections. Develop a single motif, a coordinated set or a mirrored pair from your reference.</p>
+          <p className="hero-proof"><strong>MOQ: 10 pieces.</strong> Sample Time and Bulk Lead Time are confirmed after design review.</p>
+          <div className="hero-actions"><WhatsAppLink className="button button-dark" message={whatsappMessage} placement="3d_money_page_hero">Send a reference photo on WhatsApp → Get MOQ &amp; sampling options</WhatsAppLink><a className="text-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Compare 3D vs flat applique <ArrowRight size={15} /></a></div>
         </div>
-        <figure className="inner-hero-image applique-hero-image">
-          <Image src={heroImage} alt="Wholesale pastel 3D flower lace applique pairs with layered embroidered petals" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" />
-          <figcaption>Representative wholesale 3D flower lace applique assortment. Final dimensions, colors, backing and motif pairing are confirmed against the selected style and approval sample.</figcaption>
-        </figure>
+        <figure className="inner-hero-image applique-concept-figure"><Image src={heroImage} alt="Ivory 3D flower lace applique design for a bridal gown neckline" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /><figcaption>Product concept/design showcase for style and placement discussion. Not presented as a factory, QC or customer-order photograph.</figcaption></figure>
       </section>
 
-      <section className="section applique-spec-section" aria-labelledby="applique-spec-title">
-        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Procurement specifications</p><h2 id="applique-spec-title">What buyers can confirm before ordering.</h2></div><p>These fields turn a visual reference into a production brief. Values that vary by design are confirmed in the quotation and physical sample instead of being treated as universal promises.</p></div>
-        <dl className="applique-spec-grid">{threeDFlowerAppliqueBuyerData.fields.map(({ key, label, value }) => <div key={key}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-        <p className="spec-note"><strong>Data boundary:</strong> only the published MOQ for styles VL-2602 and VL-2603 is stated numerically. Sample time, bulk lead time and other project-specific commitments remain “Confirmed after design review” until the materials, handwork, quantity and destination are known.</p>
+      <section className="section buyer-spec-section" aria-labelledby="buyer-spec-title">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Buyer specifications</p><h2 id="buyer-spec-title">The details buyers need before sampling.</h2></div><p>Unconfirmed timelines are deliberately left as “Confirmed after design review” because construction, handwork and material availability vary by design.</p></div>
+        <div className="spec-table-wrap"><table className="procurement-table"><tbody>{specifications.map(([label, value]) => <tr key={label}><th scope="row">{label}</th><td>{value}</td></tr>)}</tbody></table></div>
       </section>
 
-      <section className="section applique-evidence-section" aria-labelledby="applique-image-evidence-title">
-        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Real product references</p><h2 id="applique-image-evidence-title">Review petal structure and motif grouping.</h2></div><p>These are product-display photographs from the current VELORACE LACE range. They show visible construction only; they are not presented as measurement, sampling, factory, QC or packing evidence.</p></div>
-        <div className="applique-evidence-grid">
-          <figure><Image src="/products/3d-flower-lace-applique-wholesale.jpg" alt="Pastel embroidered 3D flower lace applique assortment with raised petals and beaded details" width={600} height={600} sizes="(max-width: 700px) 100vw, 50vw" /><figcaption>Assorted pastel motifs showing layered petals, embroidered leaves and varied embellishment. Confirm the exact style code before quotation.</figcaption></figure>
-          <figure><Image src="/products/pastel-matched-3d-flower-lace-applique-pairs.jpg" alt="Matched pastel 3D flower lace applique motifs for bridal bodice placement" width={600} height={600} sizes="(max-width: 700px) 100vw, 50vw" /><figcaption>Coordinated floral motifs suitable for testing left/right or graduated bridal placement. Final orientation and quantities are recorded in the approved brief.</figcaption></figure>
-        </div>
+      <section className="section design-showcase-section" aria-labelledby="showcase-title">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Design directions</p><h2 id="showcase-title">Five ways to develop dimensional florals.</h2></div><p>These images are product concepts/design showcases used to discuss style, construction and placement. They are not labeled as factory production, QC inspection or customer orders.</p></div>
+        <div className="design-showcase-grid">{showcase.map((item) => <article key={item.title}><figure><Image src={item.image} alt={item.alt} width={900} height={900} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" /><figcaption>Product concept/design showcase — final construction is confirmed after design review.</figcaption></figure><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
       </section>
 
-      <section className="section applique-buyer-section">
-        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer intent guide</p><h2>Choose construction around the garment.</h2></div>
-        <div className="applique-buyer-grid">
-          <article><Sparkles /><h3>For bridal gowns</h3><p>Prioritize soft edges, controlled weight and secure petals on tulle or lace. Request mirrored neckline pairs or mixed-size motifs when placement must follow the bodice.</p></article>
-          <article><Ruler /><h3>For repeatable placement</h3><p>Provide finished dimensions, orientation and quantity per garment. A placement map helps maintain the approved balance across sizes and repeat orders.</p></article>
-          <article><Palette /><h3>For custom colors</h3><p>Approve thread, base and embellishment beside the final garment fabric. Ivory and champagne names are not universal color standards.</p></article>
-          <article><ClipboardCheck /><h3>For bulk quality control</h3><p>Inspect petal attachment, motif shape, left-right matching, bead security, reverse-side finish and packing against the signed physical sample.</p></article>
-        </div>
+      <section className="section quick-comparison-section">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Quick comparison</p><h2>3D applique or flat embroidery?</h2></div><p>3D styles create stronger depth and visual impact. Flat embroidered appliques are generally lighter, more flexible and easier to sew or alter.</p></div>
+        <div className="comparison-cards"><article><h3>Choose 3D applique when</h3><p>Raised petals, couture focal points, pearl or bead detail and strong bridal impact are the priority.</p></article><article><h3>Choose flat embroidery when</h3><p>Lower weight, flexibility, easier seam handling and repeatable all-over placement matter more.</p></article><article><h3>Important cost note</h3><p>3D is usually more expensive, more complex to sample and more labor-intensive to sew, but the actual result depends on the design.</p></article></div>
+        <a className="text-link comparison-deep-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Read the full bridal applique comparison <ArrowRight size={15} /></a>
       </section>
 
-      <section className="applique-comparison-cta">
-        <div><p className="eyebrow eyebrow-light"><span /> Material decision</p><h2>Do you need dimensional petals or a flatter embroidered motif?</h2><p>Compare appearance, weight, durability, sewing, care and cost drivers before you brief the sample.</p></div>
-        <a className="button button-light" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Read the comparison <ArrowRight size={17} /></a>
-      </section>
-
-      <section className="section applique-process-section">
-        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> From inquiry to bulk</p><h2>A clear approval path.</h2></div><p>Share the intended garment and quantity early so construction and commercial recommendations are relevant.</p></div>
-        <div className="applique-process-grid">
-          <article><span>01</span><h3>Send the brief</h3><p>Reference image or artwork, application, dimensions, colors, quantity and destination.</p></article>
-          <article><span>02</span><h3>Confirm feasibility</h3><p>Review motif structure, base, embellishment, backing, MOQ and estimated schedule.</p></article>
-          <article><span>03</span><h3>Approve a sample</h3><p>Check the physical piece on the final garment fabric and record approved details.</p></article>
-          <article><span>04</span><h3>Produce and inspect</h3><p>Use the signed sample for workmanship, dimensions, color and pair-matching checks.</p></article>
-        </div>
+      <section className="section applique-process-section" aria-labelledby="process-title">
+        <div className="section-heading centered-heading"><p className="eyebrow"><span /> Custom development</p><h2 id="process-title">Send Reference → Design Review → Sample → Approval → Bulk Production → QC → Shipment</h2></div>
+        <div className="seven-step-process">{process.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+        <p className="process-link-note">Need a motif developed around a garment pattern? Continue to <a href="/custom-design">custom lace design and sampling</a>.</p>
       </section>
 
       <section className="section faq-section category-faq" id="faq"><div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer FAQ</p><h2>3D flower lace applique sourcing.</h2></div><div className="faq-list">{faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
-
-      <section className="final-cta"><p>3D flower applique supplier in Guangzhou, China</p><h2>Send a reference photo.<br />Get MOQ &amp; sampling options.</h2><a className="button button-light" href="/#contact">Start with your reference <ArrowRight size={17} /></a></section>
+      <section className="final-cta"><p>MOQ 10 pieces · timelines confirmed after design review</p><h2>Send a reference photo.<br />Get MOQ &amp; sampling options.</h2><WhatsAppLink className="button button-light" message={whatsappMessage} placement="3d_money_page_final">Send a reference photo on WhatsApp <ArrowRight size={17} /></WhatsAppLink></section>
     </main>
   );
 }
