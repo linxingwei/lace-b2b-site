@@ -7,6 +7,13 @@ function linkText(anchor: HTMLAnchorElement) {
   return (anchor.getAttribute("aria-label") || anchor.textContent || "").trim().replace(/\s+/g, " ").slice(0, 120);
 }
 
+function productCategory(pathname: string) {
+  if (pathname.startsWith("/3d-flower-applique")) return "3D Flower Lace Applique";
+  if (pathname.startsWith("/bridal-lace")) return "Bridal Lace";
+  if (pathname.startsWith("/embroidery-lace")) return "Embroidery Lace";
+  return "General Lace & Embellishments";
+}
+
 export default function AnalyticsEvents() {
   useEffect(() => {
     function handleClick(event: MouseEvent) {
@@ -18,7 +25,14 @@ export default function AnalyticsEvents() {
       const href = anchor.href;
       const common = { link_url: href, link_text: linkText(anchor), page_path: window.location.pathname };
       if (/wa\.me|whatsapp/i.test(href)) {
-        trackEvent("whatsapp_click", common);
+        const lead = {
+          ...common,
+          inquiry_method: "whatsapp",
+          product_category: anchor.dataset.productCategory || productCategory(window.location.pathname),
+          cta_placement: anchor.dataset.ctaPlacement || "unclassified_whatsapp_link",
+        };
+        trackEvent("whatsapp_click", lead);
+        trackEvent("generate_lead", lead);
       } else if (href.startsWith("mailto:")) {
         trackEvent("email_click", common);
       } else if (anchor.hasAttribute("download") || /\.pdf(?:$|\?)/i.test(href)) {

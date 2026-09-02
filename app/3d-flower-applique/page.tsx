@@ -11,7 +11,7 @@ const heroImage = "/products/3d-applique-design-showcase/ivory-bridal-3d-flower-
 
 export const metadata: Metadata = createPageMetadata(pageTitle, pageDescription, pagePath, heroImage);
 
-const whatsappMessage = "Hello VELORACE LACE, I would like to develop a 3D flower lace applique. I will send a reference photo. Please advise the MOQ and sampling options.";
+const whatsappMessage = "Hello VELORACE LACE, I would like to develop a 3D flower lace applique. I will send a reference photo. Please advise the MOQ, price and sampling options.";
 
 const specifications = [
   ["Product type", "3D flower lace applique"],
@@ -74,7 +74,7 @@ export default function ThreeDFlowerAppliquePage() {
           <h1>3D Flower Lace Applique<br /><em>Supplier for Bridal &amp; Couture</em></h1>
           <p>Custom dimensional floral appliques for wedding gowns, couture dresses, eveningwear and fashion collections. Develop a single motif, a coordinated set or a mirrored pair from your reference.</p>
           <p className="hero-proof"><strong>MOQ: 10 pieces.</strong> Sample Time and Bulk Lead Time are confirmed after design review.</p>
-          <div className="hero-actions"><WhatsAppLink className="button button-dark" message={whatsappMessage} placement="3d_money_page_hero">Send a reference photo on WhatsApp → Get MOQ &amp; sampling options</WhatsAppLink><a className="text-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Compare 3D vs flat applique <ArrowRight size={15} /></a></div>
+          <div className="hero-actions"><WhatsAppLink className="button button-dark" message={whatsappMessage} productCategory="3D Flower Lace Applique" placement="3d_money_page_hero">Send a reference photo on WhatsApp → Get MOQ, price &amp; sampling options</WhatsAppLink><a className="text-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Compare 3D vs flat applique <ArrowRight size={15} /></a></div>
         </div>
         <figure className="inner-hero-image applique-concept-figure"><Image src={heroImage} alt="Ivory 3D flower lace applique design for a bridal gown neckline" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /><figcaption>Product concept/design showcase for style and placement discussion. Not presented as a factory, QC or customer-order photograph.</figcaption></figure>
       </section>
@@ -102,7 +102,7 @@ export default function ThreeDFlowerAppliquePage() {
       </section>
 
       <section className="section faq-section category-faq" id="faq"><div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer FAQ</p><h2>3D flower lace applique sourcing.</h2></div><div className="faq-list">{faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
-      <section className="final-cta"><p>MOQ 10 pieces · timelines confirmed after design review</p><h2>Send a reference photo.<br />Get MOQ &amp; sampling options.</h2><WhatsAppLink className="button button-light" message={whatsappMessage} placement="3d_money_page_final">Send a reference photo on WhatsApp <ArrowRight size={17} /></WhatsAppLink></section>
+      <section className="final-cta"><p>MOQ 10 pieces · timelines confirmed after design review</p><h2>Send a reference photo.<br />Get MOQ, price &amp; sampling options.</h2><WhatsAppLink className="button button-light" message={whatsappMessage} productCategory="3D Flower Lace Applique" placement="3d_money_page_final">Send a reference photo on WhatsApp <ArrowRight size={17} /></WhatsAppLink></section>
     </main>
   );
 }

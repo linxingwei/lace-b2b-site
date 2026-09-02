@@ -14,6 +14,7 @@ import {
   Truck,
 } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
+import WhatsAppLink from "@/components/WhatsAppLink";
 import { mediaUrl } from "@/lib/media";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -30,6 +31,8 @@ const trust = [
   ["Flexible", "MOQ based on design and process"],
   ["Worldwide", "Export packing and shipping support"],
 ] as const;
+
+const homeWhatsAppMessage = "Hello VELORACE LACE, I would like to discuss a lace or garment embellishment project. I will send a reference photo. Please advise the MOQ, price and sampling options.";
 
 const trends = [
   { name: "3D Floral Appliqué", type: "Dimensional", href: "/3d-flower-applique", image: "/products/home-ranges/3d-floral.webp", alt: "colorful 3D floral appliqué collection" },
@@ -79,7 +82,8 @@ export default function Home() {
           <p className="loti-kicker">Guangzhou Lace Manufacturing & Sourcing</p>
           <h1>Premium Lace Trims & Embellishments for <em>Global Fashion Brands.</em></h1>
           <p>VELORACE LACE supports bridal brands, fashion designers and garment manufacturers with product selection, custom development, coordinated production and reliable wholesale supply.</p>
-          <div className="hero-actions"><a className="button button-dark" href="#contact">Request samples & quote <ArrowRight size={17} /></a><a className="button button-outline" href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">Discuss your project <ArrowRight size={15} /></a></div>
+          <div className="hero-actions"><WhatsAppLink className="button button-whatsapp" message={homeWhatsAppMessage} productCategory="General Lace & Embellishments" placement="homepage_hero_primary">Send a reference photo on WhatsApp <ArrowRight size={17} /></WhatsAppLink><a className="button button-outline" href="#contact">Request samples &amp; quote <ArrowRight size={15} /></a></div>
+          <p className="whatsapp-cta-note">Send a reference photo on WhatsApp → Get MOQ, price &amp; sampling options.</p>
         </div>
       </section>
 
