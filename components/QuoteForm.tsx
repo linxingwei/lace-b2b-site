@@ -56,7 +56,7 @@ export default function QuoteForm() {
       <label>REQUIREMENT<textarea name="requirement" required maxLength={1600} rows={5} placeholder="Please include quantity, color, size, application and destination country." /></label>
       <button className="button button-gold" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending inquiry..." : "Send wholesale inquiry"}<ArrowRight size={17} /></button>
       <p className={`form-note form-${status}`} aria-live="polite">{status === "sent" ? "Thank you. Your inquiry was sent to our trade team and we will reply shortly." : status === "fallback" ? "Automatic delivery was unavailable. Continue in WhatsApp below, then tap Send to complete your inquiry." : status === "error" ? "We could not submit these details. Please review the required fields or use WhatsApp Business." : "Your details remain private. We typically reply within one business day."}</p>
-      {status !== "sent" && <a className={`form-whatsapp${whatsappFallback ? " form-whatsapp-fallback" : ""}`} href={whatsappFallback?.url || "https://wa.me/message/IXEEGXESENF6F1"} target="_blank" rel="noreferrer"><MessageCircle size={16} /> {whatsappFallback ? "Continue in WhatsApp" : "Prefer WhatsApp Business?"}</a>}
+      {status !== "sent" && <a className={`form-whatsapp${whatsappFallback ? " form-whatsapp-fallback" : ""}`} href={whatsappFallback?.url || "https://wa.me/message/IXEEGXESENF6F1"} target="_blank" rel="noreferrer" data-product-category={whatsappFallback?.product || "General Lace & Embellishments"} data-cta-placement={whatsappFallback ? "inquiry_form_fallback" : "inquiry_form_whatsapp_option"}><MessageCircle size={16} /> {whatsappFallback ? "Continue in WhatsApp" : "Prefer WhatsApp Business?"}</a>}
     </form>
   );
 }
