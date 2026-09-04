@@ -6,8 +6,8 @@ import { absoluteUrl, createPageMetadata, siteUrl } from "@/lib/seo";
 
 const pagePath = "/3d-flower-applique";
 const pageTitle = "3D Flower Lace Applique Supplier for Bridal & Couture";
-const pageDescription = "Custom 3D flower lace appliques for bridal gowns and couture. Review buyer specifications, MOQ 10 pieces, sampling, mirrored pairs and beading options.";
-const heroImage = "/products/3d-applique-design-showcase/ivory-bridal-3d-flower-lace-applique-design-showcase.jpg";
+const pageDescription = "Custom 3D flower and rose lace appliques for bridal gowns, couture and fashion. Review buyer specifications, MOQ 10 pieces, sample references, sizing and color options.";
+const heroImage = "/products/3d-rose-applique/black-white-red-3d-rose-applique-colors.webp";
 
 export const metadata: Metadata = createPageMetadata(pageTitle, pageDescription, pagePath, heroImage);
 
@@ -20,7 +20,8 @@ const specifications = [
   ["Decoration", "Embroidery-only, pearl, bead, sequin or crystal options"],
   ["Backing", "Sew-on by default; other options confirmed after design review"],
   ["Pairing", "Single motif, coordinated set or mirrored pair"],
-  ["Color", "Ivory, white or custom color matching"],
+  ["Color", "Black, white, ivory, red or custom color matching"],
+  ["Example shown size", "Approx. 14 × 30 cm for the featured rose style"],
   ["Custom size & motif", "Available after design feasibility review"],
   ["MOQ", "10 pieces"],
   ["Sample Time", "Confirmed after design review"],
@@ -30,11 +31,34 @@ const specifications = [
 ];
 
 const showcase = [
-  { title: "Ivory Bridal 3D Flower Applique", image: heroImage, alt: "Ivory 3D flower lace applique design for a bridal gown neckline", text: "An ivory floral direction for wedding-gown necklines and bodices. The motif can be reviewed for color tone, scale and placement against the final dress fabric." },
-  { title: "Pearl & Beaded 3D Flower Applique", image: "/products/3d-applique-design-showcase/pearl-beaded-3d-flower-applique-design-showcase.jpg", alt: "Pearl and beaded 3D flower lace applique design for couture eveningwear", text: "Pearls, beads or sequins can highlight flower centers and leaf details. Material, placement and attachment method are confirmed during design review." },
-  { title: "Layered Petal 3D Lace Applique", image: "/products/3d-applique-design-showcase/layered-petal-3d-flower-lace-applique-design-showcase.jpg", alt: "Layered petal 3D flower lace applique concept for a bridal bodice", text: "Layered embroidered petals create more depth than flat stitching. Petal structure and edge finishing are assessed during sampling so the motif remains balanced on the garment." },
-  { title: "Mirrored Pair Lace Appliques", image: "/products/3d-applique-design-showcase/mirrored-pair-3d-flower-lace-applique-design-showcase.jpg", alt: "Mirrored pair 3D floral lace applique design for symmetrical bridal placement", text: "Matched left-and-right directions can frame a neckline, corset, waist or back panel. Send the intended placement so orientation and pair matching can be reviewed before sampling." },
-  { title: "Couture Bodice Lace Applique", image: "/products/3d-applique-design-showcase/couture-bodice-3d-flower-lace-applique-design-showcase.jpg", alt: "Couture bodice 3D flower lace applique design with dimensional floral placement", text: "Elongated or contoured applique layouts can follow a couture bodice or corset. Final shape depends on the silhouette, seams and desired focal area." },
+  {
+    title: "Black 3D Rose Applique — Approx. 14 × 30 cm",
+    image: "/products/3d-rose-applique/black-3d-rose-applique-14x30cm.webp",
+    alt: "black 3D rose lace applique sample approximately 14 by 30 cm",
+    text: "This shown rose style is approximately 14 × 30 cm. Use the measurement as a sample reference; custom size and placement are reviewed before sampling.",
+    caption: "Shown style: approximately 14 × 30 cm.",
+  },
+  {
+    title: "Layered Rose Embroidery Detail",
+    image: "/products/3d-rose-applique/black-3d-rose-lace-applique-detail.webp",
+    alt: "black 3D embroidered rose lace applique close-up with layered petals",
+    text: "A close-up reference showing the raised rose construction, dense embroidery and leaf stitching used to discuss texture and garment placement.",
+    caption: "Close-up sample reference showing layered embroidered rose construction.",
+  },
+  {
+    title: "Black, White & Red Color Directions",
+    image: "/products/3d-rose-applique/black-white-red-3d-rose-applique-colors.webp",
+    alt: "black white and red 3D embroidered rose lace applique color options",
+    text: "The same floral direction can be reviewed in different colorways. Final shade matching is confirmed during sampling against your garment fabric or color reference.",
+    caption: "Black, white and red color directions for the rose applique style.",
+  },
+  {
+    title: "Custom Color Options",
+    image: "/products/3d-rose-applique/3d-rose-lace-applique-color-options.webp",
+    alt: "multicolor 3D embroidered rose lace applique color options for custom garment development",
+    text: "Multiple color directions are available for fashion, occasionwear and custom development. Send your target shade or reference image for review.",
+    caption: "Color development reference; final matching is confirmed during sampling.",
+  },
 ];
 
 const process = [
@@ -49,6 +73,7 @@ const process = [
 
 const faqs = [
   ["What is the MOQ for 3D flower lace appliques?", "The MOQ is 10 pieces. Final order details depend on the selected design, decoration and customization level."],
+  ["What size is the rose applique shown on this page?", "The featured black rose style is approximately 14 × 30 cm. Other sizes are reviewed for feasibility before sampling."],
   ["What are the sample and bulk lead times?", "Sample Time: Confirmed after design review. Bulk Lead Time: Confirmed after design review. We do not publish a fixed number before the construction, handwork and quantity are assessed."],
   ["Can you customize from a reference photo?", "Yes. Send a product photo, dress photo, sketch, artwork or physical sample. We review whether the design can be adapted for production and advise the sampling route."],
   ["Can you make mirrored applique pairs?", "Yes. Matched left-and-right pairs can be developed for bodices, necklines, shoulders, waistlines and other symmetrical garment areas."],
@@ -76,7 +101,7 @@ export default function ThreeDFlowerAppliquePage() {
           <p className="hero-proof"><strong>MOQ: 10 pieces.</strong> Sample Time and Bulk Lead Time are confirmed after design review.</p>
           <div className="hero-actions"><WhatsAppLink className="button button-dark" message={whatsappMessage} productCategory="3D Flower Lace Applique" placement="3d_money_page_hero">Send a reference photo on WhatsApp → Get MOQ, price &amp; sampling options</WhatsAppLink><a className="text-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Compare 3D vs flat applique <ArrowRight size={15} /></a></div>
         </div>
-        <figure className="inner-hero-image applique-concept-figure"><Image src={heroImage} alt="Ivory 3D flower lace applique design for a bridal gown neckline" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /><figcaption>Product concept/design showcase for style and placement discussion. Not presented as a factory, QC or customer-order photograph.</figcaption></figure>
+        <figure className="inner-hero-image applique-concept-figure"><Image src={heroImage} alt="black white and red 3D embroidered rose lace applique color options" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /><figcaption>Rose applique sample reference for color, size and construction discussion. Final details are confirmed during design review.</figcaption></figure>
       </section>
 
       <section className="section buyer-spec-section" aria-labelledby="buyer-spec-title">
@@ -85,8 +110,8 @@ export default function ThreeDFlowerAppliquePage() {
       </section>
 
       <section className="section design-showcase-section" aria-labelledby="showcase-title">
-        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Design directions</p><h2 id="showcase-title">Five ways to develop dimensional florals.</h2></div><p>These images are product concepts/design showcases used to discuss style, construction and placement. They are not labeled as factory production, QC inspection or customer orders.</p></div>
-        <div className="design-showcase-grid">{showcase.map((item) => <article key={item.title}><figure><Image src={item.image} alt={item.alt} width={900} height={900} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" /><figcaption>Product concept/design showcase — final construction is confirmed after design review.</figcaption></figure><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product sample references</p><h2 id="showcase-title">Rose applique size, detail and color options.</h2></div><p>Review the shown style, approximate size, layered rose construction and available color directions before sending your reference for sampling.</p></div>
+        <div className="design-showcase-grid">{showcase.map((item) => <article key={item.title}><figure><Image src={item.image} alt={item.alt} width={900} height={900} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" /><figcaption>{item.caption}</figcaption></figure><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
       </section>
 
       <section className="section quick-comparison-section">
