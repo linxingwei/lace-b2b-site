@@ -13,8 +13,9 @@ function sitemapUrls() {
 }
 
 function normalizeRequestedUrls(requested: unknown) {
-  const allowed = new Set(sitemapUrls());
-  if (!Array.isArray(requested)) return [...allowed];
+  const allowedUrls = sitemapUrls();
+  const allowed = new Set(allowedUrls);
+  if (!Array.isArray(requested)) return allowedUrls;
 
   return requested
     .filter((value): value is string => typeof value === "string")
