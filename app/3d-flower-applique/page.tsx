@@ -31,34 +31,10 @@ const specifications = [
 ];
 
 const showcase = [
-  {
-    title: "Black 3D Rose Applique — Approx. 14 × 30 cm",
-    image: "/products/3d-rose-applique/black-3d-rose-applique-14x30cm.webp",
-    alt: "black 3D rose lace applique sample approximately 14 by 30 cm",
-    text: "This shown rose style is approximately 14 × 30 cm. Use the measurement as a sample reference; custom size and placement are reviewed before sampling.",
-    caption: "Shown style: approximately 14 × 30 cm.",
-  },
-  {
-    title: "Layered Rose Embroidery Detail",
-    image: "/products/3d-rose-applique/black-3d-rose-lace-applique-detail.webp",
-    alt: "black 3D embroidered rose lace applique close-up with layered petals",
-    text: "A close-up reference showing the raised rose construction, dense embroidery and leaf stitching used to discuss texture and garment placement.",
-    caption: "Close-up sample reference showing layered embroidered rose construction.",
-  },
-  {
-    title: "Black, White & Red Color Directions",
-    image: "/products/3d-rose-applique/black-white-red-3d-rose-applique-colors.webp",
-    alt: "black white and red 3D embroidered rose lace applique color options",
-    text: "The same floral direction can be reviewed in different colorways. Final shade matching is confirmed during sampling against your garment fabric or color reference.",
-    caption: "Black, white and red color directions for the rose applique style.",
-  },
-  {
-    title: "Custom Color Options",
-    image: "/products/3d-rose-applique/3d-rose-lace-applique-color-options.webp",
-    alt: "multicolor 3D embroidered rose lace applique color options for custom garment development",
-    text: "Multiple color directions are available for fashion, occasionwear and custom development. Send your target shade or reference image for review.",
-    caption: "Color development reference; final matching is confirmed during sampling.",
-  },
+  { title: "Black 3D Rose Applique — Approx. 14 × 30 cm", image: "/products/3d-rose-applique/black-3d-rose-applique-14x30cm.webp", alt: "black 3D rose lace applique sample approximately 14 by 30 cm", text: "This shown rose style is approximately 14 × 30 cm. Use the measurement as a sample reference; custom size and placement are reviewed before sampling.", caption: "Shown style: approximately 14 × 30 cm." },
+  { title: "Layered Rose Embroidery Detail", image: "/products/3d-rose-applique/black-3d-rose-lace-applique-detail.webp", alt: "black 3D embroidered rose lace applique close-up with layered petals", text: "A close-up reference showing the raised rose construction, dense embroidery and leaf stitching used to discuss texture and garment placement.", caption: "Close-up sample reference showing layered embroidered rose construction." },
+  { title: "Black, White & Red Color Directions", image: "/products/3d-rose-applique/black-white-red-3d-rose-applique-colors.webp", alt: "black white and red 3D embroidered rose lace applique color options", text: "The same floral direction can be reviewed in different colorways. Final shade matching is confirmed during sampling against your garment fabric or color reference.", caption: "Black, white and red color directions for the rose applique style." },
+  { title: "Custom Color Options", image: "/products/3d-rose-applique/3d-rose-lace-applique-color-options.webp", alt: "multicolor 3D embroidered rose lace applique color options for custom garment development", text: "Multiple color directions are available for fashion, occasionwear and custom development. Send your target shade or reference image for review.", caption: "Color development reference; final matching is confirmed during sampling." },
 ];
 
 const process = [
