@@ -50,9 +50,11 @@ const process = [
 const faqs = [
   ["What is the MOQ for 3D flower lace appliques?", "The MOQ is 10 pieces. Final order details depend on the selected design, decoration and customization level."],
   ["What size is the rose applique shown on this page?", "The featured black rose style is approximately 14 × 30 cm. Other sizes are reviewed for feasibility before sampling."],
+  ["Can you customize the size and color of a 3D flower applique?", "Yes. Send the target dimensions, color reference and intended garment placement. Size and color feasibility are reviewed before sampling."],
+  ["Can you make mirrored left-and-right applique pairs?", "Yes. Matched left-and-right pairs can be developed for bodices, necklines, shoulders, waistlines and other symmetrical garment areas."],
+  ["Is 3D flower applique suitable for bridal gowns and evening dresses?", "Yes. Dimensional floral appliques are commonly developed as focal decoration for bridal gowns, couture dresses, eveningwear and occasionwear. The final construction should be reviewed against the garment fabric and placement."],
   ["What are the sample and bulk lead times?", "Sample Time: Confirmed after design review. Bulk Lead Time: Confirmed after design review. We do not publish a fixed number before the construction, handwork and quantity are assessed."],
   ["Can you customize from a reference photo?", "Yes. Send a product photo, dress photo, sketch, artwork or physical sample. We review whether the design can be adapted for production and advise the sampling route."],
-  ["Can you make mirrored applique pairs?", "Yes. Matched left-and-right pairs can be developed for bodices, necklines, shoulders, waistlines and other symmetrical garment areas."],
   ["Can pearls, beads or sequins be added?", "Yes, depending on the motif. Decoration materials, placement and attachment are confirmed during design review."],
   ["Are 3D appliques more expensive and harder to sew than flat embroidery?", "Usually, yes. Layered petals and embellishment often require more materials, more complex sampling and more careful sewing, but the actual cost and workload depend on the design."],
 ];
@@ -88,6 +90,7 @@ export default function ThreeDFlowerAppliquePage() {
       <section className="section design-showcase-section" aria-labelledby="showcase-title">
         <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product sample references</p><h2 id="showcase-title">Rose applique size, detail and color options.</h2></div><p>Review the shown style, approximate size, layered rose construction and available color directions before sending your reference for sampling.</p></div>
         <div className="design-showcase-grid">{showcase.map((item) => <article key={item.title}><figure><Image src={item.image} alt={item.alt} width={900} height={900} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" /><figcaption>{item.caption}</figcaption></figure><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div>
+        <p className="process-link-note"><strong>Reverse-side note:</strong> the reverse finish depends on the approved motif, decoration and attachment method. Because no verified backside photo is shown here, reverse-side construction is confirmed during sample approval rather than represented by a generic image.</p>
       </section>
 
       <section className="section quick-comparison-section">
@@ -100,6 +103,16 @@ export default function ThreeDFlowerAppliquePage() {
         <div className="section-heading centered-heading"><p className="eyebrow"><span /> Custom development</p><h2 id="process-title">Send Reference → Design Review → Sample → Approval → Bulk Production → QC → Shipment</h2></div>
         <div className="seven-step-process">{process.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
         <p className="process-link-note">Need a motif developed around a garment pattern? Continue to <a href="/custom-design">custom lace design and sampling</a>.</p>
+      </section>
+
+      <section className="section related-section" aria-labelledby="related-guides-title">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Related sourcing guides</p><h2 id="related-guides-title">Continue your applique and garment-material review.</h2></div><p>Use these related pages to compare construction, garment application and custom development before sampling.</p></div>
+        <div className="related-links">
+          <a href="/bridal-lace"><span>3D bridal appliques &amp; bridal lace</span><ArrowRight size={17} /></a>
+          <a href="/embroidery-lace"><span>3D embroidered appliques &amp; embroidery lace</span><ArrowRight size={17} /></a>
+          <a href="/custom-design"><span>Custom 3D applique development</span><ArrowRight size={17} /></a>
+          <a href="/blog/3d-lace-applique-vs-flat-embroidered-applique"><span>3D vs flat embroidered applique</span><ArrowRight size={17} /></a>
+        </div>
       </section>
 
       <section className="section faq-section category-faq" id="faq"><div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer FAQ</p><h2>3D flower lace applique sourcing.</h2></div><div className="faq-list">{faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
