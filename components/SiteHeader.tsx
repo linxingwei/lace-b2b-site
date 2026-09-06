@@ -10,6 +10,7 @@ const mainLinks = [
 ];
 
 const productLinks = [
+  ["Hair Bow Lace", "/hair-bow-lace", "Custom embroidered tulle trim for boutique bows"],
   ["Bridal Lace", "/bridal-lace", "Lace for gowns, veils and couture bridalwear"],
   ["Fashion Lace", "/embroidery-lace", "Embroidered lace for contemporary collections"],
   ["Lolita Lace", "/kids-lace-trim", "Decorative trims for Lolita and playful fashion"],
