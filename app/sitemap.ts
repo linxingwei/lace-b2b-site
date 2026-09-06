@@ -1,3 +1,4 @@
+import { hairBowDesigns, hairBowPath, hairBowUrl } from "@/lib/hair-bow-lace";
 import type { MetadataRoute } from "next";
 import { articles, categories } from "@/lib/site-data";
 
@@ -14,5 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about", priority: 0.7, frequency: "monthly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
   ].map((route) => ({ url: `${base}${route.path}`, changeFrequency: route.frequency, priority: route.priority }));
-  return [...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes];
+  const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date("2026-09-06"), changeFrequency: "monthly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
+  return [...hairBowRoutes, ...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes];
 }
