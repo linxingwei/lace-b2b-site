@@ -1,0 +1,55 @@
+.page :global(.inner-hero-copy), .page :global(.inner-hero-image), .page :global(.category-detail-grid)>div { min-width: 0; }
+.page :global(.button) { max-width: 100%; height: auto; padding-top: 14px; padding-bottom: 14px; text-align: center; line-height: 1.5; }
+.page :global(.inner-hero-image) img { object-fit: contain; }
+.section { background: #f6f1e9; }
+.jumpLinks { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 32px; }
+.jumpLinks a { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid #cfc3b6; background: #fffdf9; font-size: 13px; line-height: 1.4; }
+.jumpLinks a:hover { border-color: #765b3d; }
+.jumpLinks a:focus-visible, .gallery a:focus-visible, .specs summary:focus-visible { outline: 2px solid #765b3d; outline-offset: 4px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.card { background: #fffdf9; border: 1px solid #ded5ca; scroll-margin-top: 110px; min-width: 0; }
+.gallery { padding: 18px 18px 0; }
+.mainImage { width: 100%; height: auto; max-height: 540px; object-fit: contain; background: #f4f2ef; }
+.thumbnails { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.thumbnails figure { margin: 0; }
+.thumbnails img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; background: #f4f2ef; }
+.thumbnails figcaption { font-size: 12px; line-height: 1.5; color: #665a50; padding-top: 8px; }
+.copy { padding: 30px; }
+.reference { color: #765b3d; font-size: 11px !important; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 12px !important; }
+.copy h3 { font: 29px/1.2 var(--serif); margin: 0 0 18px; font-weight: 400; }
+.copy p { font-size: 14px; line-height: 1.75; color: #665a50; }
+.keyFacts { display: flex; flex-direction: column; gap: 8px; padding: 16px; margin: 20px 0; background: #f6f1e9; font-size: 13px; line-height: 1.6; }
+.application strong { display: block; color: var(--ink); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
+.specs { border-top: 1px solid #ded5ca; border-bottom: 1px solid #ded5ca; margin: 24px 0; }
+.specs summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 0; font-size: 14px; cursor: pointer; list-style: none; }
+.specs summary::-webkit-details-marker { display: none; }
+.specs[open] summary span { transform: rotate(45deg); }
+.specs dl { margin: 0 0 16px; }
+.specs dl div { display: grid; grid-template-columns: 34% 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid #ece5dd; font-size: 13px; line-height: 1.65; }
+.specs dt { font-weight: 600; }
+.specs dd { margin: 0; color: #665a50; overflow-wrap: anywhere; }
+.quote { width: 100%; justify-content: center; }
+.note { display: block; margin-top: 12px; color: #665a50; font-size: 12px; line-height: 1.6; }
+.procurement { margin-top: 70px; padding-top: 55px; border-top: 1px solid #cfc3b6; display: grid; grid-template-columns: 1fr 1.4fr; gap: 55px; scroll-margin-top: 110px; }
+.procurement h2 { font: 36px/1.2 var(--serif); margin: 16px 0; }
+.procurement p { font-size: 14px; line-height: 1.8; color: #665a50; }
+.procurement ol { margin: 0; padding-left: 24px; }
+.procurement li { padding-left: 10px; margin-bottom: 24px; }
+.procurement h3 { font-size: 16px; margin: 0 0 6px; }
+.procurement li p { margin: 0; }
+.procurement a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) {
+  .page :global(.inner-hero-image) { min-height: 0; }
+  .page :global(.inner-hero-image) img { height: auto; }
+  .page :global(.inner-hero-copy) { padding: 44px 6vw; }
+  .page :global(.category-detail-grid)>div { padding: 28px; }
+  .grid { grid-template-columns: 1fr; gap: 22px; }
+  .copy { padding: 24px; }
+  .copy h3 { font-size: 27px; }
+  .procurement { grid-template-columns: 1fr; gap: 24px; margin-top: 44px; padding-top: 34px; }
+  .procurement h2 { font-size: 30px; }
+  .jumpLinks a { font-size: 12px; padding: 10px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jumpLinks a, .specs summary span { transition: none; }
+}
