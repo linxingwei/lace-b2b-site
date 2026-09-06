@@ -30,11 +30,14 @@ for (const path of ['/hair-bow-lace', ...paths]) {
   if(path!=='/hair-bow-lace') {
     const product=schemas.find(s=>s['@type']==='Product'); assert(product);
     assert(!product.offers && !product.aggregateRating && !product.review);
+    assert.equal(product.additionalProperty.find(item=>item.name==='Target market')?.value, 'United States');
+    assert(product.audience?.audienceType.includes('US boutique hair bow brands'));
     assert(product.image?.startsWith(canonicalBase + '/products/hair-bow-lace/'));
     assert(html.includes('alt="Design concept for '));
     assert(!html.includes('Original concept image pending'));
     assert(html.includes('href="/hair-bow-lace"'));
   }
+  assert(html.includes(path === '/hair-bow-lace' ? 'Designed for the US boutique hair bow market' : 'Do you supply boutique hair bow businesses in the United States?'));
   const ctas=[...html.matchAll(/href="(https:\/\/wa.me\/8615767956637\?text=[^"]+)"/g)];
   assert(ctas.length>=2, path+' CTA');
   assert(decodeURIComponent(ctas[0][1]).includes('MOQ'));
