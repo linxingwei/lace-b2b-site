@@ -20,11 +20,12 @@ export const hairBowDesigns: HairBowDesign[] = designs.map(([slug, name, theme, 
 });
 export const hairBowUrl = (design: HairBowDesign) => `${hairBowPath}/${design.slug}`;
 export const conceptNotice = "Design concepts for development, not factory photographs, QC photographs or customer orders. Final construction, color and dimensions are subject to physical sample approval.";
-export const orderingAnswer = "Send the design name, requested finished width, thread colors, estimated length in yards or meters and US delivery ZIP code. MOQ, price, sample time, bulk lead time, packing and shipping are confirmed after design review.";
+export const orderingAnswer = "US buyers can send the design name, requested finished width in inches, thread colors, estimated length in yards and delivery ZIP code. MOQ, price, sample time, bulk lead time, packing and shipping are confirmed after design review. Metric specifications can also be provided for production.";
 export function designFaq(design: HairBowDesign) { return [
   { q: `What is ${design.name} hair bow lace?`, a: `${design.description} It is a trim development concept from VELORACE LACE, not a finished hair bow or an in-stock product promise.` },
   { q: "How is it used for children's hair bows?", a: `Use it as a decorative overlay on ribbon for ${design.use.toLowerCase()}. Align a visible motif with each loop, check the center wrap placement and test attachment on a physical sample before production.` },
   { q: "Is the lace 1.5 inches wide?", a: "The development target is approximately 1.5 inches (38.1 mm). Confirm the actual finished width and edge fit with your ribbon during sample review; a concept image does not establish a measured specification." },
   { q: "Can I customize this design?", a: `${design.development} Motif scale, repeat spacing, thread colors, mesh base, edge finish and requested width can be reviewed for feasibility.` },
   { q: "How do sampling and ordering work?", a: orderingAnswer + " Agree the sample scope first, review the physical sample, then confirm the bulk order against the approved specification." },
+  { q: "Do you supply boutique hair bow businesses in the United States?", a: "Yes. This collection is presented for US boutique hair bow brands, hair accessory designers and bow supply buyers. International shipping options and commercial terms are confirmed for each project after the design, quantity and destination are reviewed." },
 ]; }
