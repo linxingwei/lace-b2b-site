@@ -85,6 +85,11 @@ assert(title(about).includes("VELORACE LACE"), "About title uses the full brand 
 assert(/property="og:title" content="[^"]*VELORACE LACE/i.test(about), "About OG title uses the full brand name");
 jsonLdIsValid(about, "About page");
 
+const butterflyTrim = await get("/products/butterfly-floral-embroidered-trim");
+assert(!butterflyTrim.includes('"@type":"Product"'), "Quote-only butterfly trim page does not claim Product rich-result eligibility without an offer or review");
+assert(butterflyTrim.includes('"@type":"BreadcrumbList"'), "Butterfly trim page retains breadcrumb structured data");
+jsonLdIsValid(butterflyTrim, "Butterfly trim page");
+
 const sitemap = await get("/sitemap.xml");
 assert(sitemap.includes(`${productionUrl}/3d-flower-applique`), "Sitemap includes the 3D applique page");
 assert(sitemap.includes(`${productionUrl}/blog/3d-lace-applique-vs-flat-embroidered-applique`), "Sitemap includes the comparison guide");
@@ -108,3 +113,4 @@ for (const check of checks) console.log(`${check.ok ? "PASS" : "FAIL"} ${check.l
 const failures = checks.filter((check) => !check.ok);
 console.log(`\n${checks.length - failures.length}/${checks.length} checks passed.`);
 if (failures.length) process.exitCode = 1;
+
