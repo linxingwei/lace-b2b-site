@@ -21,33 +21,12 @@ export default function ButterflyFloralTrimPage() {
   const url = absoluteUrl(path);
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": `${url}#product`,
-        name: productName,
-        description,
-        sku: "VET-BF002",
-        url,
-        image: images.map(([image]) => absoluteUrl(image)),
-        category: "Embroidered Lace Trim",
-        material: "Embroidered mesh lace",
-        brand: { "@type": "Brand", name: "VELORACE LACE" },
-        additionalProperty: [
-          { "@type": "PropertyValue", name: "Customization", value: "Color, motif, width and base material" },
-          { "@type": "PropertyValue", name: "Supply type", value: "Wholesale and custom development" },
-          { "@type": "PropertyValue", name: "Sample", value: "Available before bulk production" },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
-          { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` },
-          { "@type": "ListItem", position: 3, name: "Embroidery Lace", item: `${siteUrl}/embroidery-lace` },
-          { "@type": "ListItem", position: 4, name: productName, item: url },
-        ],
-      },
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` },
+      { "@type": "ListItem", position: 3, name: "Embroidery Lace", item: `${siteUrl}/embroidery-lace` },
+      { "@type": "ListItem", position: 4, name: productName, item: url },
     ],
   };
 
@@ -82,3 +61,4 @@ export default function ButterflyFloralTrimPage() {
     </main>
   );
 }
+
