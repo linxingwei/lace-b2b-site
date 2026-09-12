@@ -5,16 +5,17 @@ import { categoryBySlug } from "@/lib/site-data";
 const category = categoryBySlug["bridal-lace"];
 
 export const metadata: Metadata = {
-  title: "Wholesale Bridal Lace Supplier China | Wedding Dress Lace",
+  title: "Bridal Lace Fabric | Embroidered Tulle & Beaded Lace",
   description:
-    "Source bridal lace, embroidered lace, 3D appliques and beaded lace for wedding gowns and veils. Custom colors, sampling and wholesale supply from China.",
+    "Explore embroidered tulle bridal lace with gown and fabric photos. Compare 3D floral and beaded styles; ask VELORACE LACE about MOQ, samples and shipping.",
   alternates: { canonical: "/bridal-lace" },
   openGraph: {
-    title: "Wholesale Bridal Lace Supplier China | VELORACE LACE",
+    title: "Bridal Lace Fabric | VELORACE LACE",
     description:
-      "Bridal lace and custom embroidery for wedding gowns, cathedral veils and couture bridalwear. Send your reference for MOQ, sampling and wholesale pricing.",
+      "Explore fine embroidered tulle, 3D floral and beaded bridal lace. View fabric and gown photos and request specifications, samples and a quote.",
     url: "/bridal-lace",
     type: "website",
+    images: [{ url: "/products/fine-embroidered-tulle/off-shoulder-wedding-gown.png", width: 550, height: 740, alt: "Floral embroidered tulle lace wedding gown application" }],
   },
 };
 

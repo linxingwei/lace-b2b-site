@@ -4,6 +4,8 @@ import type { CategoryData } from "@/lib/site-data";
 import { categories } from "@/lib/site-data";
 import { absoluteUrl, siteUrl } from "@/lib/seo";
 import WhatsAppLink from "@/components/WhatsAppLink";
+import BridalProducts from "@/components/BridalProducts";
+import bridalStyles from "@/components/BridalProducts.module.css";
 
 export default function CategoryPage({ category }: { category: CategoryData }) {
   const url = absoluteUrl(`/${category.slug}`);
@@ -29,7 +31,7 @@ export default function CategoryPage({ category }: { category: CategoryData }) {
     { "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ] };
   return (
-    <main>
+    <main className={isBridal ? bridalStyles.page : undefined}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="inner-hero">
         <div className="inner-hero-copy">
@@ -41,6 +43,7 @@ export default function CategoryPage({ category }: { category: CategoryData }) {
         </div>
         <div className="inner-hero-image"><Image src={category.image} alt={isBridal ? "beaded bridal lace applique for wedding gown and veil development" : category.alt} width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /></div>
       </section>
+      {isBridal && <BridalProducts />}
       <section className="section category-detail">
         <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Sourcing advantages</p><h2>{isBridal ? "Bridal lace developed around the final garment." : "Flexible supply for global buyers."}</h2></div><p>{isBridal ? "Choose an existing construction or send your artwork, veil reference or gown detail. We review application, base material, motif scale, color, quantity and finishing before confirming the sampling route." : category.description}</p></div>
         <div className="category-detail-grid">

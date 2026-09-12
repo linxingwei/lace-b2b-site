@@ -1,0 +1,25 @@
+.section { scroll-margin-top: 100px; }
+.page :global(.inner-hero-copy), .page :global(.inner-hero-image) { min-width: 0; }
+.page :global(.category-whatsapp-actions .button) { white-space: normal; max-width: 100%; }
+.section h2 { max-width: 850px; }
+.intro { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 24px 0 32px; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.gallery figure { margin: 0; min-width: 0; }
+.gallery a { display: block; background: #f4f0e9; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.gallery figcaption { font-size: 14px; padding: 10px 0 16px; }
+.procurement { margin: 36px 0 60px; padding: 30px; background: #f4f0e9; }
+.procurement dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 24px 0; }
+.procurement dt { font-weight: 600; margin-bottom: 6px; }
+.procurement dd { margin: 0; }
+.procurement a { margin: 8px 18px 8px 0; white-space: normal; }
+.matrixTitle { margin-bottom: 18px; }
+.matrix { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 28px 0; }
+.matrix article { padding: 26px; border: 1px solid #ded5c8; scroll-margin-top: 100px; }
+.matrix h3 { margin: 15px 0; }
+.matrix ul { padding-left: 20px; margin: 20px 0; }
+.matrix li { margin-bottom: 8px; }
+.matrix article > p { margin-bottom: 18px; }
+.guide a { text-decoration: underline; }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .matrix { grid-template-columns: 1fr; } .procurement dl { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .intro, .gallery, .procurement dl { grid-template-columns: 1fr; } .intro { gap: 16px; } .procurement { padding: 22px; } }
