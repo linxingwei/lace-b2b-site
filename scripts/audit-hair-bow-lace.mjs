@@ -28,11 +28,10 @@ for (const path of ['/hair-bow-lace', ...paths]) {
   const faq=schemas.find(s=>s['@type']==='FAQPage'); assert(faq?.mainEntity.length>=5);
   for(const q of faq.mainEntity) assert(html.includes(q.name.replace(/&/g,'&amp;').replace(/'/g,'&#x27;')), path+' visible FAQ');
   if(path!=='/hair-bow-lace') {
-    const product=schemas.find(s=>s['@type']==='Product'); assert(product);
-    assert(!product.offers && !product.aggregateRating && !product.review);
-    assert.equal(product.additionalProperty.find(item=>item.name==='Target market')?.value, 'United States');
-    assert(product.audience?.audienceType.includes('US boutique hair bow brands'));
-    assert(product.image?.startsWith(canonicalBase + '/products/hair-bow-lace/'));
+    assert(!schemas.some(s=>s['@type']==='Product'), path+' quote-only concept does not claim Product rich-result eligibility');
+    const webPage=schemas.find(s=>s['@type']==='WebPage'); assert(webPage);
+    assert(webPage.audience?.audienceType.includes('US boutique hair bow brands'));
+    assert(webPage.primaryImageOfPage?.url.startsWith(canonicalBase + '/products/hair-bow-lace/'));
     assert(html.includes('alt="Design concept for '));
     assert(!html.includes('Original concept image pending'));
     assert(html.includes('href="/hair-bow-lace"'));
@@ -48,3 +47,4 @@ const home=await get('/'); assert(home.includes('id="featured-hair-bow-lace"'));
 assert.equal((await fetch(base+'/hair-bow-lace/not-a-design')).status,404);
 console.log(`PASS: ${checks} pages; unique metadata, canonical, sitemap, robots, JSON-LD, FAQ, links, WhatsApp and unknown route.`);
 console.log('PASS: All 12 optimized concept images are connected to their matching product pages.');
+
