@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+const path = "/christmas-embroidered-lace-trim";
+const base = "https://www.veloracelace.com";
+const whatsapp = "https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20need%20custom%20Christmas%20multicolor%20embroidered%20lace%20trim.%20I%20will%20send%20my%20motifs%2C%20colors%2C%20target%20width%2C%20application%20and%20quantity.";
+
+export const metadata: Metadata = {
+  title: "Custom Christmas Embroidered Lace Trim | Multicolor Supplier",
+  description: "Develop custom multicolor Christmas embroidered lace trim with trees, gifts, bows, candy canes and other holiday motifs for hair bows, childrenswear and fashion accessories.",
+  alternates: { canonical: path },
+  openGraph: { title: "Custom Christmas Multicolor Embroidered Lace Trim | VELORACE LACE", description: "Develop Christmas motif lace trim from artwork or references with custom thread colors, repeat, width and sample review.", url: path, type: "website" },
+};
+
+const faqs = [
+  ["Can I customize the Christmas motifs?", "Yes. Send your artwork or reference images and identify which motifs should be used. Motif scale, spacing and embroidery feasibility are reviewed before sampling."],
+  ["Can Christmas lace use pink or non-traditional colors?", "Yes. The palette can be developed around the buyer's collection rather than only traditional red and green. Send target colors or Pantone references for discussion."],
+  ["Can the trim be developed for children's hair bows?", "Yes. For hair-bow applications, send the backing ribbon width and finished bow size so motif visibility and repeat can be reviewed around the loops and center fold."],
+  ["How many embroidery colors can I use?", "The practical thread-color count depends on the design and embroidery construction. Send the intended palette first; the feasible color plan should be confirmed during development rather than assumed."],
+  ["Can I approve a sample before bulk production?", "Yes. A physical sample is recommended to review colors, stitch definition, motif readability, repeat, width and fit before confirming bulk specifications."],
+] as const;
+
+export default function ChristmasLacePage() {
+  const schema = [
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: base }, { "@type": "ListItem", position: 2, name: "Seasonal Embroidered Lace", item: `${base}/seasonal-embroidered-lace-trim` }, { "@type": "ListItem", position: 3, name: "Christmas Embroidered Lace Trim", item: `${base}${path}` }] },
+    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q,a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
+  ];
+  return <main className="mx-auto max-w-6xl px-5 py-10 md:py-16">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <nav className="mb-6 text-sm text-neutral-600"><Link href="/">Home</Link> / <Link href="/seasonal-embroidered-lace-trim">Seasonal Lace</Link> / Christmas Lace</nav>
+    <section className="max-w-4xl"><p className="mb-3 text-sm font-semibold uppercase tracking-wider">Holiday collection development · Multicolor embroidery</p><h1 className="text-4xl font-semibold leading-tight md:text-6xl">Custom Christmas Multicolor Embroidered Lace Trim</h1><p className="mt-6 text-lg leading-8 text-neutral-700">Develop Christmas embroidered lace trim around your own holiday palette and product application. Christmas trees, gifts, bows, candy canes, gingerbread and other recognizable motifs can be translated into repeating multicolor embroidery for hair bows, children's accessories, garments and decorative fashion trims.</p><div className="mt-7 flex flex-wrap gap-3"><a className="rounded-full bg-black px-6 py-3 text-white" href={whatsapp}>Send Christmas design</a><Link className="rounded-full border border-neutral-300 px-6 py-3" href="/hair-bow-lace">View hair bow concepts</Link></div></section>
+
+    <section className="mt-16"><h2 className="text-3xl font-semibold">Christmas motif directions for custom embroidery</h2><div className="mt-7 grid gap-4 md:grid-cols-3">{[["Tree + gift + bow","A recognizable holiday combination for boutique accessories. Develop the palette and motif spacing around the finished trim width."],["Gingerbread + candy cane + bow","A playful Christmas direction suited to children's seasonal collections where motifs need to remain readable after folding or sewing."],["Santa + tree + gift","A classic holiday direction that can be simplified into embroidery-friendly shapes and coordinated thread colors for a repeating trim."],["Snowflake + bow","A cleaner winter direction that can use traditional or boutique palettes depending on the buyer's collection."],["Custom brand palette","Christmas does not have to mean only red and green. Send your collection colors, including pink, blue or other coordinated directions."],["Your own artwork","Provide original motifs, sketches or references. Development should preserve the important visual identity while adapting scale and construction for embroidery."]].map(([h,p]) => <article className="rounded-2xl border border-neutral-200 p-6" key={h}><h3 className="text-xl font-semibold">{h}</h3><p className="mt-3 leading-7 text-neutral-700">{p}</p></article>)}</div></section>
+
+    <section className="mt-16 rounded-2xl bg-neutral-100 p-7 md:p-10"><h2 className="text-3xl font-semibold">For hair bows, design the repeat around the bow.</h2><p className="mt-4 max-w-4xl leading-7 text-neutral-700">A motif that looks clear on a flat strip can disappear when the lace is folded into loops. For Christmas hair-bow trim, send the backing ribbon width, finished bow size and center-wrap reference. The motif scale and repeat can then be reviewed so the important Christmas elements remain visible on the finished accessory.</p><Link className="mt-5 inline-block font-semibold underline" href="/hair-bow-lace">Explore custom multicolor hair bow lace</Link></section>
+
+    <section className="mt-16 grid gap-6 md:grid-cols-3"><article className="rounded-2xl border border-neutral-200 p-6"><h2 className="text-xl font-semibold">Send the reference</h2><p className="mt-3 leading-7 text-neutral-700">Artwork, motif references, target palette, application and approximate finished width.</p></article><article className="rounded-2xl border border-neutral-200 p-6"><h2 className="text-xl font-semibold">Review embroidery construction</h2><p className="mt-3 leading-7 text-neutral-700">Discuss motif scale, repeat, thread colors, mesh base and edge direction before the sample specification is confirmed.</p></article><article className="rounded-2xl border border-neutral-200 p-6"><h2 className="text-xl font-semibold">Approve the physical sample</h2><p className="mt-3 leading-7 text-neutral-700">Check color balance, stitch definition, width, repeat and fit on the intended product before bulk confirmation.</p></article></section>
+
+    <section className="mt-16"><h2 className="text-3xl font-semibold">Christmas embroidered lace FAQ</h2><div className="mt-6 divide-y">{faqs.map(([q,a]) => <div className="py-5" key={q}><h3 className="text-xl font-semibold">{q}</h3><p className="mt-2 leading-7 text-neutral-700">{a}</p></div>)}</div></section>
+    <section className="mt-16 rounded-2xl bg-black p-8 text-white md:p-10"><h2 className="text-3xl font-semibold">Develop your next Christmas lace collection.</h2><p className="mt-4 max-w-3xl leading-7 text-neutral-200">Send the motifs, reference images, target colors, width, application, estimated quantity and destination. We can use that brief to discuss the appropriate sampling route and commercial specification.</p><div className="mt-6 flex flex-wrap gap-4"><a className="rounded-full bg-white px-6 py-3 font-semibold text-black" href={whatsapp}>Send Christmas reference</a><Link className="rounded-full border border-neutral-600 px-6 py-3" href="/custom-multicolor-embroidered-lace">Custom multicolor embroidery</Link></div></section>
+  </main>;
+}
