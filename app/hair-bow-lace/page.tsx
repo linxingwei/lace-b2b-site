@@ -3,8 +3,8 @@ import { conceptNotice, hairBowPath, orderingAnswer } from "@/lib/hair-bow-lace"
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata(
-  "US Hair Bow Lace Trim & Tulle Ribbon",
-  "Explore 12 embroidered tulle lace concepts for US boutique hair bows. Target 1.5 inch lace ribbon, custom motifs and colors; ask about sampling and ordering.",
+  "Custom Multicolor Hair Bow Lace Trim | US Boutique Supply",
+  "Explore 12 multicolor embroidered tulle lace concepts for US boutique hair bows. Develop custom seasonal motifs, thread colors, repeat and width for sampling.",
   hairBowPath,
 );
 
@@ -13,6 +13,7 @@ const faq = [
   { q: "How is a hair bow lace overlay used?", a: "Place the lace over a coordinating ribbon, align the motifs with the intended loops, and test the center fold and attachment. Review the finished bow with a physical sample before making a production run." },
   { q: "Is this 1.5 inch lace ribbon?", a: "Approximately 1.5 inches (38.1 mm) is the requested development target. The final width, mesh, scalloped edge, repeat and fit on your ribbon are confirmed through sample review." },
   { q: "What can be customized?", a: "Share your thread colors, motif scale, repeat spacing, mesh base, edge finish and desired width. VELORACE LACE reviews feasibility for your boutique hair bow supplies program before confirming the sample specification." },
+  { q: "Can I develop Christmas, Halloween or school-themed lace?", a: "Yes. Seasonal motif directions can be reviewed from buyer artwork or references. The palette, motif scale, repeat and width should be developed around the finished hair bow or accessory before sampling." },
   { q: "Are these finished products or real factory photos?", a: conceptNotice },
   { q: "How do I request a sample or place an order?", a: orderingAnswer + " Sample scope is agreed before development; a bulk order follows approval of the physical sample and written specification." },
   { q: "Who is this collection designed for in the United States?", a: "The collection is intended for US boutique hair bow brands, hair accessory designers, bow makers and wholesale bow supply buyers developing seasonal or evergreen collections. It is supplied as custom lace trim rather than finished retail hair bows." },
@@ -22,10 +23,10 @@ export default function HairBowCollection() {
   return <main className="bow-page">
     <HairBowBreadcrumb />
     <section className="bow-intro">
-      <p className="eyebrow">VELORACE LACE · For US boutique hair bow brands</p>
-      <h1>Custom Embroidered Lace Trim for Hair Bows</h1>
-      <p className="bow-lead">1.5 Inch Embroidered Tulle Lace Trim · 12 design concepts</p>
-      <p>Decorative tulle lace overlays developed for children&apos;s boutique hair bows and hair accessories in the United States. Choose a motif direction and develop a custom lace ribbon around your backing ribbon, bow shape and brand colors.</p>
+      <p className="eyebrow">VELORACE LACE · Multicolor embroidery for US boutique bow brands</p>
+      <h1>Custom Multicolor Embroidered Lace Trim for Hair Bows</h1>
+      <p className="bow-lead">Narrow embroidered tulle trim · 12 motif-led design concepts</p>
+      <p>Decorative multicolor tulle lace overlays developed for children's boutique hair bows and hair accessories in the United States. Choose a motif direction and develop a custom lace ribbon around your backing ribbon, bow shape, seasonal theme and brand colors.</p>
       <HairBowCTA placement="hair_bow_collection_hero" />
       <p className="bow-notice">{conceptNotice}</p>
     </section>
@@ -37,6 +38,11 @@ export default function HairBowCollection() {
     </section>
     <section id="designs"><h2>Choose your hair bow lace design</h2><HairBowCards /></section>
     <section className="bow-guide">
+      <h2>Build a seasonal bow collection from custom embroidery</h2>
+      <p>For holiday launches, develop the trim as a collection rather than as isolated motifs. A coordinated palette can connect Christmas, Halloween, back-to-school and Valentine's designs while each repeat remains recognizable on the finished bow.</p>
+      <p>See the <a href="/seasonal-embroidered-lace-trim"><strong>seasonal multicolor embroidered lace trim</strong></a> sourcing page for theme, artwork, color, layout and physical-sample requirements.</p>
+    </section>
+    <section className="bow-guide">
       <h2>From lace concept to a finished bow</h2>
       <ol>
         <li><strong>Define the fit.</strong> Send your ribbon width and intended bow size. A 1.5 inch target is a development request, not a measured guarantee.</li>
@@ -46,7 +52,7 @@ export default function HairBowCollection() {
         <li><strong>Confirm the order.</strong> Agree the approved specification, order length and commercial terms before bulk production.</li>
       </ol>
       <p>{orderingAnswer}</p>
-      <p>Explore our <a href="/custom-multicolor-embroidered-lace">multicolor embroidered lace development</a>, <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
+      <p>Explore our <a href="/custom-multicolor-embroidered-lace">multicolor embroidered lace development</a>, <a href="/seasonal-embroidered-lace-trim">seasonal embroidery development</a>, <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
     </section>
     <HairBowFAQ items={faq} />
     <section className="bow-inquiry"><h2>Develop your next US boutique bow collection</h2><p>Send the design names, requested colors, width in inches, length in yards and US delivery ZIP code.</p><HairBowCTA placement="hair_bow_collection_bottom" /></section>
