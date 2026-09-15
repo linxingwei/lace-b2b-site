@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CategoryPage from "@/components/CategoryPage";
 import { categoryBySlug } from "@/lib/site-data";
 
@@ -20,5 +21,15 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <CategoryPage category={category} />;
+  return <>
+    <CategoryPage category={category} />
+    <section className="mx-auto max-w-6xl px-5 pb-14">
+      <div className="rounded-2xl border border-neutral-200 p-6 md:p-8">
+        <p className="text-sm font-semibold uppercase tracking-wider">Featured bridal material</p>
+        <h2 className="mt-2 text-2xl font-semibold">Fine Embroidered Tulle Bridal Lace</h2>
+        <p className="mt-3 max-w-3xl text-neutral-700">Compare real fabric panels, embroidery details, scalloped borders and wedding gown applications before requesting a physical sample.</p>
+        <Link className="mt-5 inline-block font-semibold underline" href="/bridal-lace/embroidered-tulle">View fine embroidered tulle bridal lace</Link>
+      </div>
+    </section>
+  </>;
 }
