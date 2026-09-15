@@ -33,6 +33,7 @@ export default function HairBowCollection() {
       <h2>Designed for the US boutique hair bow market</h2>
       <p>This B2B collection supports boutique bow brands, hair accessory designers, bow makers and wholesale supply buyers. Christmas, Halloween, back-to-school, ballet, faith, bunny, teddy bear and cherry concepts help buyers plan seasonal and evergreen releases for the US market.</p>
       <p>Product development uses inches and yards first for US buying conversations. Final production documents may also include millimeters and meters. Send the backing ribbon width, bow size and intended launch season so the motif repeat can be reviewed around the finished bow.</p>
+      <p>Need a completely different palette or motif? Start with our <a href="/custom-multicolor-embroidered-lace"><strong>custom multicolor embroidered lace development</strong></a> page and send the reference image, target thread colors, width and application.</p>
     </section>
     <section id="designs"><h2>Choose your hair bow lace design</h2><HairBowCards /></section>
     <section className="bow-guide">
@@ -45,7 +46,7 @@ export default function HairBowCollection() {
         <li><strong>Confirm the order.</strong> Agree the approved specification, order length and commercial terms before bulk production.</li>
       </ol>
       <p>{orderingAnswer}</p>
-      <p>Explore our <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
+      <p>Explore our <a href="/custom-multicolor-embroidered-lace">multicolor embroidered lace development</a>, <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
     </section>
     <HairBowFAQ items={faq} />
     <section className="bow-inquiry"><h2>Develop your next US boutique bow collection</h2><p>Send the design names, requested colors, width in inches, length in yards and US delivery ZIP code.</p><HairBowCTA placement="hair_bow_collection_bottom" /></section>
