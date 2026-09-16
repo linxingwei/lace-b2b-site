@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/seasonal-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/christmas-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/halloween-embroidered-lace-trim`, lastModified: new Date("2026-09-16"), changeFrequency: "monthly" as const, priority: 0.85 },
+    { url: `${base}/back-to-school-embroidered-lace-trim`, lastModified: new Date("2026-09-16"), changeFrequency: "monthly" as const, priority: 0.85 },
   ];
   const coreRoutes = [
     { path: "", priority: 1, frequency: "weekly" as const }, { path: "/products", priority: 0.9, frequency: "weekly" as const },
