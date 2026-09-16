@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 const path = "/christmas-embroidered-lace-trim";
 const base = "https://www.veloracelace.com";
 const whatsapp = "https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20need%20custom%20Christmas%20multicolor%20embroidered%20lace%20trim.%20I%20will%20send%20my%20motifs%2C%20colors%2C%20target%20width%2C%20application%20and%20quantity.";
+const concepts = [
+  { src: "/products/hair-bow-lace/pink-christmas-tree-gift-bow-embroidered-lace-trim.webp", alt: "Pink Christmas tree gift and bow multicolor embroidered lace trim design concept for children's hair bows", title: "Pink Christmas Tree + Gift + Bow", href: "/hair-bow-lace/pink-christmas-tree-gift-bow-embroidered-lace-trim" },
+  { src: "/products/hair-bow-lace/gingerbread-candy-cane-bow-embroidered-lace-trim.webp", alt: "Gingerbread candy cane and bow Christmas embroidered tulle lace trim design concept", title: "Gingerbread + Candy Cane + Bow", href: "/hair-bow-lace/gingerbread-candy-cane-bow-embroidered-lace-trim" },
+  { src: "/products/hair-bow-lace/santa-christmas-tree-gift-embroidered-lace-trim.webp", alt: "Santa Christmas tree and gift multicolor embroidered lace trim concept for boutique hair bows", title: "Santa + Christmas Tree + Gift", href: "/hair-bow-lace/santa-christmas-tree-gift-embroidered-lace-trim" },
+];
 
 export const metadata: Metadata = {
   title: "Custom Christmas Embroidered Lace Trim | Multicolor Supplier",
   description: "Develop custom multicolor Christmas embroidered lace trim with trees, gifts, bows, candy canes and other holiday motifs for hair bows, childrenswear and fashion accessories.",
   alternates: { canonical: path },
-  openGraph: { title: "Custom Christmas Multicolor Embroidered Lace Trim | VELORACE LACE", description: "Develop Christmas motif lace trim from artwork or references with custom thread colors, repeat, width and sample review.", url: path, type: "website" },
+  openGraph: { title: "Custom Christmas Multicolor Embroidered Lace Trim | VELORACE LACE", description: "Develop Christmas motif lace trim from artwork or references with custom thread colors, repeat, width and sample review.", url: path, type: "website", images: [{ url: concepts[0].src, alt: concepts[0].alt }] },
 };
 
 const faqs = [
@@ -29,6 +35,8 @@ export default function ChristmasLacePage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <nav className="mb-6 text-sm text-neutral-600"><Link href="/">Home</Link> / <Link href="/seasonal-embroidered-lace-trim">Seasonal Lace</Link> / Christmas Lace</nav>
     <section className="max-w-4xl"><p className="mb-3 text-sm font-semibold uppercase tracking-wider">Holiday collection development · Multicolor embroidery</p><h1 className="text-4xl font-semibold leading-tight md:text-6xl">Custom Christmas Multicolor Embroidered Lace Trim</h1><p className="mt-6 text-lg leading-8 text-neutral-700">Develop Christmas embroidered lace trim around your own holiday palette and product application. Christmas trees, gifts, bows, candy canes, gingerbread and other recognizable motifs can be translated into repeating multicolor embroidery for hair bows, children's accessories, garments and decorative fashion trims.</p><div className="mt-7 flex flex-wrap gap-3"><a className="rounded-full bg-black px-6 py-3 text-white" href={whatsapp}>Send Christmas design</a><Link className="rounded-full border border-neutral-300 px-6 py-3" href="/hair-bow-lace">View hair bow concepts</Link></div></section>
+
+    <section className="mt-16"><h2 className="text-3xl font-semibold">Christmas embroidered lace design concepts</h2><p className="mt-4 max-w-4xl leading-7 text-neutral-700">These images are design concepts for custom development, not factory photographs, QC photographs or customer orders. Final thread colors, construction, dimensions and repeat are subject to physical sample approval.</p><div className="mt-7 grid gap-6 md:grid-cols-3">{concepts.map((item) => <Link href={item.href} key={item.src} className="overflow-hidden rounded-2xl border border-neutral-200"><Image src={item.src} alt={item.alt} width={900} height={900} sizes="(min-width: 768px) 33vw, 100vw" className="aspect-square w-full object-cover" /><div className="p-5"><h3 className="text-lg font-semibold">{item.title}</h3><p className="mt-2 text-sm leading-6 text-neutral-600">Design concept for custom Christmas multicolor embroidery development.</p></div></Link>)}</div></section>
 
     <section className="mt-16"><h2 className="text-3xl font-semibold">Christmas motif directions for custom embroidery</h2><div className="mt-7 grid gap-4 md:grid-cols-3">{[["Tree + gift + bow","A recognizable holiday combination for boutique accessories. Develop the palette and motif spacing around the finished trim width."],["Gingerbread + candy cane + bow","A playful Christmas direction suited to children's seasonal collections where motifs need to remain readable after folding or sewing."],["Santa + tree + gift","A classic holiday direction that can be simplified into embroidery-friendly shapes and coordinated thread colors for a repeating trim."],["Snowflake + bow","A cleaner winter direction that can use traditional or boutique palettes depending on the buyer's collection."],["Custom brand palette","Christmas does not have to mean only red and green. Send your collection colors, including pink, blue or other coordinated directions."],["Your own artwork","Provide original motifs, sketches or references. Development should preserve the important visual identity while adapting scale and construction for embroidery."]].map(([h,p]) => <article className="rounded-2xl border border-neutral-200 p-6" key={h}><h3 className="text-xl font-semibold">{h}</h3><p className="mt-3 leading-7 text-neutral-700">{p}</p></article>)}</div></section>
 
