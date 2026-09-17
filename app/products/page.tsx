@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { categories } from "@/lib/site-data";
 import { createPageMetadata } from "@/lib/seo";
@@ -8,7 +9,7 @@ const construction = categories.filter((item) => ["embroidery-lace", "eyelash-la
 const application = categories.filter((item) => ["lace-trim", "bridal-lace", "kids-lace-trim"].includes(item.slug));
 
 function Group({ title, intro, items }: { title: string; intro: string; items: typeof categories }) {
-  return <section className="section product-hub-group"><div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product categories</p><h2>{title}</h2></div><p>{intro}</p></div><div className="category-grid">{items.map((item, index) => <a className="category-card" href={`/${item.slug}`} key={item.slug}><img src={item.image} alt={item.alt} width="900" height="700" loading="lazy" decoding="async" /><span className="category-shade" /><span className="category-index">0{index + 1}</span><span className="category-copy"><strong>{item.name}</strong><small>{item.description}</small></span><span className="round-arrow"><ArrowRight size={18} /></span></a>)}</div></section>;
+  return <section className="section product-hub-group"><div className="section-heading split-heading"><div><p className="eyebrow"><span /> Product categories</p><h2>{title}</h2></div><p>{intro}</p></div><div className="category-grid">{items.map((item, index) => <a className="category-card" href={`/${item.slug}`} key={item.slug}><Image src={item.image} alt={item.alt} width={900} height={700} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" /><span className="category-shade" /><span className="category-index">0{index + 1}</span><span className="category-copy"><strong>{item.name}</strong><small>{item.description}</small></span><span className="round-arrow"><ArrowRight size={18} /></span></a>)}</div></section>;
 }
 
 export default function ProductsPage() {
