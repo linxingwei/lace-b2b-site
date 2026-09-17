@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 const base = "https://www.veloracelace.com";
 const path = "/back-to-school-embroidered-lace-trim";
+const concepts = [
+  ["/products/hair-bow-lace/apple-pencil-bow-embroidered-lace-trim.webp","Apple + Pencil + Bow","Apple pencil and bow back-to-school multicolor embroidered lace trim design concept","/hair-bow-lace/apple-pencil-bow-embroidered-lace-trim"],
+  ["/products/hair-bow-lace/books-apple-school-bow-embroidered-lace-trim.webp","Books + Apple + School Bow","Books apple and school bow embroidered tulle lace trim concept for boutique hair bows","/hair-bow-lace/books-apple-school-bow-embroidered-lace-trim"],
+] as const;
 const whatsapp = "https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20need%20custom%20back-to-school%20multicolor%20embroidered%20lace%20trim.%20I%20will%20send%20my%20apple%2C%20pencil%2C%20book%20or%20school%20bow%20reference%2C%20colors%2C%20width%2C%20application%20and%20quantity.";
 
 export const metadata: Metadata = {
   title: "Back-to-School Embroidered Lace Trim | Custom Multicolor",
   description: "Develop custom multicolor back-to-school embroidered lace trim with apple, pencil, book and school-bow motifs for hair bows, children's accessories and boutique collections.",
   alternates: { canonical: path },
-  openGraph: { title: "Custom Back-to-School Embroidered Lace Trim | VELORACE LACE", description: "Develop school-themed multicolor embroidered lace from buyer artwork with custom colors, repeat, width and physical sample review.", url: path, type: "website" },
+  openGraph: { title: "Custom Back-to-School Embroidered Lace Trim | VELORACE LACE", description: "Develop school-themed multicolor embroidered lace from buyer artwork with custom colors, repeat, width and physical sample review.", url: path, type: "website", images: [{ url: concepts[0][0], alt: concepts[0][2] }] },
 };
 
 const faqs = [
@@ -29,6 +34,8 @@ export default function BackToSchoolLacePage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <nav className="mb-6 text-sm text-neutral-600"><Link href="/">Home</Link> / <Link href="/seasonal-embroidered-lace-trim">Seasonal Lace</Link> / Back-to-School Lace</nav>
     <section className="max-w-4xl"><p className="mb-3 text-sm font-semibold uppercase tracking-wider">School-season collection development · Multicolor embroidery</p><h1 className="text-4xl font-semibold leading-tight md:text-6xl">Custom Back-to-School Multicolor Embroidered Lace Trim</h1><p className="mt-6 text-lg leading-8 text-neutral-700">Develop school-themed embroidered lace around your boutique collection, brand palette and finished product. Apple, pencil, book and school-bow motifs can be adapted into repeating multicolor embroidery for children&apos;s hair bows, accessories, garments and decorative trims.</p><div className="mt-7 flex flex-wrap gap-3"><a className="rounded-full bg-black px-6 py-3 text-white" href={whatsapp}>Send school-season design</a><Link className="rounded-full border border-neutral-300 px-6 py-3" href="/hair-bow-lace">View hair bow concepts</Link></div></section>
+
+    <section className="mt-16"><h2 className="text-3xl font-semibold">Back-to-school embroidered lace design concepts</h2><p className="mt-4 max-w-4xl leading-7 text-neutral-700">These images are design concepts for custom development, not factory photographs, QC photographs or customer orders. Final thread colors, construction, dimensions and repeat are subject to physical sample approval.</p><div className="mt-7 grid gap-6 md:grid-cols-2">{concepts.map(([src,title,alt,href],index) => <Link href={href} key={src} className="overflow-hidden rounded-2xl border border-neutral-200"><Image src={src} alt={alt} width={900} height={900} priority={index === 0} sizes="(min-width: 768px) 50vw, 100vw" className="aspect-square w-full object-cover" /><div className="p-5"><h3 className="text-xl font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-neutral-600">Open the exact design concept and send your requested colors, width and application for development review.</p></div></Link>)}</div></section>
 
     <section className="mt-16"><h2 className="text-3xl font-semibold">Back-to-school motif directions</h2><div className="mt-7 grid gap-4 md:grid-cols-3">{[["Apple + pencil + bow","A clear school-season combination for boutique accessories. Develop motif spacing around the intended trim width and bow construction."],["Books + apple + school bow","A multi-motif direction that can create a stronger back-to-school story while keeping each element large enough to read."],["Pencil-led repeat","A cleaner repeat can focus on one primary school motif with a supporting bow or apple when a simpler embroidery construction is preferred."],["Boutique color palette","Use school colors, brand colors or a coordinated seasonal palette instead of relying on one generic color scheme."],["Limited readable motifs","For narrow trims, prioritize a few recognizable shapes rather than many tiny classroom details that may lose definition in embroidery."],["Buyer artwork development","Send your own school-themed artwork or reference. Important visual identity can be retained while small details are adapted for embroidery feasibility."]].map(([h,p]) => <article className="rounded-2xl border border-neutral-200 p-6" key={h}><h3 className="text-xl font-semibold">{h}</h3><p className="mt-3 leading-7 text-neutral-700">{p}</p></article>)}</div></section>
 
