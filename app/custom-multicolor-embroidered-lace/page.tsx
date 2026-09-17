@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 const base = "https://www.veloracelace.com";
 const path = "/custom-multicolor-embroidered-lace";
 const whatsapp = "https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20need%20custom%20multicolor%20embroidered%20lace%20trim.%20I%20will%20send%20my%20reference%20image%2C%20colors%2C%20target%20width%2C%20quantity%20and%20application.%20Please%20advise%20the%20sample%20development%20route%20and%20MOQ.";
+const concepts = [
+  ["/products/hair-bow-lace/pink-christmas-tree-gift-bow-embroidered-lace-trim.webp","Pink Christmas Tree + Gift + Bow","multicolor Christmas embroidered lace trim design concept with pink tree gift and bow motifs","/hair-bow-lace/pink-christmas-tree-gift-bow-embroidered-lace-trim"],
+  ["/products/hair-bow-lace/ghost-pumpkin-pink-bow-embroidered-lace-trim.webp","Ghost + Pumpkin + Pink Bow","custom multicolor Halloween embroidered lace trim design concept with ghost pumpkin and pink bow motifs","/hair-bow-lace/ghost-pumpkin-pink-bow-embroidered-lace-trim"],
+  ["/products/hair-bow-lace/apple-pencil-bow-embroidered-lace-trim.webp","Apple + Pencil + Bow","back-to-school multicolor embroidered lace trim concept with apple pencil and bow motifs","/hair-bow-lace/apple-pencil-bow-embroidered-lace-trim"],
+  ["/products/hair-bow-lace/books-apple-school-bow-embroidered-lace-trim.webp","Books + Apple + School Bow","colorful embroidered tulle lace trim design concept for children's hair bows with books apple and school bow motifs","/hair-bow-lace/books-apple-school-bow-embroidered-lace-trim"],
+] as const;
 
 export const metadata: Metadata = {
-  title: "Custom Multicolor Embroidered Lace Trim Supplier | VELORACE LACE",
+  title: "Custom Multicolor Embroidered Lace Trim Supplier",
   description: "Develop custom multicolor embroidered lace trim from artwork or reference images. Specify thread colors, motif, repeat, width, mesh base and application for sample review.",
   alternates: { canonical: path },
-  openGraph: { title: "Custom Multicolor Embroidered Lace Trim | VELORACE LACE", description: "Custom multicolor embroidery development for fashion trims, hair bows, childrenswear, seasonal collections and garment accessories.", url: path, type: "website" },
+  openGraph: { title: "Custom Multicolor Embroidered Lace Trim | VELORACE LACE", description: "Custom multicolor embroidery development for fashion trims, hair bows, childrenswear, seasonal collections and garment accessories.", url: path, type: "website", images: [{ url: concepts[0][0], alt: concepts[0][2] }] },
 };
 
 const faqs = [
@@ -33,6 +40,8 @@ export default function MulticolorEmbroideredLacePage() {
     <section className="max-w-4xl"><p className="mb-3 text-sm font-semibold uppercase tracking-wider">Custom embroidery development · Multicolor motif specialist</p><h1 className="text-4xl font-semibold leading-tight md:text-6xl">Custom Multicolor Embroidered Lace Trim</h1><p className="mt-6 text-lg leading-8 text-neutral-700">VELORACE LACE develops colorful embroidered lace and narrow lace trim around buyer artwork, reference motifs, seasonal palettes and final-product requirements. This service is intended for buyers who need more than standard white or single-color lace: send a reference and define the thread colors, motif scale, mesh base, width, repeat spacing and edge construction for sample review.</p><div className="mt-7 flex flex-wrap gap-3"><a className="rounded-full bg-black px-6 py-3 text-white" href={whatsapp}>Send a design for development</a><Link className="rounded-full border border-neutral-300 px-6 py-3" href="/embroidery-lace">Browse embroidery lace</Link></div></section>
 
     <section className="mt-12 rounded-2xl border border-neutral-200 p-7 md:p-9"><p className="text-sm font-semibold uppercase tracking-wider">Buyer answer</p><h2 className="mt-2 text-2xl font-semibold">Who should use this custom lace service?</h2><p className="mt-4 leading-7 text-neutral-700">Use this service when the color combination and motif are central to the product: for example, a seasonal embroidered trim, a children&apos;s hair-bow overlay, a colorful fashion edge, a branded motif or a collection that must coordinate with a defined palette. Instead of selecting only from standard lace, the buyer starts with the intended product and develops the embroidery around it.</p></section>
+
+    <section className="mt-16"><h2 className="text-3xl font-semibold">Multicolor embroidery design directions</h2><p className="mt-4 max-w-4xl leading-7 text-neutral-700">The examples below are design concepts for custom development, not factory photographs, QC photographs or customer orders. They show how multiple thread colors and recognizable motifs can be organized for narrow embroidered trim. Final colors, dimensions, construction and repeat are confirmed through sample review.</p><div className="mt-7 grid gap-6 md:grid-cols-2 lg:grid-cols-4">{concepts.map(([src,title,alt,href]) => <Link href={href} key={src} className="overflow-hidden rounded-2xl border border-neutral-200"><Image src={src} alt={alt} width={900} height={900} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="aspect-square w-full object-cover" /><div className="p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-neutral-600">Design concept for custom multicolor embroidery development.</p></div></Link>)}</div></section>
 
     <section className="mt-16"><h2 className="text-3xl font-semibold">What can be customized?</h2><div className="mt-7 grid gap-4 md:grid-cols-3">{[["Multicolor thread palette","Develop several coordinated embroidery colors in one motif. Send Pantone references, a swatch or a visual palette for review."],["Motif & repeat","Develop floral, bow, seasonal, school, faith, novelty or brand-specific directions from artwork and reference images."],["Base & construction","Discuss tulle or mesh base, trim width, scalloped edges, motif spacing and construction according to the final application."],["Seasonal collections","Build coordinated Christmas, Halloween, back-to-school, Valentine's and other seasonal embroidery directions."],["Application fit","Adjust scale and repeat for hair bows, childrenswear, dresses, fashion accessories and decorative garment trims."],["Physical sampling","Approve color balance, stitch definition, scale and hand feel on a physical sample before confirming bulk production."]].map(([h,p]) => <article className="rounded-2xl border border-neutral-200 p-6" key={h}><h3 className="text-xl font-semibold">{h}</h3><p className="mt-3 leading-7 text-neutral-700">{p}</p></article>)}</div></section>
 
