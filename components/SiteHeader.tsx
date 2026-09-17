@@ -50,7 +50,7 @@ export default function SiteHeader() {
       <div className="announcement">
         <span>OEM & Custom Design · Flexible MOQ · Worldwide Shipping</span>
         <a href="https://wa.me/message/IXEEGXESENF6F1" target="_blank" rel="noreferrer">
-          Wholesale replies within 24 hours <ArrowRight size={13} />
+          Send your requirement for review <ArrowRight size={13} />
         </a>
       </div>
       <header className="site-header">
