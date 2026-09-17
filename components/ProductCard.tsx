@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 type ProductCardProps = { id: string; name: string; category: string; image: string; alt?: string; description?: string; moq: string; tag?: string };
@@ -7,7 +8,7 @@ export default function ProductCard({ id, name, category, image, alt, descriptio
   return (
     <article className="product-card">
       <a className="product-image" href={`https://wa.me/8615767956637?text=${message}`} target="_blank" rel="noreferrer" aria-label={`Inquire about ${name}`}>
-        <img src={image} alt={alt || name} width="900" height="980" loading="lazy" decoding="async" />
+        <Image src={image} alt={alt || name} width={900} height={980} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" />
         {tag && <span className="product-tag">{tag}</span>}
         <span className="product-action"><ArrowUpRight size={19} /></span>
       </a>
