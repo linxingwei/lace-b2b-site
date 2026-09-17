@@ -26,7 +26,7 @@ export default function HairBowCollection() {
       <p className="eyebrow">VELORACE LACE · Multicolor embroidery for US boutique bow brands</p>
       <h1>Custom Multicolor Embroidered Lace Trim for Hair Bows</h1>
       <p className="bow-lead">Narrow embroidered tulle trim · 12 motif-led design concepts</p>
-      <p>Decorative multicolor tulle lace overlays developed for children's boutique hair bows and hair accessories in the United States. Choose a motif direction and develop a custom lace ribbon around your backing ribbon, bow shape, seasonal theme and brand colors.</p>
+      <p>Decorative multicolor tulle lace overlays developed for children&apos;s boutique hair bows and hair accessories in the United States. Choose a motif direction and develop a custom lace ribbon around your backing ribbon, bow shape, seasonal theme and brand colors.</p>
       <HairBowCTA placement="hair_bow_collection_hero" />
       <p className="bow-notice">{conceptNotice}</p>
     </section>
@@ -39,7 +39,7 @@ export default function HairBowCollection() {
     <section id="designs"><h2>Choose your hair bow lace design</h2><HairBowCards /></section>
     <section className="bow-guide">
       <h2>Build a seasonal bow collection from custom embroidery</h2>
-      <p>For holiday launches, develop the trim as a collection rather than as isolated motifs. A coordinated palette can connect Christmas, Halloween, back-to-school and Valentine's designs while each repeat remains recognizable on the finished bow.</p>
+      <p>For holiday launches, develop the trim as a collection rather than as isolated motifs. A coordinated palette can connect Christmas, Halloween, back-to-school and Valentine&apos;s designs while each repeat remains recognizable on the finished bow.</p>
       <p>See the <a href="/seasonal-embroidered-lace-trim"><strong>seasonal multicolor embroidered lace trim</strong></a> sourcing page for theme, artwork, color, layout and physical-sample requirements.</p>
     </section>
     <section className="bow-guide">
