@@ -4,15 +4,15 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { absoluteUrl, createPageMetadata, siteName, siteUrl } from "@/lib/seo";
 
 const pagePath = "/custom-embroidered-lace-trim";
-const pageTitle = "Custom Embroidered Lace Trim Manufacturer";
-const pageDescription = "Source custom embroidered lace trim for kidswear, bridal and fashion collections. VELORACE LACE supports motif, color, width, sampling and bulk production.";
+const pageTitle = "Embroidered Lace Trim Design Guide";
+const pageDescription = "A practical embroidered lace trim design guide for kidswear and fashion buyers covering motif scale, color, width, sampling and application planning.";
 const heroImage = "/images/custom-embroidered-lace-trim/red-crown-custom-lace-trim.webp";
 
 const baseMetadata = createPageMetadata(pageTitle, pageDescription, pagePath, heroImage);
 
 export const metadata: Metadata = {
   ...baseMetadata,
-  title: { absolute: "Custom Embroidered Lace Trim Manufacturer | Cute Lace for Kidswear & Fashion Brands" },
+  title: { absolute: "Embroidered Lace Trim Design Guide | Kidswear & Fashion" },
   keywords: [
     "embroidered lace trim",
     "custom lace trim manufacturer",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: `${siteName} sourcing team`, url: siteUrl }],
   openGraph: {
     ...baseMetadata.openGraph,
-    title: "Custom Embroidered Lace Trim Manufacturer | Cute Lace for Kidswear & Fashion Brands",
+    title: "Embroidered Lace Trim Design Guide | Kidswear & Fashion",
     type: "article",
     publishedTime: "2026-08-02",
     modifiedTime: "2026-08-02",
@@ -79,7 +79,7 @@ export default function CustomEmbroideredLaceTrimPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Custom Embroidered Lace Trim Manufacturer | Cute Lace for Kidswear & Fashion Brands",
+    headline: "Embroidered Lace Trim Design Guide for Kidswear & Fashion",
     description: pageDescription,
     image: [absoluteUrl(heroImage)],
     datePublished: "2026-08-02",
@@ -109,10 +109,10 @@ export default function CustomEmbroideredLaceTrimPage() {
             <a href="/">Home</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>Custom Embroidered Lace Trim</span>
           </nav>
           <p className="eyebrow"><span /> Custom lace sourcing guide</p>
-          <h1>Custom Embroidered Lace Trim Manufacturer <em>Cute Lace for Kidswear &amp; Fashion Brands</em></h1>
+          <h1>Embroidered Lace Trim Design Guide <em>for Kidswear &amp; Fashion Brands</em></h1>
           <p className="custom-lace-intro">From playful animal motifs to elegant tonal embroidery, the right trim can turn a simple garment into a recognizable collection. VELORACE LACE helps brands develop embroidered lace trim with considered color, scale, texture and production consistency.</p>
           <div className="hero-actions">
-            <a className="button button-dark" href="/contact">Request samples &amp; quote <ArrowRight size={17} /></a>
+            <a className="button button-dark" href="/custom-multicolor-embroidered-lace">Start custom multicolor development <ArrowRight size={17} /></a>
             <a className="text-link" href="#custom-development">See the development process <ArrowRight size={15} /></a>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function CustomEmbroideredLaceTrimPage() {
           <p className="article-lead">Embroidered lace trim combines a light textile base with stitched motifs and a decorative edge. It offers the softness of lace, the clarity of embroidery and the flexibility to build a distinctive brand language.</p>
           <h2>Why fashion brands choose embroidered lace trim</h2>
           <p>Unlike a printed ribbon, embroidered lace has visible thread direction, raised detail and dimensional edges. These small construction details catch the light and give garments a more crafted finish. Designers can use the trim as a narrow border, a placement detail or a repeated visual signature across several styles.</p>
-          <p>A capable <strong>custom lace trim manufacturer</strong> can adjust more than the motif. The mesh transparency, embroidery density, scallop shape, overall width, repeat length and thread colors all influence how the final trim looks and behaves. These decisions should be made with the intended garment, fabric weight and sewing method in mind.</p>
+          <p>A custom embroidery development program can adjust more than the motif. The mesh transparency, embroidery density, scallop shape, overall width, repeat length and thread colors all influence how the final trim looks and behaves. These decisions should be made with the intended garment, fabric weight and sewing method in mind.</p>
         </section>
 
         <section>
