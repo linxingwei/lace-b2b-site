@@ -8,9 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articleRoutes = articles.map((article) => ({ url: `${base}/blog/${article.slug}`, lastModified: new Date(article.modifiedDate ?? article.date), changeFrequency: "monthly" as const, priority: 0.7 }));
   const productRoutes = [
     { url: `${base}/products/butterfly-floral-embroidered-trim`, lastModified: new Date("2026-07-13"), changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: `${base}/custom-embroidered-lace-trim`, lastModified: new Date("2026-08-02"), changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${base}/custom-embroidered-lace-trim`, lastModified: new Date("2026-09-19"), changeFrequency: "monthly" as const, priority: 0.65 },
     { url: `${base}/bridal-lace/embroidered-tulle`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.9 },
-    { url: `${base}/custom-multicolor-embroidered-lace`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.9 },
+    { url: `${base}/custom-multicolor-embroidered-lace`, lastModified: new Date("2026-09-19"), changeFrequency: "weekly" as const, priority: 0.95 },
     { url: `${base}/seasonal-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/christmas-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/halloween-embroidered-lace-trim`, lastModified: new Date("2026-09-16"), changeFrequency: "monthly" as const, priority: 0.85 },
