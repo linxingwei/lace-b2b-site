@@ -20,7 +20,7 @@ export const hairBowDesigns: HairBowDesign[] = designs.map(([slug, name, theme, 
 });
 export const hairBowUrl = (design: HairBowDesign) => `${hairBowPath}/${design.slug}`;
 export const conceptNotice = "Design concepts for development, not factory photographs, QC photographs or customer orders. Final construction, color and dimensions are subject to physical sample approval.";
-export const orderingAnswer = "US buyers can send the design name, requested finished width in inches, thread colors, estimated length in yards and delivery ZIP code. MOQ, price, sample time, bulk lead time, packing and shipping are confirmed after design review. Metric specifications can also be provided for production.";
+export const orderingAnswer = "To start, send the design name or reference image, preferred colors and approximate quantity. We can then review the sample and quotation route. Width, repeat, MOQ, price, lead time, packing and shipping are confirmed as the project is defined.";
 export function designFaq(design: HairBowDesign) { return [
   { q: `What is ${design.name} hair bow lace?`, a: `${design.description} It is a trim development concept from VELORACE LACE, not a finished hair bow or an in-stock product promise.` },
   { q: "How is it used for children's hair bows?", a: `Use it as a decorative overlay on ribbon for ${design.use.toLowerCase()}. Align a visible motif with each loop, check the center wrap placement and test attachment on a physical sample before production.` },
