@@ -26,7 +26,11 @@ export const categories: CategoryData[] = [
     image: mediaUrl("yellow-floral.jpg"),
     alt: "white and yellow embroidery lace trim supplier",
     applications: ["Dresses and fashion apparel", "Lingerie and sleepwear", "Children's clothing", "Accessories and craft collections"],
-    highlights: ["Embroidered and decorative lace trims", "Color and width customization", "Custom motif development", "Export packing available"],
+    highlights: ["Embroidered and decorative lace trims", "Color, width and repeat development", "Custom motifs from artwork or references", "Sample approval before bulk"],
+    contextualLinks: [
+      { prefix: "For designs using several thread colors in one motif, review our ", href: "/custom-multicolor-embroidered-lace", label: "custom multicolor embroidered lace development", suffix: " workflow before preparing the sample brief." },
+      { prefix: "If your requirement starts from a sketch, photo or motif reference, use our ", href: "/custom-design", label: "custom lace development process", suffix: " to prepare the initial brief." },
+    ],
   },
   {
     slug: "embroidery-lace",
@@ -39,6 +43,7 @@ export const categories: CategoryData[] = [
     applications: ["Designer dresses", "Blouses and occasionwear", "Bridal accessories", "Decorative garment panels"],
     highlights: ["Custom motif development", "Multicolor thread development", "Color reference matching", "Sample approval before bulk"],
     contextualLinks: [
+      { prefix: "For colorful motifs using several thread colors, start with our ", href: "/custom-multicolor-embroidered-lace", label: "custom multicolor embroidered lace", suffix: " development workflow." },
       { prefix: "When a design brief calls for raised petals instead of a flat stitched surface, compare ", href: "/blog/3d-lace-applique-vs-flat-embroidered-applique", label: "3D and flat embroidered appliques", suffix: " before choosing the sample construction." },
       { prefix: "For dimensional focal motifs, review the published ", href: "/3d-flower-applique", label: "3D flower applique buyer specifications", suffix: " and send the target placement with your reference." },
     ],
