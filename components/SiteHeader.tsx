@@ -2,20 +2,20 @@ import { ArrowRight, ChevronDown, Menu, MessageCircle } from "lucide-react";
 
 const mainLinks = [
   ["Home", "/"],
-  ["Custom Lace", "/custom-design"],
-  ["Manufacturing", "/#manufacturing"],
+  ["Custom Development", "/custom-design"],
+  ["Applications", "/#applications"],
   ["About Us", "/about"],
   ["Blog", "/blog"],
   ["Contact", "/contact"],
 ];
 
 const productLinks = [
-  ["Hair Bow Lace", "/hair-bow-lace", "Custom embroidered tulle trim for boutique bows"],
+  ["Embroidered Lace", "/embroidery-lace", "Core embroidered lace and mesh embroidery collection"],
+  ["Lace Trim", "/lace-trim", "Lace borders, edgings and garment finishing trims"],
+  ["Multicolor Custom Lace", "/custom-multicolor-embroidered-lace", "Custom multicolor motifs developed from artwork or references"],
   ["Bridal Lace", "/bridal-lace", "Lace for gowns, veils and couture bridalwear"],
-  ["Fashion Lace", "/embroidery-lace", "Embroidered lace for contemporary collections"],
-  ["Lolita Lace", "/kids-lace-trim", "Decorative trims for Lolita and playful fashion"],
-  ["Lace Trim", "/lace-trim", "Borders, edgings and garment finishing details"],
-  ["Applique", "/3d-flower-applique", "Dimensional motifs and floral embellishments"],
+  ["3D Lace Applique", "/3d-flower-applique", "Dimensional motifs and floral embellishments"],
+  ["Kids & Hair Bow Applications", "/kids-lace-trim", "Colorful lace trims for childrenswear and accessories"],
 ];
 
 function ProductDropdown() {
@@ -27,7 +27,7 @@ function ProductDropdown() {
       <div className="product-dropdown">
         <div className="product-dropdown-intro">
           <span>Product collections</span>
-          <strong>Lace selected for bridal and fashion development.</strong>
+          <strong>Embroidered lace, lace trim and custom development for B2B sourcing.</strong>
           <a href="/products">View all products <ArrowRight size={14} /></a>
         </div>
         <div className="product-dropdown-links">
