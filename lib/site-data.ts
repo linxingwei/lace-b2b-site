@@ -31,6 +31,13 @@ export const categories: CategoryData[] = [
       { prefix: "For designs using several thread colors in one motif, review our ", href: "/custom-multicolor-embroidered-lace", label: "custom multicolor embroidered lace development", suffix: " workflow before preparing the sample brief." },
       { prefix: "If your requirement starts from a sketch, photo or motif reference, use our ", href: "/custom-design", label: "custom lace development process", suffix: " to prepare the initial brief." },
     ],
+    gallery: [
+      { image: mediaUrl("embroidered-lace/embroidered-lace-butterfly.webp"), alt: "multicolor butterfly embroidered lace trim for garment and accessory development" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-gold-floral.webp"), alt: "gold floral embroidered lace trim for fashion garment sourcing" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-aqua-floral.webp"), alt: "aqua floral embroidered lace trim with decorative mesh embroidery" },
+      { image: mediaUrl("embroidered-lace/embroidered-lace-blush-floral.webp"), alt: "blush floral embroidered lace trim for fashion and childrenswear" },
+    ],
+    catalogUrl: "https://ruiyuelai.x.yupoo.com/",
   },
   {
     slug: "embroidery-lace",
