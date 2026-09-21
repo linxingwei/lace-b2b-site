@@ -7,15 +7,15 @@ import AnalyticsEvents from "@/components/AnalyticsEvents";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.veloracelace.com"),
-  title: { default: "Custom Multicolor Embroidered Lace Supplier | VELORACE LACE", template: "%s | VELORACE LACE" },
-  description: "China-based B2B supplier coordinating custom multicolor embroidered lace trim, bridal lace and garment accessories for fashion brands, designers and wholesale buyers.",
-  keywords: ["custom multicolor embroidered lace", "embroidered lace trim supplier", "custom lace trim supplier", "wholesale lace supplier", "bridal lace supplier", "custom embroidery lace"],
+  title: { default: "Lace Supplier | Embroidered Lace & Lace Trim | VELORACE LACE", template: "%s | VELORACE LACE" },
+  description: "B2B lace supplier coordinating embroidered lace, lace trim and custom multicolor embroidery development for fashion brands, garment buyers, bridal designers and accessories.",
+  keywords: ["lace supplier", "embroidered lace supplier", "lace trim supplier", "embroidered lace trim", "custom multicolor embroidered lace", "custom lace trim supplier", "bridal lace supplier"],
   authors: [{ name: "VELORACE LACE" }],
   creator: "VELORACE LACE",
   publisher: "VELORACE LACE",
   formatDetection: { email: false, address: false, telephone: false },
-  openGraph: { title: "VELORACE LACE | Custom Multicolor Embroidered Lace Supplier", description: "Custom multicolor embroidered lace trim, bridal lace and garment accessory development for global B2B buyers.", type: "website", locale: "en_US", url: "https://www.veloracelace.com", siteName: "VELORACE LACE", images: [{ url: "/og.png", width: 1200, height: 630, alt: "VELORACE LACE custom multicolor embroidered lace and trim development" }] },
-  twitter: { card: "summary_large_image", title: "VELORACE LACE | Custom Multicolor Embroidered Lace Supplier", description: "Custom multicolor embroidered lace trim, bridal lace and garment accessory development for global B2B buyers.", images: ["/og.png"] },
+  openGraph: { title: "VELORACE LACE | Embroidered Lace & Lace Trim Supplier", description: "Embroidered lace, lace trim and custom multicolor embroidery development for global B2B buyers.", type: "website", locale: "en_US", url: "https://www.veloracelace.com", siteName: "VELORACE LACE", images: [{ url: "/og.png", width: 1200, height: 630, alt: "VELORACE LACE custom multicolor embroidered lace and trim development" }] },
+  twitter: { card: "summary_large_image", title: "VELORACE LACE | Embroidered Lace & Lace Trim Supplier", description: "Embroidered lace, lace trim and custom multicolor embroidery development for global B2B buyers.", images: ["/og.png"] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : undefined,
 };
