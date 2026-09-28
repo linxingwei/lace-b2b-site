@@ -4,7 +4,7 @@ import { articles, categories } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.veloracelace.com";
-  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, lastModified: category.slug === "3d-flower-applique" ? new Date("2026-09-04") : undefined, changeFrequency: "monthly" as const, priority: 0.8 }));
+  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, lastModified: category.slug === "embroidery-lace" ? new Date("2026-09-28") : category.slug === "3d-flower-applique" ? new Date("2026-09-04") : undefined, changeFrequency: "monthly" as const, priority: 0.8 }));
   const articleRoutes = articles.map((article) => ({ url: `${base}/blog/${article.slug}`, lastModified: new Date(article.modifiedDate ?? article.date), changeFrequency: "monthly" as const, priority: 0.7 }));
   const productRoutes = [
     { url: `${base}/products/butterfly-floral-embroidered-trim`, lastModified: new Date("2026-07-13"), changeFrequency: "monthly" as const, priority: 0.8 },
@@ -21,6 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about", priority: 0.7, frequency: "monthly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
   ].map((route) => ({ url: `${base}${route.path}`, changeFrequency: route.frequency, priority: route.priority }));
-  const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date("2026-09-06"), changeFrequency: "monthly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
+  const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date("2026-09-28"), changeFrequency: "weekly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
   return [...hairBowRoutes, ...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes];
 }
