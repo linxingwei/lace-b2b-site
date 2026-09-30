@@ -2,6 +2,7 @@ import CategoryPage from "@/components/CategoryPage";
 import { categoryBySlug } from "@/lib/site-data";
 import { categoryMetadata } from "@/lib/seo";
 import Link from "next/link";
+import Image from "next/image";
 
 const category = categoryBySlug["embroidery-lace"];
 export const metadata = categoryMetadata(category);
@@ -24,6 +25,25 @@ export default function Page() {
         <div className="mt-7 grid gap-4 md:grid-cols-4">
           {steps.map(([title, body]) => <article key={title} className="rounded-2xl border border-neutral-200 bg-white p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-neutral-700">{body}</p></article>)}
         </div>
+      </div>
+    </section>
+
+
+    <section className="mx-auto max-w-6xl px-5 pb-10">
+      <div className="mb-6 max-w-4xl">
+        <p className="text-sm font-semibold uppercase tracking-wider">Real product references</p>
+        <h2 className="mt-3 text-3xl font-semibold">Review embroidery direction before confirming specifications</h2>
+        <p className="mt-4 leading-7 text-neutral-700">These product photographs show embroidery directions already available in the VELORACE LACE product library. Use them as visual references for color, motif and application discussions. Exact base composition, finished width, repeat, price, MOQ and lead time are confirmed only after the selected reference and project requirements are reviewed.</p>
+      </div>
+      <div className="grid gap-5 md:grid-cols-3">
+        {[
+          ["/products/embroidered-lace/embroidered-lace-butterfly.webp", "Multicolor Butterfly Embroidery", "A multicolor motif reference for buyers developing colorful fashion trims, childrenswear or accessory applications."],
+          ["/products/embroidered-lace/embroidered-lace-gold-floral.webp", "Gold Floral Embroidery", "A metallic-look floral direction for decorative fashion, occasionwear and statement trim development."],
+          ["/products/embroidered-lace/embroidered-lace-aqua-floral.webp", "Aqua Floral Embroidery", "A colored floral embroidery reference for collection-specific palettes and custom lace development."],
+        ].map(([src, title, text]) => <article key={src} className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
+          <Image src={src} alt={`${title.toLowerCase()} lace product reference for B2B sourcing`} width={900} height={900} sizes="(max-width: 768px) 100vw, 33vw" />
+          <div className="p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-neutral-700">{text}</p><p className="mt-3 text-xs leading-5 text-neutral-500">Confirm base, width, repeat, colors, quantity and sample requirements for your project.</p></div>
+        </article>)}
       </div>
     </section>
 
