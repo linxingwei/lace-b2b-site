@@ -40,6 +40,9 @@ export default function Page() {
           ["/products/embroidered-lace/embroidered-lace-butterfly.webp", "Multicolor Butterfly Embroidery", "A multicolor motif reference for buyers developing colorful fashion trims, childrenswear or accessory applications."],
           ["/products/embroidered-lace/embroidered-lace-gold-floral.webp", "Gold Floral Embroidery", "A metallic-look floral direction for decorative fashion, occasionwear and statement trim development."],
           ["/products/embroidered-lace/embroidered-lace-aqua-floral.webp", "Aqua Floral Embroidery", "A colored floral embroidery reference for collection-specific palettes and custom lace development."],
+          ["/products/embroidered-lace/embroidered-lace-blush-floral.webp", "Blush Floral Embroidery", "A soft blush floral direction for feminine fashion, occasionwear and coordinated collection development."],
+          ["/products/embroidered-lace/embroidered-lace-forest-floral.webp", "Forest Floral Embroidery", "A deeper multicolor floral reference for fashion trims and projects that need stronger contrast."],
+          ["/products/embroidered-lace/embroidered-lace-scallop.webp", "Scalloped Embroidered Lace", "An edge-focused embroidery reference for buyers reviewing scallop direction, border treatment and finished application."],
         ].map(([src, title, text]) => <article key={src} className="overflow-hidden rounded-2xl border border-neutral-200 bg-white">
           <Image src={src} alt={`${title.toLowerCase()} lace product reference for B2B sourcing`} width={900} height={900} sizes="(max-width: 768px) 100vw, 33vw" />
           <div className="p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-neutral-700">{text}</p><p className="mt-3 text-xs leading-5 text-neutral-500">Confirm base, width, repeat, colors, quantity and sample requirements for your project.</p></div>
