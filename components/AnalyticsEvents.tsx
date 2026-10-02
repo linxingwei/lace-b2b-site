@@ -16,14 +16,23 @@ function productCategory(pathname: string) {
 
 export default function AnalyticsEvents() {
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const referrer = document.referrer ? (() => { try { return new URL(document.referrer).hostname; } catch { return document.referrer.slice(0, 100); } })() : "direct";
+    if (!window.sessionStorage.getItem("velora_landing_page")) {
+      window.sessionStorage.setItem("velora_landing_page", window.location.pathname);
+      window.sessionStorage.setItem("velora_utm_source", params.get("utm_source") || "");
+      window.sessionStorage.setItem("velora_utm_medium", params.get("utm_medium") || "");
+      window.sessionStorage.setItem("velora_utm_campaign", params.get("utm_campaign") || "");
+      window.sessionStorage.setItem("velora_referrer", referrer);
+    }
+
     function handleClick(event: MouseEvent) {
-      const params = new URLSearchParams(window.location.search);
       const attribution = {
-        landing_page: window.location.pathname,
-        utm_source: params.get("utm_source") || undefined,
-        utm_medium: params.get("utm_medium") || undefined,
-        utm_campaign: params.get("utm_campaign") || undefined,
-        referrer: document.referrer ? (() => { try { return new URL(document.referrer).hostname; } catch { return document.referrer.slice(0, 100); } })() : "direct",
+        landing_page: window.sessionStorage.getItem("velora_landing_page") || window.location.pathname,
+        utm_source: window.sessionStorage.getItem("velora_utm_source") || undefined,
+        utm_medium: window.sessionStorage.getItem("velora_utm_medium") || undefined,
+        utm_campaign: window.sessionStorage.getItem("velora_utm_campaign") || undefined,
+        referrer: window.sessionStorage.getItem("velora_referrer") || "direct",
       };
       const target = event.target;
       if (!(target instanceof Element)) return;
