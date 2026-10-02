@@ -17,6 +17,14 @@ function productCategory(pathname: string) {
 export default function AnalyticsEvents() {
   useEffect(() => {
     function handleClick(event: MouseEvent) {
+      const params = new URLSearchParams(window.location.search);
+      const attribution = {
+        landing_page: window.location.pathname,
+        utm_source: params.get("utm_source") || undefined,
+        utm_medium: params.get("utm_medium") || undefined,
+        utm_campaign: params.get("utm_campaign") || undefined,
+        referrer: document.referrer ? (() => { try { return new URL(document.referrer).hostname; } catch { return document.referrer.slice(0, 100); } })() : "direct",
+      };
       const target = event.target;
       if (!(target instanceof Element)) return;
       const anchor = target.closest("a");
@@ -27,11 +35,12 @@ export default function AnalyticsEvents() {
       if (/wa\.me|whatsapp/i.test(href)) {
         const lead = {
           ...common,
+          ...attribution,
           inquiry_method: "whatsapp",
           product_category: anchor.dataset.productCategory || productCategory(window.location.pathname),
           cta_placement: anchor.dataset.ctaPlacement || "unclassified_whatsapp_link",
         };
-        trackEvent("whatsapp_click", lead);
+        trackEvent("whatsapp_lead_click", lead);
         trackEvent("generate_lead", lead);
       } else if (href.startsWith("mailto:")) {
         trackEvent("email_click", common);
