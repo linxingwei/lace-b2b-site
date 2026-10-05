@@ -13,6 +13,8 @@ const faq = [
   { q: "How is a hair bow lace overlay used?", a: "Place the lace over a coordinating ribbon, align the motifs with the intended loops, and test the center fold and attachment. Review the finished bow with a physical sample before making a production run." },
   { q: "Is this 1.5 inch lace ribbon?", a: "Approximately 1.5 inches (38.1 mm) is the requested development target. The final width, mesh, scalloped edge, repeat and fit on your ribbon are confirmed through sample review." },
   { q: "What can be customized?", a: "Share your thread colors, motif scale, repeat spacing, mesh base, edge finish and desired width. VELORACE LACE reviews feasibility for your boutique hair bow supplies program before confirming the sample specification." },
+  { q: "Can you develop princess-gown embroidery from a reference image?", a: "Yes. A princess-gown or similar multicolor motif can be reviewed from a buyer reference image. For a hair-bow project, confirm the intended width, white or colored mesh/tulle base, thread-color direction and scalloped or decorative edge during sample development before bulk terms are finalized." },
+  { q: "Can I compare pricing at different yard quantities?", a: "Yes. Buyers can request quotation review at planned quantities such as 100, 250, 500 and 1,000 yards. Final MOQ and unit pricing depend on the approved design, width, base, embroidery construction and production requirements, so they are confirmed after project review rather than assumed on the website." },
   { q: "Can I develop Christmas, Halloween or school-themed lace?", a: "Yes. Seasonal motif directions can be reviewed from buyer artwork or references. The palette, motif scale, repeat and width should be developed around the finished hair bow or accessory before sampling." },
   { q: "Are these finished products or real factory photos?", a: conceptNotice },
   { q: "How do I request a sample or place an order?", a: orderingAnswer + " Sample scope is agreed before development; a bulk order follows approval of the physical sample and written specification." },
@@ -35,6 +37,14 @@ export default function HairBowCollection() {
       <p>This B2B collection supports boutique bow brands, hair accessory designers, bow makers and wholesale supply buyers. Christmas, Halloween, back-to-school, ballet, faith, bunny, teddy bear and cherry concepts help buyers plan seasonal and evergreen releases for the US market.</p>
       <p>Product development uses inches and yards first for US buying conversations. Final production documents may also include millimeters and meters. Send the backing ribbon width, bow size and intended launch season so the motif repeat can be reviewed around the finished bow.</p>
       <p>Need a completely different palette or motif? Start with our <a href="/custom-multicolor-embroidered-lace"><strong>custom multicolor embroidered lace development</strong></a> page and send the reference image, target thread colors, width and application.</p>
+    </section>
+    <section className="bow-guide">
+      <p className="eyebrow">Reference-image development</p>
+      <h2>Develop princess-gown and multicolor lace trim for hair bows</h2>
+      <p>If your reference shows multicolor princess dresses or other character-led motifs on white mesh or tulle, send the image for development review. We can discuss the motif scale, thread-color direction, white decorative or scalloped embroidery, finished width and how the repeat should sit on the completed bow.</p>
+      <p>For a useful quotation, send your target width in inches, preferred colors, approximate order quantity in yards and delivery ZIP code. Buyers planning 100, 250, 500 or 1,000 yards can request quantity-based quotation review after the design and construction are defined.</p>
+      <p>A physical sample can be developed before bulk production so you can review the mesh/tulle, embroidery definition, color balance, scalloped edge and finished-bow fit.</p>
+      <HairBowCTA placement="hair_bow_princess_reference_section" />
     </section>
     <section id="designs"><h2>Choose your hair bow lace design</h2><HairBowCards /></section>
     <section className="bow-guide">
