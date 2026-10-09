@@ -17,7 +17,10 @@ export default function QuoteForm() {
     const data = new FormData(form);
     const fields = Object.fromEntries(data.entries());
     const params = new URLSearchParams(window.location.search);
-    const payload = { ...fields, page: window.location.href, source: params.get("utm_source") || document.referrer || "direct" };
+    const landingPage = window.sessionStorage.getItem("velora_landing_page") || window.location.pathname;
+    const firstSource = window.sessionStorage.getItem("velora_utm_source") || params.get("utm_source") || "";
+    const firstReferrer = window.sessionStorage.getItem("velora_referrer") || document.referrer || "direct";
+    const payload = { ...fields, page: window.location.href, source: firstSource || firstReferrer, landing_page: landingPage, utm_source: firstSource, utm_medium: window.sessionStorage.getItem("velora_utm_medium") || params.get("utm_medium") || "", utm_campaign: window.sessionStorage.getItem("velora_utm_campaign") || params.get("utm_campaign") || "" };
     const message = ["Hello VELORACE LACE, I would like to discuss a wholesale inquiry.", `Name: ${fields.name}`, `Email: ${fields.email}`, `WhatsApp: ${fields.whatsapp}`, `Product: ${fields.product}`, `Request: ${fields.request}`, `Quantity / requirement: ${fields.requirement}`, `Page: ${window.location.href}`].join("\n");
     const whatsappUrl = `https://wa.me/8615767956637?text=${encodeURIComponent(message)}`;
     const product = String(fields.product || "");
@@ -34,7 +37,7 @@ export default function QuoteForm() {
       if (response.ok && result.delivered) {
         setStatus("sent");
         form.reset();
-        trackEvent("generate_lead", { inquiry_method: "form", product_category: product });
+        trackEvent("generate_lead", { inquiry_method: "form", product_category: product, landing_page: landingPage, page_path: window.location.pathname, utm_source: firstSource, utm_medium: payload.utm_medium, utm_campaign: payload.utm_campaign, referrer: firstReferrer });
         return;
       }
       if (response.ok && result.fallback === "whatsapp") {
