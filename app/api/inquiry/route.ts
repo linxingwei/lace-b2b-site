@@ -9,6 +9,10 @@ type Inquiry = {
   requirement?: string;
   page?: string;
   source?: string;
+  landing_page?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
   website?: string;
 };
 
@@ -24,6 +28,10 @@ type CleanInquiry = {
   requirement: string;
   page: string;
   source: string;
+  landing_page: string;
+  utm_source: string;
+  utm_medium: string;
+  utm_campaign: string;
 };
 
 async function deliverWebhook(webhook: string, inquiry: CleanInquiry, submittedAt: string) {
@@ -49,7 +57,7 @@ async function deliverEmail(resendKey: string, toEmail: string, fromEmail: strin
       body: JSON.stringify({
         from: fromEmail, to: [toEmail], reply_to: inquiry.email,
         subject: `[VELORACE LACE] ${inquiry.request || "Wholesale inquiry"} - ${inquiry.product}`,
-        text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`].join("\n"),
+        text: [`Name: ${inquiry.name}`, `Email: ${inquiry.email}`, `WhatsApp: ${inquiry.whatsapp}`, `Product: ${inquiry.product}`, `Request: ${inquiry.request}`, `Requirement: ${inquiry.requirement}`, `Page: ${inquiry.page}`, `Source: ${inquiry.source}`, `Landing page: ${inquiry.landing_page}`, `UTM source: ${inquiry.utm_source}`, `UTM medium: ${inquiry.utm_medium}`, `UTM campaign: ${inquiry.utm_campaign}`].join("\n"),
       }),
     });
     if (response.ok) return { delivered: true, status: "sent" };
@@ -73,6 +81,8 @@ export async function POST(request: Request) {
       name: clean(body.name, 100), email: clean(body.email, 160), whatsapp: clean(body.whatsapp, 80),
       product: clean(body.product, 120), request: clean(body.request, 120), requirement: clean(body.requirement, 1600),
       page: clean(body.page, 300), source: clean(body.source, 200),
+      landing_page: clean(body.landing_page, 300), utm_source: clean(body.utm_source, 120),
+      utm_medium: clean(body.utm_medium, 120), utm_campaign: clean(body.utm_campaign, 120),
     };
     if (!inquiry.name || !inquiry.email || !inquiry.product || !inquiry.requirement || !/^\S+@\S+\.\S+$/.test(inquiry.email)) {
       return NextResponse.json({ ok: false, error: "Please complete the required inquiry fields." }, { status: 400 });
