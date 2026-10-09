@@ -50,7 +50,6 @@ export default function AnalyticsEvents() {
           cta_placement: anchor.dataset.ctaPlacement || "unclassified_whatsapp_link",
         };
         trackEvent("whatsapp_lead_click", lead);
-        trackEvent("generate_lead", lead);
       } else if (href.startsWith("mailto:")) {
         trackEvent("email_click", common);
       } else if (anchor.hasAttribute("download") || /\.pdf(?:$|\?)/i.test(href)) {
