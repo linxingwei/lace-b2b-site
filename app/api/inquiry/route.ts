@@ -66,7 +66,8 @@ async function deliverEmail(resendKey: string, toEmail: string, fromEmail: strin
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as Inquiry;
-    if (body.website) return NextResponse.json({ ok: true, delivered: true });
+    // Honeypot submissions are silently discarded, never counted as delivered leads.
+    if (body.website) return NextResponse.json({ ok: true, delivered: false, ignored: true, fallback: undefined });
 
     const inquiry = {
       name: clean(body.name, 100), email: clean(body.email, 160), whatsapp: clean(body.whatsapp, 80),
