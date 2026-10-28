@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/products/butterfly-floral-embroidered-trim`, lastModified: new Date("2026-07-13"), changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${base}/custom-embroidered-lace-trim`, lastModified: new Date("2026-09-19"), changeFrequency: "monthly" as const, priority: 0.65 },
     { url: `${base}/bridal-lace/embroidered-tulle`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.9 },
-    { url: `${base}/custom-multicolor-embroidered-lace`, lastModified: new Date("2026-10-24"), changeFrequency: "weekly" as const, priority: 0.95 },
+    { url: `${base}/custom-multicolor-embroidered-lace`, lastModified: new Date("2026-10-28"), changeFrequency: "weekly" as const, priority: 0.95 },
     { url: `${base}/seasonal-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/christmas-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/halloween-embroidered-lace-trim`, lastModified: new Date("2026-09-16"), changeFrequency: "monthly" as const, priority: 0.85 },
