@@ -30,6 +30,7 @@ export default function HairBowCollection() {
       <p className="bow-lead">Narrow embroidered tulle trim · 12 motif-led design concepts</p>
       <p>Decorative multicolor tulle lace overlays developed for children&apos;s boutique hair bows and hair accessories in the United States. Choose a motif direction and develop a custom lace ribbon around your backing ribbon, bow shape, seasonal theme and brand colors.</p>
       <HairBowCTA placement="hair_bow_collection_hero" />
+      <p className="mt-4"><a className="button button-dark" href="/contact">Request quote by online form</a></p>
       <p className="bow-notice">{conceptNotice}</p>
     </section>
     <section className="bow-guide">
@@ -65,6 +66,6 @@ export default function HairBowCollection() {
       <p>Explore our <a href="/custom-multicolor-embroidered-lace">multicolor embroidered lace development</a>, <a href="/seasonal-embroidered-lace-trim">seasonal embroidery development</a>, <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
     </section>
     <HairBowFAQ items={faq} />
-    <section className="bow-inquiry"><h2>Develop your next US boutique bow collection</h2><p>Send the design names, requested colors, width in inches, length in yards and US delivery ZIP code.</p><HairBowCTA placement="hair_bow_collection_bottom" /></section>
+    <section className="bow-inquiry"><h2>Develop your next US boutique bow collection</h2><p>Send the design names, requested colors, width in inches, length in yards and US delivery ZIP code.</p><HairBowCTA placement="hair_bow_collection_bottom" /><p className="mt-4"><a className="button button-dark" href="/contact">Request quote by online form</a></p></section>
   </main>;
 }
