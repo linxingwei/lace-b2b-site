@@ -56,7 +56,7 @@ export default function AnalyticsEvents() {
         trackEvent("file_download", common);
       } else if (/catalog|yupoo/i.test(`${href} ${anchor.textContent || ""}`)) {
         trackEvent("catalog_click", common);
-      } else if (href.includes("#contact") || /request (?:samples|a quote)|get free samples/i.test(anchor.textContent || "")) {
+      } else if (href.includes("#contact") || (new URL(href).origin === window.location.origin && new URL(href).pathname === "/contact" && /quote|inquir|sample/i.test(anchor.textContent || "")) || /request (?:samples|a quote)|get free samples/i.test(anchor.textContent || "")) {
         trackEvent("inquiry_cta_click", common);
       }
     }
