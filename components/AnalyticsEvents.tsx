@@ -8,6 +8,8 @@ function linkText(anchor: HTMLAnchorElement) {
 }
 
 function productCategory(pathname: string) {
+  if (pathname.startsWith("/hair-bow-lace")) return "Hair Bow Lace";
+  if (pathname.startsWith("/custom-multicolor-embroidered-lace")) return "Custom Multicolor Lace";
   if (pathname.startsWith("/3d-flower-applique")) return "3D Flower Lace Applique";
   if (pathname.startsWith("/bridal-lace")) return "Bridal Lace";
   if (pathname.startsWith("/embroidery-lace")) return "Embroidery Lace";
@@ -57,7 +59,7 @@ export default function AnalyticsEvents() {
       } else if (/catalog|yupoo/i.test(`${href} ${anchor.textContent || ""}`)) {
         trackEvent("catalog_click", common);
       } else if (href.includes("#contact") || (new URL(href).origin === window.location.origin && new URL(href).pathname === "/contact" && /quote|inquir|sample/i.test(anchor.textContent || "")) || /request (?:samples|a quote)|get free samples/i.test(anchor.textContent || "")) {
-        trackEvent("inquiry_cta_click", common);
+        trackEvent("inquiry_cta_click", { ...common, ...attribution, product_category: anchor.dataset.productCategory || productCategory(window.location.pathname) });
       }
     }
 
