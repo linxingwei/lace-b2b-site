@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1, frequency: "weekly" as const }, { path: "/products", priority: 0.9, frequency: "weekly" as const },
     { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about", priority: 0.7, frequency: "monthly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
-  ].map((route) => ({ url: `${base}${route.path}`, changeFrequency: route.frequency, priority: route.priority }));
+  ].map((route) => ({ url: `${base}${route.path}`, lastModified: route.path === "/contact" ? new Date("2026-11-09") : undefined, changeFrequency: route.frequency, priority: route.priority }));
   const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date(path === hairBowPath ? "2026-11-02" : "2026-09-28"), changeFrequency: "weekly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
   return [...hairBowRoutes, ...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes];
 }
