@@ -1,3 +1,4 @@
+import ProductSpecifications from "@/components/ProductSpecifications";
 import { HairBowBreadcrumb, HairBowCards, HairBowCTA, HairBowFAQ } from "@/components/HairBowLace";
 import { conceptNotice, hairBowPath, orderingAnswer } from "@/lib/hair-bow-lace";
 import { createPageMetadata } from "@/lib/seo";
@@ -53,6 +54,7 @@ export default function HairBowCollection() {
       <p>For holiday launches, develop the trim as a collection rather than as isolated motifs. A coordinated palette can connect Christmas, Halloween, back-to-school and Valentine&apos;s designs while each repeat remains recognizable on the finished bow.</p>
       <p>See the <a href="/seasonal-embroidered-lace-trim"><strong>seasonal multicolor embroidered lace trim</strong></a> sourcing page for theme, artwork, color, layout and physical-sample requirements.</p>
     </section>
+    <ProductSpecifications variant="hairBow" whatsapp="https://wa.me/8615767956637?text=Hello%20VELORACE%20LACE%2C%20I%20would%20like%20to%20request%20a%20lace%20sample%20and%20quote." />
     <section className="bow-guide">
       <h2>From lace concept to a finished bow</h2>
       <ol>
