@@ -84,7 +84,7 @@ export default function ProductSpecifications({ variant, whatsapp }: { variant: 
       </div>
       <p className="mt-2 text-xs text-neutral-600">On narrow screens, scroll the table horizontally to view all specifications. Unconfirmed production terms are subject to factory review.</p>
       <div className="mt-5 flex flex-wrap gap-3">
-        {variant === "hairBow" ? <HairBowCTA placement="hair_bow_product_specifications" /> : <a href={whatsapp} className="inline-block rounded-full bg-black px-5 py-3 font-semibold text-white">Send inquiry on WhatsApp</a>}
+        {variant === "hairBow" ? <HairBowCTA placement="hair_bow_product_specifications" /> : <a href={whatsapp} target="_blank" rel="noreferrer" data-cta-placement={`${variant}_product_specifications`} data-product-category={variant === "multicolor" ? "Custom Multicolor Lace" : "Embroidery Lace"} className="inline-block rounded-full bg-black px-5 py-3 font-semibold text-white">Send inquiry on WhatsApp</a>}
         <Link href="/contact" className="inline-block rounded-full border border-neutral-400 px-5 py-3 font-semibold text-neutral-900">{variant === "hairBow" ? "Request quote by online form" : "Request quote by form"}</Link>
       </div>
       <nav aria-label="Related product sourcing pages" className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm">
