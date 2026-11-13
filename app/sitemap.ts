@@ -4,13 +4,13 @@ import { articles, categories } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.veloracelace.com";
-  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, lastModified: category.slug === "lace-trim" ? new Date("2026-09-30") : category.slug === "embroidery-lace" ? new Date("2026-09-30") : category.slug === "3d-flower-applique" ? new Date("2026-09-04") : undefined, changeFrequency: "monthly" as const, priority: 0.8 }));
+  const categoryRoutes = categories.map((category) => ({ url: `${base}/${category.slug}`, lastModified: category.slug === "lace-trim" ? new Date("2026-09-30") : category.slug === "embroidery-lace" ? new Date("2026-11-13") : category.slug === "3d-flower-applique" ? new Date("2026-09-04") : undefined, changeFrequency: "monthly" as const, priority: 0.8 }));
   const articleRoutes = articles.map((article) => ({ url: `${base}/blog/${article.slug}`, lastModified: new Date(article.modifiedDate ?? article.date), changeFrequency: "monthly" as const, priority: 0.7 }));
   const productRoutes = [
     { url: `${base}/products/butterfly-floral-embroidered-trim`, lastModified: new Date("2026-07-13"), changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${base}/custom-embroidered-lace-trim`, lastModified: new Date("2026-09-19"), changeFrequency: "monthly" as const, priority: 0.65 },
     { url: `${base}/bridal-lace/embroidered-tulle`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.9 },
-    { url: `${base}/custom-multicolor-embroidered-lace`, lastModified: new Date("2026-10-28"), changeFrequency: "weekly" as const, priority: 0.95 },
+    { url: `${base}/custom-multicolor-embroidered-lace`, lastModified: new Date("2026-11-13"), changeFrequency: "weekly" as const, priority: 0.95 },
     { url: `${base}/seasonal-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/christmas-embroidered-lace-trim`, lastModified: new Date("2026-09-15"), changeFrequency: "monthly" as const, priority: 0.85 },
     { url: `${base}/halloween-embroidered-lace-trim`, lastModified: new Date("2026-09-16"), changeFrequency: "monthly" as const, priority: 0.85 },
@@ -21,6 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about", priority: 0.7, frequency: "monthly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
   ].map((route) => ({ url: `${base}${route.path}`, lastModified: route.path === "/contact" ? new Date("2026-11-09") : undefined, changeFrequency: route.frequency, priority: route.priority }));
-  const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date(path === hairBowPath ? "2026-11-02" : "2026-09-28"), changeFrequency: "weekly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
+  const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date(path === hairBowPath ? "2026-11-13" : "2026-09-28"), changeFrequency: "weekly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
   return [...hairBowRoutes, ...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes];
 }
