@@ -102,7 +102,7 @@ export default function ThreeDFlowerAppliquePage() {
       <section className="section applique-process-section" aria-labelledby="process-title">
         <div className="section-heading centered-heading"><p className="eyebrow"><span /> Custom development</p><h2 id="process-title">Send Reference → Design Review → Sample → Approval → Bulk Production → QC → Shipment</h2></div>
         <div className="seven-step-process">{process.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
-        <p className="process-link-note">Need a motif developed around a garment pattern? Continue to <a href="/custom-design">custom lace design and sampling</a>.</p>
+        <p className="process-link-note">Need a motif developed around a garment pattern? Continue to <a href="/custom-design">custom lace design and sampling</a>, or review <a href="/custom-multicolor-embroidered-lace">custom multicolor embroidered lace trim</a>.</p>
       </section>
 
       <section className="section related-section" aria-labelledby="related-guides-title">
