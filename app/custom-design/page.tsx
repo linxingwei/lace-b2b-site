@@ -19,6 +19,7 @@ export default function CustomDesignPage() {
           <p className="eyebrow"><span /> OEM and custom embroidery development</p>
           <h1>Custom multicolor lace development<br /><em>from artwork to sample.</em></h1>
           <p>Send a sketch, reference image, tech pack or physical sample. We can review multicolor embroidery direction together with motif size, thread colors, repeat spacing, width, mesh base, edge construction and embellishment requirements before sampling.</p>
+          <p>Start with our <a href="/custom-multicolor-embroidered-lace">custom multicolor embroidered lace</a> trim specifications and sampling route.</p>
           <a className="button button-dark" href="/custom-multicolor-embroidered-lace">Develop multicolor embroidered lace <ArrowRight size={17} /></a>
         </div>
         <div className="inner-hero-image"><Image src={mediaUrl("pastel-collection.jpg")} alt="Multicolor custom embroidered lace and floral applique development references" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 50vw" /></div>
@@ -28,7 +29,7 @@ export default function CustomDesignPage() {
         <div className="section-heading centered-heading"><p className="eyebrow"><span /> Development workflow</p><h2>Define the design before bulk production.</h2></div>
         <div className="service-grid">
           <article><Send /><h3>Share the brief</h3><p>Send artwork or a reference plus application, quantity, target width and destination.</p></article>
-          <article><Palette /><h3>Plan colors and construction</h3><p>Review thread colors, motif scale, repeat, base material and edge structure for the requested design.</p></article>
+          <article><Palette /><h3>Plan colors and construction</h3><p>Review thread colors, motif scale, repeat, base material and edge structure for the requested design.</p><p>See the <a href="/custom-multicolor-embroidered-lace">custom multicolor embroidered lace trim</a> page for Pantone references, base options and the full specification table.</p></article>
           <article><BadgeCheck /><h3>Approve the sample</h3><p>Review the physical sample and written specification before moving to bulk production.</p></article>
           <article><Factory /><h3>Confirm production</h3><p>Bulk production follows the approved construction and agreed commercial specification.</p></article>
           <article><Truck /><h3>Arrange shipment</h3><p>Confirm destination and shipping requirements when requesting the quotation.</p></article>
@@ -47,6 +48,7 @@ export default function CustomDesignPage() {
         <div><p className="eyebrow"><span /> Applique development</p><h2 id="custom-applique-brief-title">Choose the construction before final artwork.</h2></div>
         <div>
           <p>If the reference uses raised petals, matched pairs or hand-applied decoration, review the <a href="/3d-flower-applique">3D flower applique buyer specifications</a> so the brief includes the fields needed for sampling and quotation review.</p>
+          <p>Related pages: <a href="/custom-multicolor-embroidered-lace">custom multicolor embroidered lace trim</a> · <a href="/hair-bow-lace">multicolor hair bow lace concepts</a> · <a href="/3d-flower-applique">3D flower lace appliques</a> · <a href="/bridal-lace-applique">bridal lace applique wholesale</a>.</p>
           <p>If the construction is not yet decided, compare <a href="/blog/3d-lace-applique-vs-flat-embroidered-applique">3D lace applique vs flat embroidered applique</a> by weight, placement, sewing, care and repeatability before requesting samples.</p>
         </div>
       </section>
