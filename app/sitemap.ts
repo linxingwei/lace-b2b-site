@@ -1,5 +1,8 @@
 import { hairBowDesigns, hairBowPath, hairBowUrl } from "@/lib/hair-bow-lace";
 import type { MetadataRoute } from "next";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import beadedPatches from "@/lib/beaded-patches.json";
 import { articles, categories } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,10 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const coreRoutes = [
     { path: "", priority: 1, frequency: "weekly" as const }, { path: "/products", priority: 0.9, frequency: "weekly" as const },
-    { path: "/beaded-patches", priority: 0.9, frequency: "monthly" as const }, { path: "/bridal-lace-applique", priority: 0.85, frequency: "monthly" as const }, { path: "/lace-trim-by-the-yard-trial", priority: 0.85, frequency: "monthly" as const },
+    { path: "/bridal-lace-applique", priority: 0.85, frequency: "monthly" as const }, { path: "/lace-trim-by-the-yard-trial", priority: 0.85, frequency: "monthly" as const },
     { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about", priority: 0.7, frequency: "monthly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
   ].map((route) => ({ url: `${base}${route.path}`, lastModified: route.path === "/contact" ? new Date("2026-11-09") : undefined, changeFrequency: route.frequency, priority: route.priority }));
   const hairBowRoutes = [hairBowPath, ...hairBowDesigns.map(hairBowUrl)].map(path => ({ url: `${base}${path}`, lastModified: new Date(path === hairBowPath ? "2026-11-13" : "2026-09-28"), changeFrequency: "weekly" as const, priority: path === hairBowPath ? 0.9 : 0.8 }));
-  return [...hairBowRoutes, ...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes];
+  const beadedReady = beadedPatches.every((product) => existsSync(join(process.cwd(), "public", product.image)));
+  const beadedRoutes = beadedReady ? [{ url: `${base}/beaded-patches`, changeFrequency: "monthly" as const, priority: 0.9 }] : [];
+  return [...hairBowRoutes, ...coreRoutes, ...categoryRoutes, ...productRoutes, ...articleRoutes, ...beadedRoutes];
 }
