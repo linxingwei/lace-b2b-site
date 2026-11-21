@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -185,6 +186,7 @@ export default function WeddingDressTrends2027Page() {
       <p className="mt-6 text-lg leading-8">The 2027 wedding dress trends are dimensional 3D floral appliques, sheer Chantilly overlays, bold Guipure lace, beaded and sequin embellishment, two-piece bridal sets, detachable lace overskirts and sleeves, and lace-edged veils. This guide explains each trend, the lace and applique work behind it, and how bridal designers can develop it for a 2027 collection.</p>
       <p className="mt-4 leading-7 text-neutral-700">These are design directions for collection planning, not verified sales rankings or forecasts. Material feasibility, sampling and production terms depend on the approved design.</p>
     </header>
+    <figure className="mt-9 max-w-4xl overflow-hidden rounded-2xl border border-neutral-200"><Image src="/products/3d-rose-applique/black-white-red-3d-rose-applique-colors.webp" alt="VELORACE LACE 3D rose applique product samples in black, white and red for bridal collection design" width={1200} height={1200} priority sizes="(max-width: 900px) 100vw, 900px" className="h-auto w-full object-contain" /></figure>
     <div className="mt-12 space-y-12">
       {trends.map((trend, index) => <section key={trend.title} className="border-t border-neutral-200 pt-8" aria-labelledby={`trend-${index + 1}`}>
         <p className="text-sm font-semibold uppercase tracking-wider text-amber-700">Trend {index + 1}</p>
@@ -194,6 +196,8 @@ export default function WeddingDressTrends2027Page() {
           <p><strong>Lace and applique application:</strong> {trend.application}</p>
           <p><strong>VELORACE LACE approach:</strong> {trend.approach}</p>
         </div>
+        {index === 0 && <figure className="mt-6 max-w-2xl overflow-hidden rounded-2xl border border-neutral-200"><Image src="/products/3d-rose-applique/black-3d-rose-lace-applique-detail.webp" alt="Close-up of black dimensional embroidered rose lace applique with raised floral petals" width={1000} height={1000} sizes="(max-width: 768px) 100vw, 640px" className="h-auto w-full object-contain" /></figure>}
+        {index === 4 && <figure className="mt-6 max-w-2xl overflow-hidden rounded-2xl border border-neutral-200"><Image src="/products/beaded-neckline.jpg" alt="VELORACE LACE beaded neckline applique product reference for bridal embellishment details" width={1000} height={1000} sizes="(max-width: 768px) 100vw, 640px" className="h-auto w-full object-contain" /></figure>}
         <p className="mt-5 flex flex-wrap gap-x-6 gap-y-2">{trend.links.map(([label, href]) => <Link key={href} href={href} className="font-semibold text-amber-800 underline underline-offset-4">{label}</Link>)}</p>
       </section>)}
     </div>
