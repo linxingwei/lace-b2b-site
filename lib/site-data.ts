@@ -165,7 +165,7 @@ export const articles: ArticleData[] = [
   {
     slug: "3d-lace-applique-vs-flat-embroidered-applique",
     title: "3D Lace Applique vs Flat Embroidered Applique: Which Is Better for Bridal Dresses?",
-    seoTitle: "3D Lace Applique vs Flat Embroidered Applique for Bridal Dresses",
+    seoTitle: "3D vs Flat Embroidered Applique for Bridal",
     keyword: "3D lace applique vs flat embroidered applique",
     description: "Compare 3D lace applique and flat embroidered applique by appearance, weight, durability, sewing, care, cost drivers and best garment applications.",
     image: "/products/3d-flower-lace-applique-wholesale.jpg",
