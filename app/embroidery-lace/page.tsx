@@ -74,6 +74,7 @@ export default function Page() {
           <Link className="font-semibold underline" href="/lace-trim">Lace Trim Supplier</Link>
           <Link className="font-semibold underline" href="/custom-multicolor-embroidered-lace">Custom Multicolor Lace</Link>
           <Link className="font-semibold underline" href="/bridal-lace">Bridal Lace</Link>
+          <Link className="font-semibold underline" href="/beaded-patches">Beaded Patches with Rope — Gulf Gifts &amp; Accessories</Link>
           <Link className="font-semibold underline" href="/contact">Request a Sample / Quote</Link>
         </div>
       </div>
