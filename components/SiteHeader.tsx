@@ -64,7 +64,7 @@ export default function SiteHeader() {
           {mainLinks.slice(1).map(([label, href]) => <a href={href} key={label}>{label}</a>)}
         </nav>
 
-        <a className="header-quote" href="/#contact">Request samples <ArrowRight size={15} /></a>
+        <a className="header-quote" href="/contact">Request samples <ArrowRight size={15} /></a>
 
         <details className="mobile-menu">
           <summary aria-label="Open navigation"><Menu aria-hidden="true" /></summary>
@@ -79,7 +79,7 @@ export default function SiteHeader() {
               </div>
             </details>
             {mainLinks.slice(1).map(([label, href]) => <a href={href} key={label}>{label}</a>)}
-            <a className="mobile-inquiry-link" href="/#contact"><MessageCircle size={17} /> Request samples</a>
+            <a className="mobile-inquiry-link" href="/contact"><MessageCircle size={17} /> Request samples</a>
           </div>
         </details>
       </header>
