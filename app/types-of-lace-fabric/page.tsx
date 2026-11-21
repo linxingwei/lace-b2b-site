@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -65,6 +66,7 @@ export default function TypesOfLaceFabricPage() {
       <p className="mt-6 text-lg leading-8 text-neutral-700">The main types of lace fabric used in bridalwear, eveningwear, childrenswear and fashion are embroidered tulle lace, beaded lace, sequin lace, 3D floral lace, Chantilly lace, French lace, Guipure lace, Alençon lace, Raschel lace, eyelash lace and cotton embroidery lace. This guide explains what each type looks like, what it is best for, and how VELORACE LACE develops it for wholesale buyers.</p>
       <div className="mt-7 flex flex-wrap gap-3"><Link className="rounded-full bg-black px-6 py-3 font-semibold text-white" href="/contact">Request samples &amp; quote</Link><WhatsAppLink className="rounded-full border border-neutral-300 px-6 py-3 font-semibold" message={whatsappMessage} productCategory="Lace Fabric Types" placement="types_of_lace_hero">Discuss on WhatsApp</WhatsAppLink></div>
     </header>
+    <figure className="mt-9 max-w-4xl overflow-hidden rounded-2xl border border-neutral-200"><Image src="/products/embroidered-lace/embroidered-lace-blush-floral.webp" alt="Blush floral embroidered lace fabric product sample from VELORACE LACE" width={1200} height={900} priority sizes="(max-width: 900px) 100vw, 900px" className="h-auto w-full object-contain" /></figure>
 
     <section className="mt-16" aria-labelledby="quick-comparison"><h2 id="quick-comparison" className="text-3xl font-semibold">Quick Comparison: Different Types of Lace</h2><p className="mt-3 text-neutral-700">Typical visual and weight characteristics vary with the actual construction and embellishment. Confirm the specification against a physical sample.</p>
       <div className="mt-6 overflow-x-auto rounded-xl border border-neutral-200"><table className="w-full min-w-[760px] border-collapse text-left text-sm"><thead className="bg-neutral-100"><tr>{["Lace Type","Look","Weight","Best For"].map(h=><th key={h} className="border-b border-neutral-200 p-4 font-semibold">{h}</th>)}</tr></thead><tbody>{comparison.map(([type,look,weight,best])=><tr key={type} className="border-b border-neutral-200 last:border-b-0"><th scope="row" className="p-4 font-semibold">{type}</th><td className="p-4">{look}</td><td className="p-4">{weight}</td><td className="p-4">{best}</td></tr>)}</tbody></table></div>
