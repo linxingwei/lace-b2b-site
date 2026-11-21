@@ -21,7 +21,7 @@ export default function Page() {
       <div className="rounded-2xl bg-neutral-100 p-7 md:p-10">
         <p className="text-sm font-semibold uppercase tracking-wider">B2B custom development</p>
         <h2 className="mt-3 text-3xl font-semibold">From embroidery reference to approved lace sample</h2>
-        <p className="mt-4 max-w-4xl leading-7 text-neutral-700">For custom embroidered lace sourcing, start with the final application rather than an assumed specification. We use your reference to discuss the embroidery construction, colors, base, width and repeat, then confirm the practical sampling route before bulk terms are finalized.</p>
+        <p className="mt-4 max-w-4xl leading-7 text-neutral-700">Start with the garment or accessory you want to make. Send us a lace photo or artwork. We will review the embroidery, colors, base fabric, width and pattern repeat. We then discuss sampling before confirming bulk order terms.</p>
         <div className="mt-7 grid gap-4 md:grid-cols-4">
           {steps.map(([title, body]) => <article key={title} className="rounded-2xl border border-neutral-200 bg-white p-5"><h3 className="font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-neutral-700">{body}</p></article>)}
         </div>
@@ -34,7 +34,7 @@ export default function Page() {
         <p className="text-sm font-semibold uppercase tracking-wider">Real product references</p>
         <h2 className="mt-3 text-3xl font-semibold">Review embroidery direction before confirming specifications</h2>
         <p className="mt-3"><a className="underline" href="/products/butterfly-floral-embroidered-trim">View Butterfly Floral Embroidered Trim product reference</a></p>
-        <p className="mt-4 leading-7 text-neutral-700">Explore <a href="/custom-multicolor-embroidered-lace" className="underline">custom multicolor embroidered lace trim</a> alongside the Multicolor Butterfly reference. These product photographs show embroidery directions already available in the VELORACE LACE product library. Use them as visual references for color, motif and application discussions. Exact base composition, finished width, repeat, price, MOQ and lead time are confirmed only after the selected reference and project requirements are reviewed.</p>
+        <p className="mt-4 leading-7 text-neutral-700">Compare <a href="/custom-multicolor-embroidered-lace" className="underline">custom multicolor embroidered lace trim</a> with the Multicolor Butterfly reference. The photos show designs in our product library. Use them to discuss colors, motifs and applications. We confirm base composition, finished width, repeat, price, MOQ and lead time only after reviewing your selected design and project needs.</p>
       </div>
       <div className="grid gap-5 md:grid-cols-3">
         {[
@@ -55,13 +55,13 @@ export default function Page() {
       <article className="rounded-2xl border border-neutral-200 p-7">
         <p className="text-sm font-semibold uppercase tracking-wider">Prepare your RFQ</p>
         <h2 className="mt-3 text-2xl font-semibold">What to send for a useful quotation</h2>
-        <p className="mt-4 leading-7 text-neutral-700">Send a reference image or artwork, preferred colors, approximate finished width, intended application, estimated quantity, sample requirement and destination country. If repeat size, base fabric or edge construction is not yet decided, those points can be reviewed during development.</p>
+        <p className="mt-4 leading-7 text-neutral-700">Send an image or artwork. Include your preferred colors, approximate finished width, intended use, estimated quantity, sample needs and destination country. Not sure about the repeat, base fabric or edge? We can review those during development.</p>
         <Link className="mt-5 inline-block font-semibold underline" href="/contact">Send your embroidery lace inquiry</Link>
       </article>
       <article className="rounded-2xl border border-neutral-200 p-7">
         <p className="text-sm font-semibold uppercase tracking-wider">Multicolor specialist</p>
         <h2 className="mt-3 text-2xl font-semibold">Need several thread colors in one lace design?</h2>
-        <p className="mt-4 leading-7 text-neutral-700">Use the dedicated multicolor development page for colorful motifs, seasonal palettes and narrow trims. Prepare the thread-color direction, motif scale, width, repeat, mesh base and physical sample requirements around the final product.</p>
+        <p className="mt-4 leading-7 text-neutral-700">For colorful motifs, seasonal palettes and narrow trims, start with our multicolor development page. Share the thread colors, motif size, width, repeat and mesh base you need. We can review these details against a physical sample.</p>
         <Link className="mt-5 inline-block font-semibold underline" href="/custom-multicolor-embroidered-lace">Custom Multicolor Embroidered Lace Trim</Link>
       </article>
     </section>
