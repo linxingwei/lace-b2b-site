@@ -15,7 +15,7 @@ export default function Analytics() {
       setConsent(saved);
       if (saved === "granted") {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("consent", "update", { analytics_storage: "granted" });
-        window.gtag?.("event", "page_view");
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "page_view");
       }
     }
     setReady(true);
@@ -25,8 +25,8 @@ export default function Analytics() {
   function choose(nextConsent: Exclude<Consent, null>) {
     window.localStorage.setItem(storageKey, nextConsent);
     setConsent(nextConsent);
-    window.gtag?.("consent", "update", { analytics_storage: nextConsent });
-    if (nextConsent === "granted") window.gtag?.("event", "page_view");
+    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("consent", "update", { analytics_storage: nextConsent });
+    if (nextConsent === "granted") (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "page_view");
   }
 
   return (
