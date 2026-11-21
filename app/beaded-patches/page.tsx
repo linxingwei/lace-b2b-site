@@ -43,7 +43,7 @@ const faqs = [
 ] as const;
 
 export default function BeadedPatchesPage() {
-  // Do not publish a 30-card page with broken images. The collection becomes
+  // Do not publish a 29-card page with broken images. The collection becomes
   // available automatically after all original JPEGs are committed and deployed.
   if (!products.every((product) => existsSync(join(process.cwd(), "public", product.image)))) notFound();
   const url = absoluteUrl(path);
@@ -51,7 +51,7 @@ export default function BeadedPatchesPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ItemList", "@id": `${url}#collection`, name: "Beaded Patches with Rope — 30 Wholesale Designs",
+        "@type": "ItemList", "@id": `${url}#collection`, name: "Beaded Patches with Rope — 29 Wholesale Designs",
         numberOfItems: products.length, itemListOrder: "https://schema.org/ItemListOrderAscending",
         itemListElement: products.map((product, index) => ({
           "@type": "ListItem", position: index + 1,
@@ -88,7 +88,7 @@ export default function BeadedPatchesPage() {
         <p className="text-sm font-semibold uppercase tracking-wider text-amber-700">Wholesale gift and fashion accessories · UAE & Saudi Arabia</p>
         <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">Beaded Patches with Rope — Wholesale for Middle East Gift & Fashion Buyers</h1>
         <p className="mt-6 text-lg leading-8">VELORACE LACE supplies wholesale beaded patches with rope for gift shops, bag and accessory brands, and fashion buyers in the UAE, Saudi Arabia and across the Gulf. Each patch is hand-finished with beads and sequins and comes with a hanging cord (approx. 14 cm), ready to hang on bags, garments, shoes and gifts.</p>
-        <p className="mt-4 leading-8">This first collection of 30 designs leads with the Gulf&apos;s most recognised symbols — the falcon and the UAE emblem, the camel, the palm tree, and the Hamsa and evil eye — in gold and pearl white for gifting, National Day, Ramadan and Eid.</p>
+        <p className="mt-4 leading-8">This first collection of 29 designs leads with the Gulf&apos;s most recognised symbols — the falcon and the UAE emblem, the camel, the palm tree, and the Hamsa and evil eye — in gold and pearl white for gifting, National Day, Ramadan and Eid.</p>
         <p className="mt-4 leading-8">For prices and minimum order quantities, message us on WhatsApp (+86 157 6795 6637) — we quote per design and quantity.</p>
         <div className="mt-7 flex flex-wrap gap-3">
           <Link href="/contact" className="rounded-full bg-neutral-900 px-6 py-3 font-semibold text-white">Request samples &amp; quote</Link>
@@ -111,9 +111,9 @@ export default function BeadedPatchesPage() {
       </section>
 
       <section className="mt-16" aria-labelledby="beaded-collection-title">
-        <h2 id="beaded-collection-title" className="text-3xl font-semibold">30 Beaded Patch Designs with Rope</h2>
+        <h2 id="beaded-collection-title" className="text-3xl font-semibold">29 Beaded Patch Designs with Rope</h2>
         <p className="mt-4 max-w-5xl leading-7 text-neutral-700">Sizes and weights below are as annotated on the product photos (approx.) — please confirm exact size and weight with us before ordering. Rope length is approx. 14 cm on most designs. For prices, MOQ and lead times, message us on WhatsApp — we quote per design and quantity.</p>
-        <p className="mt-2 text-sm text-neutral-600">Original design numbers #1–#30 are preserved, including #7 White Dove. Original RYL photo watermarks are retained.</p>
+        <p className="mt-2 text-sm text-neutral-600">Original design numbers #1–#29 are preserved, including #7 White Dove. Original RYL photo watermarks are retained.</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
             <article id={`design-${product.number}`} key={product.number} className="flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white">
