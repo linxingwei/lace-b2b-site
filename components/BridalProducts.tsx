@@ -31,9 +31,7 @@ export default function BridalProducts() {
     </div>
     <div className={styles.gallery}>
       {photos.map(([file, alt, caption, width, height]) => <figure key={file}>
-        <a href={`/products/fine-embroidered-tulle/${file}.png`} target="_blank" rel="noreferrer" aria-label={`Open full image: ${caption}`}>
-          <Image src={`/products/fine-embroidered-tulle/${file}.png`} alt={alt} width={width} height={height} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" />
-        </a><figcaption>{caption}</figcaption>
+        <Image src={`/products/fine-embroidered-tulle/${file}.png`} alt={alt} width={width} height={height} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" /><figcaption>{caption}</figcaption>
       </figure>)}
     </div>
     <div className={styles.procurement}>
