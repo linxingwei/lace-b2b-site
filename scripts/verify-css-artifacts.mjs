@@ -1,12 +1,12 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
-import { join, resolve } from "node:path";
+import { join } from "node:path";
 
 const root = process.cwd();
 const cssDir = join(root, ".next", "static", "css");
 const selectors = [
-  { name: ".aspect-square", pattern: /\.aspect-square(?=[\\s.{:#>+~])/ },
-  { name: ".relative", pattern: /\.relative(?=[\\s.{:#>+~])/ },
-  { name: ".grid-cols-3", pattern: /\.grid-cols-3(?=[\\s.{:#>+~])/ },
+  { name: ".aspect-square", pattern: /\.aspect-square(?=[\s.{:#>+~])/ },
+  { name: ".relative", pattern: /\.relative(?=[\s.{:#>+~])/ },
+  { name: ".grid-cols-3", pattern: /\.grid-cols-3(?=[\s.{:#>+~])/ },
 ];
 
 function walk(dir) {
