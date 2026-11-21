@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const coreRoutes = [
     { path: "", priority: 1, frequency: "weekly" as const }, { path: "/products", priority: 0.9, frequency: "weekly" as const },
+    { path: "/bridal-lace-applique", priority: 0.85, frequency: "monthly" as const }, { path: "/lace-trim-by-the-yard-trial", priority: 0.85, frequency: "monthly" as const },
     { path: "/custom-design", priority: 0.8, frequency: "monthly" as const }, { path: "/about", priority: 0.7, frequency: "monthly" as const },
     { path: "/blog", priority: 0.8, frequency: "weekly" as const }, { path: "/contact", priority: 0.7, frequency: "monthly" as const },
   ].map((route) => ({ url: `${base}${route.path}`, lastModified: route.path === "/contact" ? new Date("2026-11-09") : undefined, changeFrequency: route.frequency, priority: route.priority }));
