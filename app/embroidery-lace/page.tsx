@@ -33,7 +33,7 @@ export default function Page() {
       <div className="mb-6 max-w-4xl">
         <p className="text-sm font-semibold uppercase tracking-wider">Real product references</p>
         <h2 className="mt-3 text-3xl font-semibold">Review embroidery direction before confirming specifications</h2>
-        <p className="mt-4 leading-7 text-neutral-700">These product photographs show embroidery directions already available in the VELORACE LACE product library. Use them as visual references for color, motif and application discussions. Exact base composition, finished width, repeat, price, MOQ and lead time are confirmed only after the selected reference and project requirements are reviewed.</p>
+        <p className="mt-4 leading-7 text-neutral-700">Explore <a href="/custom-multicolor-embroidered-lace" className="underline">custom multicolor embroidered lace trim</a> alongside the Multicolor Butterfly reference. These product photographs show embroidery directions already available in the VELORACE LACE product library. Use them as visual references for color, motif and application discussions. Exact base composition, finished width, repeat, price, MOQ and lead time are confirmed only after the selected reference and project requirements are reviewed.</p>
       </div>
       <div className="grid gap-5 md:grid-cols-3">
         {[
