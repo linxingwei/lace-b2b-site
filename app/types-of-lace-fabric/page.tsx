@@ -46,7 +46,7 @@ const faqs = [
   ["What are the main types of lace fabric?", "Embroidered tulle, beaded, sequin, 3D floral, Chantilly, French, Guipure, Alençon, Raschel, eyelash and cotton embroidery lace."],
   ["What is the difference between Guipure lace and Chantilly lace?", "Guipure has connected motifs with no net ground, giving a bold, structured effect; Chantilly is fine, sheer and delicate."],
   ["Which lace is best for wedding dresses?", "Embroidered tulle and Chantilly for overlays and veils; 3D floral for statement gowns; beaded lace for couture."],
-  ["What lace is best for children's hair bows?", "Narrow custom multicolor embroidered lace trim on tulle, developed from your motif and colors."],
+  ["What lace is best for children’s hair bows?", "Narrow custom multicolor embroidered lace trim on tulle, developed from your motif and colors."],
   ["Can I develop a custom lace type from my own design?", "Yes. Send a reference image or artwork with preferred colors and approximate quantity; we review construction and develop a sample for approval."],
   ["What is the minimum order for wholesale lace?", "Reviewed by design and process; trial orders by the yard are available."],
 ] as const;
@@ -60,7 +60,7 @@ export default function TypesOfLaceFabricPage() {
 
   return <main className="mx-auto max-w-6xl px-5 py-12 md:py-16">
     <header className="max-w-4xl">
-      <p className="text-sm font-semibold uppercase tracking-wider text-neutral-600">Wholesale buyer's lace guide</p>
+      <p className="text-sm font-semibold uppercase tracking-wider text-neutral-600">Wholesale buyer’s lace guide</p>
       <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">Types of Lace Fabric — A Guide for Wholesale Buyers</h1>
       <p className="mt-6 text-lg leading-8 text-neutral-700">The main types of lace fabric used in bridalwear, eveningwear, childrenswear and fashion are embroidered tulle lace, beaded lace, sequin lace, 3D floral lace, Chantilly lace, French lace, Guipure lace, Alençon lace, Raschel lace, eyelash lace and cotton embroidery lace. This guide explains what each type looks like, what it is best for, and how VELORACE LACE develops it for wholesale buyers.</p>
       <div className="mt-7 flex flex-wrap gap-3"><Link className="rounded-full bg-black px-6 py-3 font-semibold text-white" href="/contact">Request samples &amp; quote</Link><WhatsAppLink className="rounded-full border border-neutral-300 px-6 py-3 font-semibold" message={whatsappMessage} productCategory="Lace Fabric Types" placement="types_of_lace_hero">Discuss on WhatsApp</WhatsAppLink></div>
