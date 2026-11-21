@@ -122,6 +122,7 @@ export default function ThreeDFlowerAppliquePage() {
           <a href="/embroidery-lace"><span>3D embroidered appliques &amp; embroidery lace</span><ArrowRight size={17} /></a>
           <a href="/custom-design"><span>Custom 3D applique development</span><ArrowRight size={17} /></a>
           <a href="/beaded-patches"><span>Beaded patches with rope for Gulf gifts &amp; accessories</span><ArrowRight size={17} /></a>
+          <a href="/blog/wedding-dress-trends-2027"><span>2027 wedding dress trends and 3D floral applique styling</span><ArrowRight size={17} /></a>
           <a href="/blog/3d-lace-applique-vs-flat-embroidered-applique"><span>3D vs flat embroidered applique</span><ArrowRight size={17} /></a>
         </div>
       </section>
