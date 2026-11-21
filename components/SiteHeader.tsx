@@ -15,6 +15,7 @@ const productLinks = [
   ["Multicolor Custom Lace", "/custom-multicolor-embroidered-lace", "Custom multicolor motifs developed from artwork or references"],
   ["Bridal Lace", "/bridal-lace", "Lace for gowns, veils and couture bridalwear"],
   ["3D Lace Applique", "/3d-flower-applique", "Dimensional motifs and floral embellishments"],
+  ["Beaded Patches", "/beaded-patches", "Decorative beaded patches for bags, garments and accessories"],
   ["Kids & Hair Bow Applications", "/kids-lace-trim", "Colorful lace trims for childrenswear and accessories"],
 ];
 
