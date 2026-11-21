@@ -65,7 +65,7 @@ export default function HairBowCollection() {
         <li><strong>Confirm the order.</strong> Agree the approved specification, order length and commercial terms before bulk production.</li>
       </ol>
       <p>{orderingAnswer}</p>
-      <p>Explore our <a href="/custom-multicolor-embroidered-lace">multicolor embroidered lace development</a>, <a href="/seasonal-embroidered-lace-trim">seasonal embroidery development</a>, <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
+      <p>For a playful motif option, review the <a href="/hair-bow-lace/bunny-bow-heart-embroidered-lace-trim">bunny, bow and heart embroidered lace trim concept</a>. Explore our <a href="/custom-multicolor-embroidered-lace">multicolor embroidered lace development</a>, <a href="/seasonal-embroidered-lace-trim">seasonal embroidery development</a>, <a href="/custom-embroidered-lace-trim">custom embroidered lace trim development</a>, <a href="/kids-lace-trim">kids lace trims</a> and <a href="/custom-design">custom design process</a>.</p>
     </section>
     <HairBowFAQ items={faq} />
     <section className="bow-inquiry"><h2>Develop your next US boutique bow collection</h2><p>Send the design names, requested colors, width in inches, length in yards and US delivery ZIP code.</p><HairBowCTA placement="hair_bow_collection_bottom" /><p className="mt-4"><a className="button button-dark" href="/contact">Request quote by online form</a></p></section>
