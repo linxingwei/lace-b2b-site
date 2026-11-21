@@ -69,6 +69,7 @@ export default function ThreeDFlowerAppliquePage() {
 
   return (
     <main className="applique-money-page">
+      <section className="mx-auto max-w-6xl px-5 pt-5"><a className="font-semibold underline" href="/beaded-patches">Related collection: Beaded Patches with Rope for Gulf Gifts & Accessories</a></section>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <section className="inner-hero applique-money-hero">
         <div className="inner-hero-copy">
