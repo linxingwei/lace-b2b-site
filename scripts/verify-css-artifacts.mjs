@@ -7,6 +7,8 @@ const selectors = [
   { name: ".aspect-square", pattern: /\.aspect-square(?=[\s.{:#>+~])/ },
   { name: ".relative", pattern: /\.relative(?=[\s.{:#>+~])/ },
   { name: ".grid-cols-3", pattern: /\.grid-cols-3(?=[\s.{:#>+~])/ },
+  { name: ".loti-trend-grid", pattern: /\.loti-trend-grid(?=[\s.{:#>+~])/ },
+  { name: ".loti-trend-card img", pattern: /\.loti-trend-card\s+img\s*\{/ },
 ];
 
 function walk(dir) {
@@ -42,9 +44,9 @@ for (const { name, pattern } of selectors) {
 }
 
 if (failed) {
-  console.error("[CSS AUDIT] FAIL: Required Tailwind utility selectors are absent from generated production CSS.");
+  console.error("[CSS AUDIT] FAIL: Required layout/image selectors are absent from generated production CSS.");
   console.error("[CSS AUDIT] Diagnose: verify postcss.config.js is loaded, tailwindcss is installed, app/globals.css contains @tailwind utilities, and tailwind.config.js content globs include app/beaded-patches/page.tsx.");
   console.error("[CSS AUDIT] Next.js build MUST fail rather than silently deploy broken image/grid layouts.");
   process.exit(1);
 }
-console.log("[CSS AUDIT] PASS: All three Tailwind utility selectors are present in production CSS.\n");
+console.log("[CSS AUDIT] PASS: All required Tailwind and homepage trend selectors are present in production CSS.\n");
