@@ -117,7 +117,7 @@ export default function ThreeDFlowerAppliquePage() {
       </section>
 
       <section className="section faq-section category-faq" id="faq"><div className="section-heading centered-heading"><p className="eyebrow"><span /> Buyer FAQ</p><h2>3D flower lace applique sourcing.</h2></div><div className="faq-list">{faqs.map(([question, answer], index) => <details key={question} open={index === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
-      <p className="mx-auto max-w-6xl px-5 py-5">Compare 3D floral appliqués with other constructions in our <a className="font-semibold underline" href="/types-of-lace-fabric">types of lace fabric guide</a>.</p>
+      <p className="mx-auto max-w-6xl px-5 py-5">For gown placement and coordinated motifs, explore <a className="font-semibold underline" href="/bridal-lace-applique">bridal lace appliqué wholesale options</a>. Compare 3D floral appliqués with other constructions in our <a className="font-semibold underline" href="/types-of-lace-fabric">types of lace fabric guide</a>.</p>
       <section className="final-cta"><p>MOQ 10 pieces · timelines confirmed after design review</p><h2>Send a reference photo.<br />Get MOQ, price &amp; sampling options.</h2><WhatsAppLink className="button button-light" message={whatsappMessage} productCategory="3D Flower Lace Applique" placement="3d_money_page_final">Send a reference photo on WhatsApp <ArrowRight size={17} /></WhatsAppLink></section>
     </main>
   );
