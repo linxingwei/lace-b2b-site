@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/verify-css-artifacts.mjs",
+    "build": "tailwindcss -i ./styles/tailwind-utilities.input.css -o ./app/tailwind-utilities.generated.css --minify && next build && node scripts/verify-css-artifacts.mjs",
     "start": "next start",
     "lint": "next lint",
     "seo:audit": "node scripts/audit-indexability.mjs"
