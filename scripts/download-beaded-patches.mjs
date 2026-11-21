@@ -2,8 +2,8 @@ import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const products = JSON.parse(await readFile("lib/beaded-patches.json", "utf8"));
-if (products.length !== 29 || products.some((p) => p.number === 7)) {
-  throw new Error("Expected 29 items and no #7");
+if (products.length !== 30 || products.some((p, i) => p.number !== i + 1)) {
+  throw new Error("Expected all 30 numbered items");
 }
 const dir = "public/products/beaded-patches";
 await mkdir(dir, { recursive: true });
@@ -38,4 +38,4 @@ const failures = results.filter((result) => result.status === "rejected");
 if (failures.length) {
   throw new Error(failures.length + " images failed; no image commit will be made");
 }
-console.log("Downloaded and validated all 29 original JPEG images; no transformations applied.");
+console.log("Downloaded and validated all 30 original JPEG images; no transformations applied.");
