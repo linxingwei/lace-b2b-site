@@ -75,7 +75,7 @@ export default function ThreeDFlowerAppliquePage() {
           <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products">Products</a><span aria-hidden="true">/</span><span aria-current="page">3D Flower Applique</span></nav>
           <p className="eyebrow"><span /> Bridal &amp; couture development</p>
           <h1>3D Flower Lace Applique<br /><em>Supplier for Bridal &amp; Couture</em></h1>
-          <p>Custom dimensional floral appliques for wedding gowns, couture dresses, eveningwear and fashion collections. Develop a single motif, a coordinated set or a mirrored pair from your reference.</p>
+          <p>Custom dimensional floral appliques for wedding gowns, couture dresses, eveningwear and fashion collections. Develop a single motif, a coordinated set or a mirrored pair from your reference. These appliques can also decorate two-piece bridal sets and matching veils.</p>
           <p className="hero-proof"><strong>MOQ: 10 pieces.</strong> Sample Time and Bulk Lead Time are confirmed after design review.</p>
           <div className="hero-actions"><WhatsAppLink className="button button-dark" message={whatsappMessage} productCategory="3D Flower Lace Applique" placement="3d_money_page_hero">Send a reference photo on WhatsApp → Get MOQ, price &amp; sampling options</WhatsAppLink><a className="text-link" href="/blog/3d-lace-applique-vs-flat-embroidered-applique">Compare 3D vs flat applique <ArrowRight size={15} /></a></div>
         </div>
@@ -85,6 +85,16 @@ export default function ThreeDFlowerAppliquePage() {
       <section className="section buyer-spec-section" aria-labelledby="buyer-spec-title">
         <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Buyer specifications</p><h2 id="buyer-spec-title">The details buyers need before sampling.</h2></div><p>Unconfirmed timelines are deliberately left as “Confirmed after design review” because construction, handwork and material availability vary by design.</p></div>
         <div className="spec-table-wrap"><table className="procurement-table"><tbody>{specifications.map(([label, value]) => <tr key={label}><th scope="row">{label}</th><td>{value}</td></tr>)}</tbody></table></div>
+      </section>
+
+      <section className="section" aria-labelledby="applique-how-to-use">
+        <div className="section-heading split-heading"><div><p className="eyebrow"><span /> Application guide</p><h2 id="applique-how-to-use">How to use and apply 3D flower lace appliques</h2></div><p>Practical sewing guidance; test the method on a fabric sample before finishing the garment.</p></div>
+        <div className="comparison-cards">
+          <article><h3>How to sew on</h3><p>Sew-on is the default attachment method. Hand-sew with small, secure stitches around stable motif edges, or machine-sew slowly where the base allows; avoid catching raised petals and embellishments.</p></article>
+          <article><h3>How to position and secure</h3><p>Arrange the motif on the garment and check the drape before stitching. Temporarily baste or pin through safe flat areas, then sew and remove temporary fixings.</p></article>
+          <article><h3>How to shape 3D flowers</h3><p>Gently arrange the raised petals by hand after attachment to restore their dimension. Avoid crushing them with heavy pressure or direct heat; test any pressing method on a sample first.</p></article>
+          <article><h3>Where to use</h3><p>Use as focal decoration on wedding gowns, matching veils, two-piece bridal sets (crop tops with wide-leg trousers or long skirts), flower-girl dresses, dancewear and performance costumes.</p></article>
+        </div>
       </section>
 
       <section className="section design-showcase-section" aria-labelledby="showcase-title">
