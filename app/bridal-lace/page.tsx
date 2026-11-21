@@ -28,7 +28,7 @@ export default function Page() {
         <p className="text-sm font-semibold uppercase tracking-wider">Featured bridal material</p>
         <h2 className="mt-2 text-2xl font-semibold">Fine Embroidered Tulle Bridal Lace</h2>
         <p className="mt-3 max-w-3xl text-neutral-700">Compare real fabric panels, embroidery details, scalloped borders and wedding gown applications before requesting a physical sample.</p>
-        <Link className="mt-5 inline-block font-semibold underline" href="/bridal-lace/embroidered-tulle">View fine embroidered tulle bridal lace</Link>
+        <Link className="mt-5 inline-block font-semibold underline" href="/bridal-lace/embroidered-tulle">View fine embroidered tulle bridal lace</Link><p className="mt-4 text-neutral-700">For gown bodices and veils, compare fabric panels with <Link className="font-semibold underline" href="/bridal-lace-applique">bridal lace appliqué motifs and matched pairs</Link>.</p>
       </div>
     </section>
   </>;
