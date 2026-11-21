@@ -23,10 +23,32 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#251d18" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
   const organization = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://www.veloracelace.com/#organization", name: "VELORACE LACE", legalName: "Guangzhou Ruiyuelai Trading Co., Ltd.", description: "B2B lace trim and garment accessories supplier coordinating custom development for fashion brands, bridal designers and garment manufacturers.", url: "https://www.veloracelace.com", logo: "https://www.veloracelace.com/og.png", telephone: "+86 157 6795 6637", email: "sales@veloracelace.com", address: { "@type": "PostalAddress", addressLocality: "Guangzhou", addressRegion: "Guangdong", addressCountry: "CN" }, areaServed: ["US", "EU", "GB", "AE", "SA"], contactPoint: { "@type": "ContactPoint", contactType: "sales", email: "sales@veloracelace.com", telephone: "+86 157 6795 6637", availableLanguage: ["English", "Chinese"] }, sameAs: ["https://wa.me/message/IXEEGXESENF6F1"] };
   const website = { "@context": "https://schema.org", "@type": "WebSite", "@id": "https://www.veloracelace.com/#website", name: "VELORACE LACE", url: "https://www.veloracelace.com", inLanguage: "en", publisher: { "@id": "https://www.veloracelace.com/#organization" } };
   return (
     <html lang="en">
+      <head>
+        {gaMeasurementId ? (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaMeasurementId)}`} />
+            <script id="velora-ga4-consent" dangerouslySetInnerHTML={{ __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag("consent", "default", {
+                analytics_storage: "denied",
+                ad_storage: "denied",
+                ad_user_data: "denied",
+                ad_personalization: "denied",
+                wait_for_update: 500
+              });
+              gtag("js", new Date());
+              gtag("config", ${JSON.stringify(gaMeasurementId)}, { send_page_view: false });
+            ` }} />
+          </>
+        ) : null}
+      </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }} />
