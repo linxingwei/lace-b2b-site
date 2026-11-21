@@ -1,0 +1,2 @@
+/* Build-only Tailwind utility entrypoint. The site's existing globals.css remains unchanged. */
+@tailwind utilities;
