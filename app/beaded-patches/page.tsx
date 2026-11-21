@@ -119,7 +119,7 @@ export default function BeadedPatchesPage() {
           {products.map((product) => (
             <article id={`design-${product.number}`} key={product.number} className="flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white">
               <div className="relative aspect-square bg-neutral-100">
-                <Image src={product.image} alt={`${product.name} — original product photo with RYL watermark`} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain" />
+                <Image src={product.image} alt={`${product.name} — original product photo with RYL watermark`} quality={90} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain" />
               </div>
               <div className="flex flex-1 flex-col p-5">
                 <p className="text-xs font-bold uppercase tracking-wider text-amber-800">Design #{product.number}</p>
