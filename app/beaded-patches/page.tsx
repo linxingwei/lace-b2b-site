@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import products from "@/lib/beaded-patches.json";
 import { absoluteUrl } from "@/lib/seo";
@@ -40,6 +43,9 @@ const faqs = [
 ] as const;
 
 export default function BeadedPatchesPage() {
+  // Do not publish a 29-card page with broken images. The collection becomes
+  // available automatically after all original JPEGs are committed and deployed.
+  if (!products.every((product) => existsSync(join(process.cwd(), "public", product.image)))) notFound();
   const url = absoluteUrl(path);
   const jsonLd = {
     "@context": "https://schema.org",
