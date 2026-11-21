@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/seo";
 
 const path = "/beaded-patches";
 const title = "Wholesale Beaded Patches with Rope | VELORACE LACE";
-const description = "Wholesale beaded patches with rope for UAE & Saudi gift buyers — falcon, UAE emblem, camel, palm tree and Hamsa designs. Custom colors on request. Ask for samples.";
+const description = "Wholesale beaded patches with rope for gift shops, bag and accessory brands, and fashion buyers worldwide. Explore falcon, camel, floral and decorative motifs. Custom colors on request. Ask for samples.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const buyers = [
-  ["Gift & souvenir shops (UAE, Saudi Arabia, Qatar, Kuwait)", "falcon, UAE emblem, camel and palm tree designs for tourist and National Day gifting."],
-  ["Falconry & National Day gifts", "falcon and UAE emblem patches as hanging charms."],
+  ["Gift & souvenir shops worldwide", "decorative motifs and hanging charms for souvenirs, seasonal gifts and curated gift collections."],
+  ["Souvenir and themed gift collections", "falcon, camel, palm tree and UAE emblem motifs for destination-inspired and themed gifts."],
   ["Bag, shoe & accessory brands", "patches as ready-to-attach decoration on bags, shoes and garments."],
-  ["Ramadan & Eid gifting", "gold and pearl-white designs, Hamsa and evil eye for protective-gift lines."],
+  ["Seasonal & occasion gifting", "gold and pearl-white motifs, Hamsa and evil eye charms for themed gift assortments."],
   ["Fashion boutiques", "crowns, unicorns and bows for girls' accessories and gift sets."],
 ] as const;
 
@@ -36,7 +36,7 @@ const steps = [
 const faqs = [
   ["What are beaded patches with rope?", "Hand-finished patches made of beads and sequins, each with a hanging cord (approx. 14 cm). They hang on bags, garments, shoes and gifts, or sew on as decoration."],
   ["What sizes are beaded patches?", "Most designs in this collection are approx. 3.5–13.8 cm wide and 4–17.5 g; exact size and weight are listed per design above and are as annotated on the product photos — please confirm before ordering."],
-  ["Which beaded patch designs sell best in the UAE and Saudi Arabia?", "Falcon and UAE emblem designs, camels, palm trees, and Hamsa and evil eye charms — with gold and pearl white the most requested colors for gifting."],
+  ["Which beaded patch styles are popular for gifts and accessories?", "Decorative animal, floral, symbol and charm motifs are common choices for gift and accessory collections. Explore falcons, camels, palm trees, Hamsa, evil eye, crowns and bows in this range; ask us about suitable designs for your buyers."],
   ["How do I get a price and MOQ?", "Message us on WhatsApp (+86 157 6795 6637) with the designs and quantities you need — we quote per design and quantity."],
   ["Can I request custom colors or designs?", "Send your reference artwork and the colors you need — we confirm feasibility and pricing after review. 7-day rapid sampling is supported for the falcon, camel and UAE flag designs."],
   ["How do I order or request samples?", "Message us on WhatsApp (+86 157 6795 6637) or use the contact form. We recommend approving a physical sample before a bulk order."],
@@ -85,10 +85,10 @@ export default function BeadedPatchesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav className="mb-8 text-sm text-neutral-600" aria-label="Breadcrumb"><Link href="/">Home</Link> / <Link href="/products">Products</Link> / Beaded Patches</nav>
       <header className="max-w-5xl">
-        <p className="text-sm font-semibold uppercase tracking-wider text-amber-700">Wholesale gift and fashion accessories · UAE & Saudi Arabia</p>
-        <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">Beaded Patches with Rope — Wholesale for Middle East Gift & Fashion Buyers</h1>
-        <p className="mt-6 text-lg leading-8">VELORACE LACE supplies wholesale beaded patches with rope for gift shops, bag and accessory brands, and fashion buyers in the UAE, Saudi Arabia and across the Gulf. Each patch is hand-finished with beads and sequins and comes with a hanging cord (approx. 14 cm), ready to hang on bags, garments, shoes and gifts.</p>
-        <p className="mt-4 leading-8">This first collection of 29 designs leads with the Gulf&apos;s most recognised symbols — the falcon and the UAE emblem, the camel, the palm tree, and the Hamsa and evil eye — in gold and pearl white for gifting, National Day, Ramadan and Eid.</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-amber-700">Wholesale gift and fashion accessories · Worldwide buyers</p>
+        <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">Beaded Patches with Rope — Wholesale for Gift & Fashion Buyers</h1>
+        <p className="mt-6 text-lg leading-8">VELORACE LACE supplies wholesale beaded patches with rope for gift shops, bag and accessory brands, and fashion buyers worldwide. Each patch is hand-finished with beads and sequins and comes with a hanging cord (approx. 14 cm), ready to hang on bags, garments, shoes and gifts.</p>
+        <p className="mt-4 leading-8">This collection features 29 decorative designs, including falcons, the UAE emblem, camels, palm trees, Hamsa and evil eye motifs, crowns and bows. Explore them for souvenirs, fashion accessories and occasion gifting.</p>
         <p className="mt-4 leading-8">For prices and minimum order quantities, message us on WhatsApp (+86 157 6795 6637) — we quote per design and quantity.</p>
         <div className="mt-7 flex flex-wrap gap-3">
           <Link href="/contact" className="rounded-full bg-neutral-900 px-6 py-3 font-semibold text-white">Request samples &amp; quote</Link>
@@ -113,6 +113,7 @@ export default function BeadedPatchesPage() {
       <section className="mt-16" aria-labelledby="beaded-collection-title">
         <h2 id="beaded-collection-title" className="text-3xl font-semibold">29 Beaded Patch Designs with Rope</h2>
         <p className="mt-4 max-w-5xl leading-7 text-neutral-700">Sizes and weights below are as annotated on the product photos (approx.) — please confirm exact size and weight with us before ordering. Rope length is approx. 14 cm on most designs. For prices, MOQ and lead times, message us on WhatsApp — we quote per design and quantity.</p>
+        <p className="mt-5 rounded-xl border border-amber-300 bg-amber-50 px-5 py-4 text-base font-semibold text-neutral-900">Looking for more bestselling styles? Contact us on <a href="https://wa.me/8615767956637" target="_blank" rel="noreferrer" className="text-amber-900 underline underline-offset-4">WhatsApp (+86 157 6795 6637)</a> to explore additional designs.</p>
         <p className="mt-2 text-sm text-neutral-600">Original design numbers #1–#29 are preserved, including #7 White Dove. Original RYL photo watermarks are retained.</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
