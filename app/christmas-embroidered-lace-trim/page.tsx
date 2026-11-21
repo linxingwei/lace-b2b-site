@@ -12,7 +12,7 @@ const concepts = [
 ];
 
 export const metadata: Metadata = {
-  title: "Custom Christmas Embroidered Lace Trim | Multicolor Supplier",
+  title: "Custom Christmas Embroidered Lace Trim | VELORACE LACE",
   description: "Develop custom multicolor Christmas embroidered lace trim with trees, gifts, bows, candy canes and other holiday motifs for hair bows, childrenswear and fashion accessories.",
   alternates: { canonical: path },
   openGraph: { title: "Custom Christmas Multicolor Embroidered Lace Trim | VELORACE LACE", description: "Develop Christmas motif lace trim from artwork or references with custom thread colors, repeat, width and sample review.", url: path, type: "website", images: [{ url: concepts[0].src, alt: concepts[0].alt }] },
