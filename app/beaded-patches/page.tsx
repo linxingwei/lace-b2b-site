@@ -49,35 +49,12 @@ export default function BeadedPatchesPage() {
   const url = absoluteUrl(path);
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ItemList", "@id": `${url}#collection`, name: "Beaded Patches with Rope — 29 Wholesale Designs",
-        numberOfItems: products.length, itemListOrder: "https://schema.org/ItemListOrderAscending",
-        itemListElement: products.map((product, index) => ({
-          "@type": "ListItem", position: index + 1,
-          item: {
-            "@type": "Product", name: product.name,
-            description: product.description,
-            image: absoluteUrl(product.image),
-            url: `${url}#design-${product.number}`,
-            brand: { "@type": "Brand", name: "VELORACE LACE" },
-            additionalProperty: [
-              { "@type": "PropertyValue", name: "Original collection number", value: `#${product.number}` },
-              { "@type": "PropertyValue", name: "Color", value: product.color },
-              { "@type": "PropertyValue", name: "Approximate size", value: product.size },
-              { "@type": "PropertyValue", name: "Approximate weight", value: product.weight },
-            ],
-          },
-        })),
-      },
-      {
-        "@type": "FAQPage", "@id": `${url}#faq`,
-        mainEntity: faqs.map(([question, answer]) => ({
-          "@type": "Question", name: question,
-          acceptedAnswer: { "@type": "Answer", text: answer },
-        })),
-      },
-    ],
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    mainEntity: faqs.map(([question, answer]) => ({
+      "@type": "Question", name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
   };
 
   return (
