@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const storageKey = "velora_analytics_consent";
 type Consent = "granted" | "denied" | null;
@@ -8,6 +9,8 @@ type Consent = "granted" | "denied" | null;
 export default function Analytics() {
   const [consent, setConsent] = useState<Consent>(null);
   const [ready, setReady] = useState(false);
+  const pathname = usePathname();
+  const lastTrackedPath = useRef<string | null>(null);
 
   useEffect(() => {
     const saved = window.localStorage.getItem(storageKey);
@@ -15,18 +18,25 @@ export default function Analytics() {
       setConsent(saved);
       if (saved === "granted") {
         (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("consent", "update", { analytics_storage: "granted" });
-        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "page_view");
       }
     }
     setReady(true);
   }, []);
 
+  useEffect(() => {
+    if (!ready || consent !== "granted" || lastTrackedPath.current === pathname) return;
+    (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "page_view", {
+      page_path: pathname,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+    lastTrackedPath.current = pathname;
+  }, [ready, consent, pathname]);
 
   function choose(nextConsent: Exclude<Consent, null>) {
     window.localStorage.setItem(storageKey, nextConsent);
     setConsent(nextConsent);
     (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("consent", "update", { analytics_storage: nextConsent });
-    if (nextConsent === "granted") (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "page_view");
   }
 
   return (
