@@ -108,6 +108,7 @@ export default function BeadedPatchesPage() {
                 </dl>
                 <p className="mt-4 flex-1 text-sm leading-7 text-neutral-700">{product.description}</p>
                 <Link href="/contact" className="mt-5 block rounded-full bg-neutral-900 px-4 py-3 text-center text-sm font-semibold text-white">Request samples &amp; quote</Link>
+                <a href={`https://wa.me/8615767956637?text=${encodeURIComponent(`Hello VELORACE LACE, please quote beaded patch Design #${product.number} (${product.name}). I would like to confirm MOQ, sample availability and bulk pricing.`)}`} target="_blank" rel="noopener noreferrer" data-product-category="Beaded Patches" data-cta-placement="beaded_product_card" className="mt-3 block rounded-full border border-neutral-300 px-4 py-3 text-center text-sm font-semibold text-neutral-900">Ask about Design #{product.number} on WhatsApp</a>
               </div>
             </article>
           ))}
