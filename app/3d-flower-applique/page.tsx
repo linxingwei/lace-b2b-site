@@ -88,7 +88,6 @@ const faqs = [
 export default function ThreeDFlowerAppliquePage() {
   const url = absoluteUrl(pagePath);
   const schema = { "@context": "https://schema.org", "@graph": [
-    { "@type": "ProductGroup", "@id": `${url}#product-group`, name: "3D Flower Lace Applique", description: pageDescription, url, image: showcase.slice(0, 8).map((item) => absoluteUrl(item.image)), brand: { "@type": "Brand", name: "VELORACE LACE" }, manufacturer: { "@id": `${siteUrl}/#organization` }, audience: { "@type": "BusinessAudience", audienceType: "Bridal designers, couture studios, fashion brands and garment manufacturers" }, additionalProperty: specifications.map(([name, value]) => ({ "@type": "PropertyValue", name, value })) },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` }, { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` }, { "@type": "ListItem", position: 3, name: "3D Flower Applique", item: url }] },
     { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ] };
